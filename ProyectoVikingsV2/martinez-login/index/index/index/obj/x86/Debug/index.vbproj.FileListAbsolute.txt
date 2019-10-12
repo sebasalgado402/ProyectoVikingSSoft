@@ -1,0 +1,16 @@
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\bin\Debug\index.exe
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\bin\Debug\index.pdb
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\bin\Debug\index.xml
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\obj\x86\Debug\index.Form1.resources
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\obj\x86\Debug\index.Resources.resources
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\obj\x86\Debug\index.vbproj.GenerateResource.Cache
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\obj\x86\Debug\index.exe
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\obj\x86\Debug\index.xml
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\obj\x86\Debug\index.pdb
+C:\Users\toni-\Documents\Visual Studio 2010\Projects\proyecto\index\index\obj\x86\Debug\index.ingreso.resources
+C:\Users\toni-\Escritorio\proyecto\index\index\obj\x86\Debug\index.exe
+C:\Users\toni-\Escritorio\proyecto\index\index\obj\x86\Debug\index.xml
+C:\Users\toni-\Escritorio\proyecto\index\index\obj\x86\Debug\index.pdb
+C:\Users\seba1\Desktop\proyectoooo\martinez\index\index\index\obj\x86\Debug\index.exe
+C:\Users\seba1\Desktop\proyectoooo\martinez\index\index\index\obj\x86\Debug\index.xml
+C:\Users\seba1\Desktop\proyectoooo\martinez\index\index\index\obj\x86\Debug\index.pdb
