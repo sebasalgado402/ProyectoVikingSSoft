@@ -20,7 +20,25 @@ Public Class Facturar
         rbconsumidor.Checked = False
         rbclie.Checked = False
         rbprov.Checked = False
+        If Me.Visible = True Then
+            fmrPrincipal.Close()
+
+    
+        End If
+
         conex.Open()
+        Try
+            Dim consulta As String
+            consulta = "Select * from productos"
+            da = New MySqlDataAdapter(consulta, conex)
+            dataset = New DataSet
+            dataset.Tables.Add("productos")
+            da.Fill(dataset.Tables("productos"))
+            libprod.DataSource = dataset.Tables("productos")
+            libprod.DisplayMember = "nombprod"
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
         Try
             Dim consulta As String
             consulta = "Select * from productos"
@@ -58,9 +76,9 @@ Public Class Facturar
             MsgBox(ex.Message)
         End Try
 
-      
-       
 
+
+        Call mostrarlosproductos(dtgobtieneventa)
 
 
     End Sub
@@ -76,6 +94,7 @@ Public Class Facturar
     End Sub
     Private Sub brnsalir_Click(sender As System.Object, e As System.EventArgs) Handles brnsalir.Click
         Me.Close()
+        fmrPrincipal.Show()
 
     End Sub
 
@@ -140,19 +159,22 @@ Public Class Facturar
         Dim conex As New MySqlConnection("data source=localhost;user id=root; password='';database= vikingssoft")
         conex.Open()
         Try
-            comando = New MySqlCommand("INSERT INTO productos-factura(codprod,cantidad)" & Chr(13) &
-                                                    "Values(@codprod,@cantidad)", conex)
-            comando.Parameters.AddWithValue("@codprod", libcodprod.Text)
-            'comando.Parameters.AddWithValue("@idventafact", libprod.Text)
-            'comando.Parameters.AddWithValue("@numlineas", libprod.Text)
-            comando.Parameters.AddWithValue("@cantidad", txtcantidad.Text)
-            'comando.Parameters.AddWithValue("@montolinea", libprod.Text)
+            Dim borrar As Integer = 3
+            comando = New MySqlCommand("INSERT INTO productosfactura (codprod,idventafact,numlineas,cantidad,montolinea)" & Chr(13) &
+                                                    "Values(@codprod,@idventafact,@numlineas,@cantidad,@montolinea)", conex)
+            comando.Parameters.AddWithValue("@codprod", txtpruebacod.Text)
+            comando.Parameters.AddWithValue("@idventafact", borrar)
+            comando.Parameters.AddWithValue("@numlineas", borrar)
+            Dim cantidad As Integer
+            cantidad = txtcantidad.Text
+            comando.Parameters.AddWithValue("@cantidad", cantidad)
+            comando.Parameters.AddWithValue("@montolinea", borrar)
 
             comando.ExecuteNonQuery()
             MessageBox.Show("Operacion realizada", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
 
-
+            Call mostrarlosproductos(dtgobtieneventa)
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -161,32 +183,39 @@ Public Class Facturar
 
     End Sub
 
-  
-    Private Sub libprod_SelectedValueChanged(sender As Object, e As System.EventArgs) Handles libprod.SelectedValueChanged
-        Dim Indice As Integer = libprod.SelectedIndex + 1
-        txtpruebaprod.Text = Indice
-        Try
-            libcodprod.SelectedIndex = Indice - 1
 
-        Catch ex As Exception
-
-        End Try
+    Private Sub libprod_Click(sender As Object, e As System.EventArgs)
+       
 
     End Sub
     Private Sub mostrarlosproductos(ByVal dgv As DataGridView)
     Try
             Dim consulta As String
-            consulta = "Select * from productos-factura"
+            consulta = "Select * from productosfactura"
             da = New MySqlDataAdapter(consulta, conex)
             dataset = New DataSet
-            dataset.Tables.Add("productos-factura")
-            da.Fill(dataset, "productos-factura")
+            dataset.Tables.Add("productosfactura")
+            da.Fill(dataset, "productosfactura")
             dgv.DataSource = dataset
-            dgv.DataMember = "productos-factura"
+            dgv.DataMember = "productosfactura"
 
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub libprod_SelectedValueChanged(sender As System.Object, e As System.EventArgs) Handles libprod.SelectedValueChanged
+        Dim Indice As Integer = libprod.SelectedIndex + 1
+        Dim cod As String
+        txtpruebaprod.Text = Indice
+        Try
+            libcodprod.SelectedIndex = Indice - 1
+            cod = libcodprod.Text
+            txtpruebacod.Text = cod
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

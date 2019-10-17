@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 10-10-2019 a las 20:03:33
+-- Tiempo de generación: 17-10-2019 a las 20:10:30
 -- Versión del servidor: 5.7.26
 -- Versión de PHP: 7.2.18
 
@@ -79,11 +79,11 @@ CREATE TABLE IF NOT EXISTS `factura` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `factura-clientes`
+-- Estructura de tabla para la tabla `facturaclientes`
 --
 
-DROP TABLE IF EXISTS `factura-clientes`;
-CREATE TABLE IF NOT EXISTS `factura-clientes` (
+DROP TABLE IF EXISTS `facturaclientes`;
+CREATE TABLE IF NOT EXISTS `facturaclientes` (
   `idventafact` int(11) NOT NULL,
   `idcliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -134,11 +134,11 @@ INSERT INTO `productos` (`idprod`, `Codprod`, `nombprod`, `precioprod`, `stockpr
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productos-categoria`
+-- Estructura de tabla para la tabla `productoscategoria`
 --
 
-DROP TABLE IF EXISTS `productos-categoria`;
-CREATE TABLE IF NOT EXISTS `productos-categoria` (
+DROP TABLE IF EXISTS `productoscategoria`;
+CREATE TABLE IF NOT EXISTS `productoscategoria` (
   `codprod` varchar(15) NOT NULL,
   `idcat` int(11) NOT NULL,
   PRIMARY KEY (`codprod`)
@@ -147,11 +147,11 @@ CREATE TABLE IF NOT EXISTS `productos-categoria` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productos-factura`
+-- Estructura de tabla para la tabla `productosfactura`
 --
 
-DROP TABLE IF EXISTS `productos-factura`;
-CREATE TABLE IF NOT EXISTS `productos-factura` (
+DROP TABLE IF EXISTS `productosfactura`;
+CREATE TABLE IF NOT EXISTS `productosfactura` (
   `codprod` varchar(15) NOT NULL,
   `idventafact` int(11) NOT NULL,
   `numlineas` int(11) NOT NULL,
@@ -160,14 +160,21 @@ CREATE TABLE IF NOT EXISTS `productos-factura` (
   PRIMARY KEY (`codprod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `productosfactura`
+--
+
+INSERT INTO `productosfactura` (`codprod`, `idventafact`, `numlineas`, `cantidad`, `montolinea`) VALUES
+('ph9973', 3, 3, 2, 3);
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productos-proveedor`
+-- Estructura de tabla para la tabla `productosproveedor`
 --
 
-DROP TABLE IF EXISTS `productos-proveedor`;
-CREATE TABLE IF NOT EXISTS `productos-proveedor` (
+DROP TABLE IF EXISTS `productosproveedor`;
+CREATE TABLE IF NOT EXISTS `productosproveedor` (
   `codprod` varchar(15) NOT NULL,
   `idprov` int(11) NOT NULL,
   PRIMARY KEY (`codprod`)
@@ -224,11 +231,11 @@ INSERT INTO `usuario` (`iduser`, `nombuser`, `passwduser`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario-factura`
+-- Estructura de tabla para la tabla `usuariofactura`
 --
 
-DROP TABLE IF EXISTS `usuario-factura`;
-CREATE TABLE IF NOT EXISTS `usuario-factura` (
+DROP TABLE IF EXISTS `usuariofactura`;
+CREATE TABLE IF NOT EXISTS `usuariofactura` (
   `iduser` int(11) NOT NULL,
   `idventafact` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -236,11 +243,11 @@ CREATE TABLE IF NOT EXISTS `usuario-factura` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario-notas`
+-- Estructura de tabla para la tabla `usuarionotas`
 --
 
-DROP TABLE IF EXISTS `usuario-notas`;
-CREATE TABLE IF NOT EXISTS `usuario-notas` (
+DROP TABLE IF EXISTS `usuarionotas`;
+CREATE TABLE IF NOT EXISTS `usuarionotas` (
   `iduser` int(11) NOT NULL,
   `idnotas` int(11) NOT NULL,
   PRIMARY KEY (`idnotas`)
@@ -249,11 +256,11 @@ CREATE TABLE IF NOT EXISTS `usuario-notas` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario-producto`
+-- Estructura de tabla para la tabla `usuarioproducto`
 --
 
-DROP TABLE IF EXISTS `usuario-producto`;
-CREATE TABLE IF NOT EXISTS `usuario-producto` (
+DROP TABLE IF EXISTS `usuarioproducto`;
+CREATE TABLE IF NOT EXISTS `usuarioproducto` (
   `iduser` int(11) NOT NULL,
   `codprod` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

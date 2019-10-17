@@ -29,6 +29,8 @@ Partial Class AgregarProveedor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtestadocuenta = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtemail = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
@@ -38,8 +40,6 @@ Partial Class AgregarProveedor
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.txtestadocuenta = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -119,6 +119,23 @@ Partial Class AgregarProveedor
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Contacto"
         '
+        'txtestadocuenta
+        '
+        Me.txtestadocuenta.Location = New System.Drawing.Point(165, 158)
+        Me.txtestadocuenta.Name = "txtestadocuenta"
+        Me.txtestadocuenta.Size = New System.Drawing.Size(96, 24)
+        Me.txtestadocuenta.TabIndex = 9
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(18, 161)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(141, 18)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Estado de la Cuenta"
+        '
         'txtemail
         '
         Me.txtemail.Location = New System.Drawing.Point(90, 118)
@@ -196,23 +213,6 @@ Partial Class AgregarProveedor
         Me.Button4.TabIndex = 7
         Me.Button4.Text = "Cerrar"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'txtestadocuenta
-        '
-        Me.txtestadocuenta.Location = New System.Drawing.Point(165, 158)
-        Me.txtestadocuenta.Name = "txtestadocuenta"
-        Me.txtestadocuenta.Size = New System.Drawing.Size(96, 24)
-        Me.txtestadocuenta.TabIndex = 9
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(18, 161)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(141, 18)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Estado de la Cuenta"
         '
         'AgregarProveedor
         '

@@ -22,6 +22,8 @@ Partial Class Facturar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.rbconsumidor = New System.Windows.Forms.RadioButton()
@@ -30,14 +32,14 @@ Partial Class Facturar
         Me.gbproveedor = New System.Windows.Forms.GroupBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.txtpruebacod = New System.Windows.Forms.TextBox()
         Me.txtpruebaprod = New System.Windows.Forms.TextBox()
         Me.libcodprod = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.libprod = New System.Windows.Forms.ListBox()
         Me.btnañadeventa = New System.Windows.Forms.Button()
         Me.txtcantidad = New System.Windows.Forms.TextBox()
-        Me.dtgobtieneventa = New System.Windows.Forms.DataGridView()
         Me.label = New System.Windows.Forms.Label()
+        Me.dtgobtieneventa = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.btnañadirprov = New System.Windows.Forms.Button()
@@ -50,6 +52,7 @@ Partial Class Facturar
         Me.Label4 = New System.Windows.Forms.Label()
         Me.brnsalir = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.libprod = New System.Windows.Forms.ListBox()
         Me.GroupBox1.SuspendLayout()
         Me.gbproveedor.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -73,7 +76,7 @@ Partial Class Facturar
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(4, 34)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(871, 481)
+        Me.GroupBox1.Size = New System.Drawing.Size(871, 572)
         Me.GroupBox1.TabIndex = 27
         Me.GroupBox1.TabStop = False
         '
@@ -131,7 +134,7 @@ Partial Class Facturar
         Me.gbproveedor.ForeColor = System.Drawing.Color.White
         Me.gbproveedor.Location = New System.Drawing.Point(7, 44)
         Me.gbproveedor.Name = "gbproveedor"
-        Me.gbproveedor.Size = New System.Drawing.Size(858, 431)
+        Me.gbproveedor.Size = New System.Drawing.Size(858, 520)
         Me.gbproveedor.TabIndex = 2
         Me.gbproveedor.TabStop = False
         Me.gbproveedor.Text = "Proveedor"
@@ -144,26 +147,35 @@ Partial Class Facturar
         Me.TabControl1.Location = New System.Drawing.Point(10, 54)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(830, 371)
+        Me.TabControl1.Size = New System.Drawing.Size(830, 460)
         Me.TabControl1.TabIndex = 4
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.TabPage1.Controls.Add(Me.txtpruebacod)
         Me.TabPage1.Controls.Add(Me.txtpruebaprod)
         Me.TabPage1.Controls.Add(Me.libcodprod)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.libprod)
         Me.TabPage1.Controls.Add(Me.btnañadeventa)
         Me.TabPage1.Controls.Add(Me.txtcantidad)
-        Me.TabPage1.Controls.Add(Me.dtgobtieneventa)
         Me.TabPage1.Controls.Add(Me.label)
+        Me.TabPage1.Controls.Add(Me.dtgobtieneventa)
         Me.TabPage1.Location = New System.Drawing.Point(4, 30)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(822, 337)
+        Me.TabPage1.Size = New System.Drawing.Size(822, 426)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Producto"
+        '
+        'txtpruebacod
+        '
+        Me.txtpruebacod.Location = New System.Drawing.Point(445, 243)
+        Me.txtpruebacod.Name = "txtpruebacod"
+        Me.txtpruebacod.Size = New System.Drawing.Size(141, 29)
+        Me.txtpruebacod.TabIndex = 11
+        Me.txtpruebacod.Visible = False
         '
         'txtpruebaprod
         '
@@ -193,15 +205,6 @@ Partial Class Facturar
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Elija Producto"
         '
-        'libprod
-        '
-        Me.libprod.FormattingEnabled = True
-        Me.libprod.ItemHeight = 21
-        Me.libprod.Location = New System.Drawing.Point(212, 14)
-        Me.libprod.Name = "libprod"
-        Me.libprod.Size = New System.Drawing.Size(184, 109)
-        Me.libprod.TabIndex = 7
-        '
         'btnañadeventa
         '
         Me.btnañadeventa.ForeColor = System.Drawing.Color.Black
@@ -219,14 +222,6 @@ Partial Class Facturar
         Me.txtcantidad.Size = New System.Drawing.Size(85, 29)
         Me.txtcantidad.TabIndex = 6
         '
-        'dtgobtieneventa
-        '
-        Me.dtgobtieneventa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgobtieneventa.Location = New System.Drawing.Point(103, 133)
-        Me.dtgobtieneventa.Name = "dtgobtieneventa"
-        Me.dtgobtieneventa.Size = New System.Drawing.Size(604, 198)
-        Me.dtgobtieneventa.TabIndex = 4
-        '
         'label
         '
         Me.label.AutoSize = True
@@ -237,6 +232,43 @@ Partial Class Facturar
         Me.label.TabIndex = 3
         Me.label.Text = "Cantidad"
         '
+        'dtgobtieneventa
+        '
+        Me.dtgobtieneventa.AllowUserToAddRows = False
+        Me.dtgobtieneventa.AllowUserToDeleteRows = False
+        Me.dtgobtieneventa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dtgobtieneventa.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
+        Me.dtgobtieneventa.BackgroundColor = System.Drawing.Color.Teal
+        Me.dtgobtieneventa.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dtgobtieneventa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Poppins", 9.9999!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgobtieneventa.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dtgobtieneventa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dtgobtieneventa.ColumnHeadersVisible = False
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Poppins", 9.9999!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.NullValue = Nothing
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Turquoise
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgobtieneventa.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dtgobtieneventa.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.dtgobtieneventa.Location = New System.Drawing.Point(61, 129)
+        Me.dtgobtieneventa.Name = "dtgobtieneventa"
+        Me.dtgobtieneventa.ReadOnly = True
+        Me.dtgobtieneventa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dtgobtieneventa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dtgobtieneventa.Size = New System.Drawing.Size(673, 266)
+        Me.dtgobtieneventa.TabIndex = 21
+        '
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(20, Byte), Integer))
@@ -244,7 +276,7 @@ Partial Class Facturar
         Me.TabPage2.Location = New System.Drawing.Point(4, 30)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(822, 337)
+        Me.TabPage2.Size = New System.Drawing.Size(822, 426)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "DetalleFactura"
         '
@@ -289,7 +321,7 @@ Partial Class Facturar
         Me.gbconsumidor.ForeColor = System.Drawing.Color.White
         Me.gbconsumidor.Location = New System.Drawing.Point(7, 44)
         Me.gbconsumidor.Name = "gbconsumidor"
-        Me.gbconsumidor.Size = New System.Drawing.Size(858, 431)
+        Me.gbconsumidor.Size = New System.Drawing.Size(858, 520)
         Me.gbconsumidor.TabIndex = 4
         Me.gbconsumidor.TabStop = False
         Me.gbconsumidor.Text = "Consumidor Final"
@@ -304,7 +336,7 @@ Partial Class Facturar
         Me.gbcliente.ForeColor = System.Drawing.Color.White
         Me.gbcliente.Location = New System.Drawing.Point(7, 44)
         Me.gbcliente.Name = "gbcliente"
-        Me.gbcliente.Size = New System.Drawing.Size(858, 431)
+        Me.gbcliente.Size = New System.Drawing.Size(858, 520)
         Me.gbcliente.TabIndex = 3
         Me.gbcliente.TabStop = False
         Me.gbcliente.Text = "Cliente"
@@ -361,12 +393,21 @@ Partial Class Facturar
         Me.Label2.TabIndex = 29
         Me.Label2.Text = "FACTURAR"
         '
+        'libprod
+        '
+        Me.libprod.FormattingEnabled = True
+        Me.libprod.ItemHeight = 21
+        Me.libprod.Location = New System.Drawing.Point(212, 14)
+        Me.libprod.Name = "libprod"
+        Me.libprod.Size = New System.Drawing.Size(184, 109)
+        Me.libprod.TabIndex = 7
+        '
         'Facturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(880, 517)
+        Me.ClientSize = New System.Drawing.Size(880, 610)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.brnsalir)
         Me.Controls.Add(Me.GroupBox1)
@@ -409,14 +450,15 @@ Partial Class Facturar
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents btnañadeventa As System.Windows.Forms.Button
     Friend WithEvents txtcantidad As System.Windows.Forms.TextBox
-    Friend WithEvents dtgobtieneventa As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents libprod As System.Windows.Forms.ListBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents libcodprod As System.Windows.Forms.ListBox
     Friend WithEvents txtpruebaprod As System.Windows.Forms.TextBox
+    Friend WithEvents txtpruebacod As System.Windows.Forms.TextBox
+    Friend WithEvents dtgobtieneventa As System.Windows.Forms.DataGridView
+    Friend WithEvents libprod As System.Windows.Forms.ListBox
 End Class
