@@ -14,7 +14,7 @@ Public Class Login
         Try
 
             conex.Open()
-            MsgBox("Conexión exitosa")
+
 
         Catch ex As Exception
             MsgBox(ex.Message)

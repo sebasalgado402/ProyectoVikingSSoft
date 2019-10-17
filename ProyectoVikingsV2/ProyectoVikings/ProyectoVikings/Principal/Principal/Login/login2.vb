@@ -24,7 +24,7 @@ Public Class login2
 
         End If
         If lista <> 0 Then
-            MsgBox("bienvenido")
+
             fmrPrincipal.Show()
             Me.Close()
 

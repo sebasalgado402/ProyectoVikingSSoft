@@ -104,7 +104,7 @@ Public Class fmrPrincipal
         End Try
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnprodlista.Click
+    Private Sub btnprodlista_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnprodlista.Click
 
         groupbproductoLista.Visible = True
         If groupbproductoLista.Visible = True Then
@@ -113,8 +113,8 @@ Public Class fmrPrincipal
         End If
         Call mostrarlosproductos(dtglistaproducto)
 
-        
-                
+
+
     End Sub
     Private Sub mostrarlosproductos(ByVal dgv As DataGridView)
         Try
@@ -475,21 +475,30 @@ Public Class fmrPrincipal
 
         Dim opcion As DialogResult
         opcion = MessageBox.Show("¿Seguro desea salir?", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
         Try
-
-
-
 
             If (opcion = DialogResult.No) Then
                
             Else
-                Me.Close()
+                Try
+
+                    Me.Close()
+                    Login.Close()
+
+
+
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                    End
+                End Try
+
 
             End If
         Catch ex As Exception
             MsgBox("Se ha encontrado un error, solo cierre la ventana")
         End Try
-        End
+
 
     End Sub
 

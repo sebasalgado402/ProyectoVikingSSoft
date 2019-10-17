@@ -22,166 +22,352 @@ Partial Class Facturar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.rbconsumidor = New System.Windows.Forms.RadioButton()
+        Me.rbclie = New System.Windows.Forms.RadioButton()
+        Me.rbprov = New System.Windows.Forms.RadioButton()
+        Me.gbproveedor = New System.Windows.Forms.GroupBox()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.txtpruebaprod = New System.Windows.Forms.TextBox()
+        Me.libcodprod = New System.Windows.Forms.ListBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.libprod = New System.Windows.Forms.ListBox()
+        Me.btnañadeventa = New System.Windows.Forms.Button()
+        Me.txtcantidad = New System.Windows.Forms.TextBox()
+        Me.dtgobtieneventa = New System.Windows.Forms.DataGridView()
+        Me.label = New System.Windows.Forms.Label()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.btnañadirprov = New System.Windows.Forms.Button()
+        Me.cbprov = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.gbconsumidor = New System.Windows.Forms.GroupBox()
+        Me.gbcliente = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.brnsalir = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        Me.gbproveedor.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.dtgobtieneventa, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbcliente.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.rbconsumidor)
+        Me.GroupBox1.Controls.Add(Me.rbclie)
+        Me.GroupBox1.Controls.Add(Me.rbprov)
+        Me.GroupBox1.Controls.Add(Me.gbproveedor)
+        Me.GroupBox1.Controls.Add(Me.gbconsumidor)
+        Me.GroupBox1.Controls.Add(Me.gbcliente)
+        Me.GroupBox1.Font = New System.Drawing.Font("Poppins", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 34)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(871, 481)
+        Me.GroupBox1.TabIndex = 27
+        Me.GroupBox1.TabStop = False
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(157, 20)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(132, 23)
+        Me.RadioButton1.TabIndex = 8
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Deseo Facturar A:"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'rbconsumidor
+        '
+        Me.rbconsumidor.AutoSize = True
+        Me.rbconsumidor.Location = New System.Drawing.Point(474, 20)
+        Me.rbconsumidor.Name = "rbconsumidor"
+        Me.rbconsumidor.Size = New System.Drawing.Size(133, 23)
+        Me.rbconsumidor.TabIndex = 7
+        Me.rbconsumidor.TabStop = True
+        Me.rbconsumidor.Text = "Consumidor Final"
+        Me.rbconsumidor.UseVisualStyleBackColor = True
+        '
+        'rbclie
+        '
+        Me.rbclie.AutoSize = True
+        Me.rbclie.Location = New System.Drawing.Point(391, 20)
+        Me.rbclie.Name = "rbclie"
+        Me.rbclie.Size = New System.Drawing.Size(68, 23)
+        Me.rbclie.TabIndex = 6
+        Me.rbclie.TabStop = True
+        Me.rbclie.Text = "Cliente"
+        Me.rbclie.UseVisualStyleBackColor = True
+        '
+        'rbprov
+        '
+        Me.rbprov.AutoSize = True
+        Me.rbprov.Location = New System.Drawing.Point(293, 20)
+        Me.rbprov.Name = "rbprov"
+        Me.rbprov.Size = New System.Drawing.Size(87, 23)
+        Me.rbprov.TabIndex = 5
+        Me.rbprov.TabStop = True
+        Me.rbprov.Text = "Proveedor"
+        Me.rbprov.UseVisualStyleBackColor = True
+        '
+        'gbproveedor
+        '
+        Me.gbproveedor.Controls.Add(Me.TabControl1)
+        Me.gbproveedor.Controls.Add(Me.btnañadirprov)
+        Me.gbproveedor.Controls.Add(Me.cbprov)
+        Me.gbproveedor.Controls.Add(Me.Label3)
+        Me.gbproveedor.Font = New System.Drawing.Font("Poppins", 9.9999!)
+        Me.gbproveedor.ForeColor = System.Drawing.Color.White
+        Me.gbproveedor.Location = New System.Drawing.Point(7, 44)
+        Me.gbproveedor.Name = "gbproveedor"
+        Me.gbproveedor.Size = New System.Drawing.Size(858, 431)
+        Me.gbproveedor.TabIndex = 2
+        Me.gbproveedor.TabStop = False
+        Me.gbproveedor.Text = "Proveedor"
+        Me.gbproveedor.Visible = False
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(10, 54)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(830, 371)
+        Me.TabControl1.TabIndex = 4
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.TabPage1.Controls.Add(Me.txtpruebaprod)
+        Me.TabPage1.Controls.Add(Me.libcodprod)
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.libprod)
+        Me.TabPage1.Controls.Add(Me.btnañadeventa)
+        Me.TabPage1.Controls.Add(Me.txtcantidad)
+        Me.TabPage1.Controls.Add(Me.dtgobtieneventa)
+        Me.TabPage1.Controls.Add(Me.label)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 30)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(822, 337)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Producto"
+        '
+        'txtpruebaprod
+        '
+        Me.txtpruebaprod.Location = New System.Drawing.Point(516, 165)
+        Me.txtpruebaprod.Name = "txtpruebaprod"
+        Me.txtpruebaprod.Size = New System.Drawing.Size(100, 29)
+        Me.txtpruebaprod.TabIndex = 10
+        Me.txtpruebaprod.Visible = False
+        '
+        'libcodprod
+        '
+        Me.libcodprod.FormattingEnabled = True
+        Me.libcodprod.ItemHeight = 21
+        Me.libcodprod.Location = New System.Drawing.Point(110, 146)
+        Me.libcodprod.Name = "libcodprod"
+        Me.libcodprod.Size = New System.Drawing.Size(184, 109)
+        Me.libcodprod.TabIndex = 9
+        Me.libcodprod.Visible = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(75, 39)
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(106, 56)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Cliente:"
+        Me.Label1.Size = New System.Drawing.Size(101, 23)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Elija Producto"
         '
-        'TextBox1
+        'libprod
         '
-        Me.TextBox1.Location = New System.Drawing.Point(120, 36)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.libprod.FormattingEnabled = True
+        Me.libprod.ItemHeight = 21
+        Me.libprod.Location = New System.Drawing.Point(212, 14)
+        Me.libprod.Name = "libprod"
+        Me.libprod.Size = New System.Drawing.Size(184, 109)
+        Me.libprod.TabIndex = 7
         '
-        'Label2
+        'btnañadeventa
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(27, 130)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(93, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Nombre Producto:"
+        Me.btnañadeventa.ForeColor = System.Drawing.Color.Black
+        Me.btnañadeventa.Location = New System.Drawing.Point(584, 39)
+        Me.btnañadeventa.Name = "btnañadeventa"
+        Me.btnañadeventa.Size = New System.Drawing.Size(114, 56)
+        Me.btnañadeventa.TabIndex = 5
+        Me.btnañadeventa.Text = "Añadir a la Venta"
+        Me.btnañadeventa.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txtcantidad
         '
-        Me.TextBox3.Location = New System.Drawing.Point(120, 127)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 5
+        Me.txtcantidad.Location = New System.Drawing.Point(483, 53)
+        Me.txtcantidad.Name = "txtcantidad"
+        Me.txtcantidad.Size = New System.Drawing.Size(85, 29)
+        Me.txtcantidad.TabIndex = 6
+        '
+        'dtgobtieneventa
+        '
+        Me.dtgobtieneventa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtgobtieneventa.Location = New System.Drawing.Point(103, 133)
+        Me.dtgobtieneventa.Name = "dtgobtieneventa"
+        Me.dtgobtieneventa.Size = New System.Drawing.Size(604, 198)
+        Me.dtgobtieneventa.TabIndex = 4
+        '
+        'label
+        '
+        Me.label.AutoSize = True
+        Me.label.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.label.Location = New System.Drawing.Point(403, 56)
+        Me.label.Name = "label"
+        Me.label.Size = New System.Drawing.Size(74, 23)
+        Me.label.TabIndex = 3
+        Me.label.Text = "Cantidad"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.TabPage2.Controls.Add(Me.DataGridView2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 30)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(822, 337)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "DetalleFactura"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(3, 99)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(513, 158)
+        Me.DataGridView2.TabIndex = 0
+        '
+        'btnañadirprov
+        '
+        Me.btnañadirprov.ForeColor = System.Drawing.Color.Black
+        Me.btnañadirprov.Location = New System.Drawing.Point(267, 19)
+        Me.btnañadirprov.Name = "btnañadirprov"
+        Me.btnañadirprov.Size = New System.Drawing.Size(134, 29)
+        Me.btnañadirprov.TabIndex = 2
+        Me.btnañadirprov.Text = "Añada Poveedor"
+        Me.btnañadirprov.UseVisualStyleBackColor = True
+        '
+        'cbprov
+        '
+        Me.cbprov.FormattingEnabled = True
+        Me.cbprov.Location = New System.Drawing.Point(117, 19)
+        Me.cbprov.Name = "cbprov"
+        Me.cbprov.Size = New System.Drawing.Size(144, 29)
+        Me.cbprov.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(62, 186)
+        Me.Label3.Location = New System.Drawing.Point(6, 25)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Cantidad:"
+        Me.Label3.Size = New System.Drawing.Size(114, 23)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Elija Proveedor:"
         '
-        'TextBox4
+        'gbconsumidor
         '
-        Me.TextBox4.Location = New System.Drawing.Point(120, 183)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 7
+        Me.gbconsumidor.Font = New System.Drawing.Font("Poppins", 9.9999!)
+        Me.gbconsumidor.ForeColor = System.Drawing.Color.White
+        Me.gbconsumidor.Location = New System.Drawing.Point(7, 44)
+        Me.gbconsumidor.Name = "gbconsumidor"
+        Me.gbconsumidor.Size = New System.Drawing.Size(858, 431)
+        Me.gbconsumidor.TabIndex = 4
+        Me.gbconsumidor.TabStop = False
+        Me.gbconsumidor.Text = "Consumidor Final"
+        Me.gbconsumidor.Visible = False
+        '
+        'gbcliente
+        '
+        Me.gbcliente.Controls.Add(Me.Button1)
+        Me.gbcliente.Controls.Add(Me.ComboBox2)
+        Me.gbcliente.Controls.Add(Me.Label4)
+        Me.gbcliente.Font = New System.Drawing.Font("Poppins", 9.9999!)
+        Me.gbcliente.ForeColor = System.Drawing.Color.White
+        Me.gbcliente.Location = New System.Drawing.Point(7, 44)
+        Me.gbcliente.Name = "gbcliente"
+        Me.gbcliente.Size = New System.Drawing.Size(858, 431)
+        Me.gbcliente.TabIndex = 3
+        Me.gbcliente.TabStop = False
+        Me.gbcliente.Text = "Cliente"
+        Me.gbcliente.Visible = False
+        '
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(254, 22)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(134, 29)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Añada Cliente"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(104, 22)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(144, 29)
+        Me.ComboBox2.TabIndex = 4
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(8, 82)
+        Me.Label4.Location = New System.Drawing.Point(6, 25)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(109, 13)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Seleccione Producto:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(120, 79)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 10
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(52, 238)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(62, 13)
-        Me.Label7.TabIndex = 16
-        Me.Label7.Text = "Descuento:"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(120, 235)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 15
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(247, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(717, 263)
-        Me.DataGridView1.TabIndex = 20
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(785, 309)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(68, 13)
-        Me.Label9.TabIndex = 24
-        Me.Label9.Text = "Importe total:"
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(853, 306)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox9.TabIndex = 23
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox9)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 48)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(970, 355)
-        Me.GroupBox1.TabIndex = 27
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Facturar"
+        Me.Label4.Size = New System.Drawing.Size(92, 23)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Elija Cliente:"
         '
         'brnsalir
         '
-        Me.brnsalir.Location = New System.Drawing.Point(888, 13)
+        Me.brnsalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.brnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.brnsalir.Font = New System.Drawing.Font("Poppins", 9.0!)
+        Me.brnsalir.ForeColor = System.Drawing.Color.White
+        Me.brnsalir.Location = New System.Drawing.Point(793, 12)
         Me.brnsalir.Name = "brnsalir"
         Me.brnsalir.Size = New System.Drawing.Size(75, 23)
         Me.brnsalir.TabIndex = 28
         Me.brnsalir.Text = "salir"
-        Me.brnsalir.UseVisualStyleBackColor = True
+        Me.brnsalir.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Poppins", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(361, 6)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(120, 31)
+        Me.Label2.TabIndex = 29
+        Me.Label2.Text = "FACTURAR"
         '
         'Facturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(992, 412)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(880, 517)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.brnsalir)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -189,25 +375,48 @@ Partial Class Facturar
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Facturar"
         Me.TopMost = True
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.gbproveedor.ResumeLayout(False)
+        Me.gbproveedor.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        CType(Me.dtgobtieneventa, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbcliente.ResumeLayout(False)
+        Me.gbcliente.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents brnsalir As System.Windows.Forms.Button
+    Friend WithEvents gbconsumidor As System.Windows.Forms.GroupBox
+    Friend WithEvents gbcliente As System.Windows.Forms.GroupBox
+    Friend WithEvents gbproveedor As System.Windows.Forms.GroupBox
+    Friend WithEvents rbconsumidor As System.Windows.Forms.RadioButton
+    Friend WithEvents rbclie As System.Windows.Forms.RadioButton
+    Friend WithEvents rbprov As System.Windows.Forms.RadioButton
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents btnañadirprov As System.Windows.Forms.Button
+    Friend WithEvents cbprov As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents label As System.Windows.Forms.Label
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents btnañadeventa As System.Windows.Forms.Button
+    Friend WithEvents txtcantidad As System.Windows.Forms.TextBox
+    Friend WithEvents dtgobtieneventa As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents libprod As System.Windows.Forms.ListBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents libcodprod As System.Windows.Forms.ListBox
+    Friend WithEvents txtpruebaprod As System.Windows.Forms.TextBox
 End Class
