@@ -27,19 +27,20 @@ Partial Class Agregarproductos
         Me.txtagrenombrprod = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.recibecat = New System.Windows.Forms.ListBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.recibeprov = New System.Windows.Forms.ListBox()
+        Me.btnagregarcat = New System.Windows.Forms.Button()
+        Me.brnagregarprov = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cbcategoria = New System.Windows.Forms.ComboBox()
         Me.txtagredescripcionprod = New System.Windows.Forms.TextBox()
-        Me.cbproveedor = New System.Windows.Forms.ComboBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtagreexistmin = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtagreexistprod = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtpruebacod2 = New System.Windows.Forms.TextBox()
+        Me.txtpruebacod = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtagrepreciofinalprod = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -50,8 +51,8 @@ Partial Class Agregarproductos
         Me.btnagrenuevo = New System.Windows.Forms.Button()
         Me.btnagreguardar = New System.Windows.Forms.Button()
         Me.btnagrecerrar = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,8 +67,9 @@ Partial Class Agregarproductos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.BackColor = System.Drawing.Color.OliveDrab
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(97, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 18)
@@ -85,8 +87,9 @@ Partial Class Agregarproductos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.BackColor = System.Drawing.Color.OliveDrab
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(3, 63)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(150, 18)
@@ -96,144 +99,145 @@ Partial Class Agregarproductos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.BackColor = System.Drawing.Color.OliveDrab
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(76, 108)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(6, 141)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(77, 18)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Proveedor"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(81, 152)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 18)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Categoría"
-        '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.cbcategoria)
-        Me.GroupBox1.Controls.Add(Me.txtagredescripcionprod)
-        Me.GroupBox1.Controls.Add(Me.cbproveedor)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.recibecat)
         Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.recibeprov)
+        Me.GroupBox1.Controls.Add(Me.btnagregarcat)
+        Me.GroupBox1.Controls.Add(Me.brnagregarprov)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.txtagredescripcionprod)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtagrenombrprod)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtagercodigoprod)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(689, 180)
+        Me.GroupBox1.Size = New System.Drawing.Size(689, 275)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Básicos"
         '
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(219, 203)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(111, 52)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Actualizar Listas"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'recibecat
+        '
+        Me.recibecat.FormattingEnabled = True
+        Me.recibecat.ItemHeight = 18
+        Me.recibecat.Location = New System.Drawing.Point(313, 103)
+        Me.recibecat.Name = "recibecat"
+        Me.recibecat.Size = New System.Drawing.Size(147, 94)
+        Me.recibecat.TabIndex = 17
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.OliveDrab
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(236, 141)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(72, 18)
+        Me.Label4.TabIndex = 16
+        Me.Label4.Text = "Categoria"
+        '
+        'recibeprov
+        '
+        Me.recibeprov.FormattingEnabled = True
+        Me.recibeprov.ItemHeight = 18
+        Me.recibeprov.Location = New System.Drawing.Point(83, 103)
+        Me.recibeprov.Name = "recibeprov"
+        Me.recibeprov.Size = New System.Drawing.Size(147, 94)
+        Me.recibeprov.TabIndex = 15
+        '
+        'btnagregarcat
+        '
+        Me.btnagregarcat.ForeColor = System.Drawing.Color.Black
+        Me.btnagregarcat.Location = New System.Drawing.Point(362, 203)
+        Me.btnagregarcat.Name = "btnagregarcat"
+        Me.btnagregarcat.Size = New System.Drawing.Size(98, 52)
+        Me.btnagregarcat.TabIndex = 14
+        Me.btnagregarcat.Text = "Nueva Categoría"
+        Me.btnagregarcat.UseVisualStyleBackColor = True
+        '
+        'brnagregarprov
+        '
+        Me.brnagregarprov.ForeColor = System.Drawing.Color.Black
+        Me.brnagregarprov.Location = New System.Drawing.Point(83, 203)
+        Me.brnagregarprov.Name = "brnagregarprov"
+        Me.brnagregarprov.Size = New System.Drawing.Size(95, 52)
+        Me.brnagregarprov.TabIndex = 13
+        Me.brnagregarprov.Text = "Nuevo Proveedor"
+        Me.brnagregarprov.UseVisualStyleBackColor = True
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(486, 14)
+        Me.Label5.BackColor = System.Drawing.Color.OliveDrab
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(486, 24)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(177, 18)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Descripción(Opcional)"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(384, 108)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(87, 18)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "(Opcional)"
-        '
-        'cbcategoria
-        '
-        Me.cbcategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbcategoria.FormattingEnabled = True
-        Me.cbcategoria.Location = New System.Drawing.Point(159, 149)
-        Me.cbcategoria.Name = "cbcategoria"
-        Me.cbcategoria.Size = New System.Drawing.Size(152, 26)
-        Me.cbcategoria.TabIndex = 9
-        '
         'txtagredescripcionprod
         '
-        Me.txtagredescripcionprod.Location = New System.Drawing.Point(477, 37)
+        Me.txtagredescripcionprod.Location = New System.Drawing.Point(477, 45)
         Me.txtagredescripcionprod.Multiline = True
         Me.txtagredescripcionprod.Name = "txtagredescripcionprod"
-        Me.txtagredescripcionprod.Size = New System.Drawing.Size(195, 135)
+        Me.txtagredescripcionprod.Size = New System.Drawing.Size(195, 173)
         Me.txtagredescripcionprod.TabIndex = 7
-        '
-        'cbproveedor
-        '
-        Me.cbproveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbproveedor.FormattingEnabled = True
-        Me.cbproveedor.Location = New System.Drawing.Point(159, 105)
-        Me.cbproveedor.Name = "cbproveedor"
-        Me.cbproveedor.Size = New System.Drawing.Size(219, 26)
-        Me.cbproveedor.TabIndex = 8
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.txtagreexistmin)
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.txtagreexistprod)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 193)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(689, 94)
-        Me.GroupBox2.TabIndex = 10
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Existencias"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(207, 68)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(127, 18)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "Existencia Mínima"
-        '
-        'txtagreexistmin
-        '
-        Me.txtagreexistmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtagreexistmin.Location = New System.Drawing.Point(340, 65)
-        Me.txtagreexistmin.Name = "txtagreexistmin"
-        Me.txtagreexistmin.Size = New System.Drawing.Size(111, 24)
-        Me.txtagreexistmin.TabIndex = 2
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.BackColor = System.Drawing.Color.OliveDrab
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(259, 26)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(195, 42)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(75, 18)
+        Me.Label8.Size = New System.Drawing.Size(47, 18)
         Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Existencia"
+        Me.Label8.Text = "Stock"
         '
         'txtagreexistprod
         '
         Me.txtagreexistprod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtagreexistprod.Location = New System.Drawing.Point(340, 23)
+        Me.txtagreexistprod.Location = New System.Drawing.Point(248, 39)
         Me.txtagreexistprod.Name = "txtagreexistprod"
         Me.txtagreexistprod.Size = New System.Drawing.Size(111, 24)
         Me.txtagreexistprod.TabIndex = 0
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.txtagreexistprod)
+        Me.GroupBox3.Controls.Add(Me.txtpruebacod2)
+        Me.GroupBox3.Controls.Add(Me.txtpruebacod)
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.txtagrepreciofinalprod)
         Me.GroupBox3.Controls.Add(Me.Label10)
@@ -242,17 +246,36 @@ Partial Class Agregarproductos
         Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.Controls.Add(Me.txtagreprecio)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(12, 293)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(689, 198)
         Me.GroupBox3.TabIndex = 11
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Detalle de Precio"
+        Me.GroupBox3.Text = "Detalle de Precio y Stock"
+        '
+        'txtpruebacod2
+        '
+        Me.txtpruebacod2.Location = New System.Drawing.Point(23, 84)
+        Me.txtpruebacod2.Name = "txtpruebacod2"
+        Me.txtpruebacod2.Size = New System.Drawing.Size(100, 24)
+        Me.txtpruebacod2.TabIndex = 14
+        Me.txtpruebacod2.Visible = False
+        '
+        'txtpruebacod
+        '
+        Me.txtpruebacod.Location = New System.Drawing.Point(23, 42)
+        Me.txtpruebacod.Name = "txtpruebacod"
+        Me.txtpruebacod.Size = New System.Drawing.Size(100, 24)
+        Me.txtpruebacod.TabIndex = 13
+        Me.txtpruebacod.Visible = False
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(371, 84)
+        Me.Label9.BackColor = System.Drawing.Color.OliveDrab
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(314, 129)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(87, 18)
         Me.Label9.TabIndex = 11
@@ -260,8 +283,9 @@ Partial Class Agregarproductos
         '
         'txtagrepreciofinalprod
         '
+        Me.txtagrepreciofinalprod.Enabled = False
         Me.txtagrepreciofinalprod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtagrepreciofinalprod.Location = New System.Drawing.Point(340, 126)
+        Me.txtagrepreciofinalprod.Location = New System.Drawing.Point(283, 161)
         Me.txtagrepreciofinalprod.Name = "txtagrepreciofinalprod"
         Me.txtagrepreciofinalprod.Size = New System.Drawing.Size(105, 24)
         Me.txtagrepreciofinalprod.TabIndex = 6
@@ -269,9 +293,10 @@ Partial Class Agregarproductos
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.BackColor = System.Drawing.Color.OliveDrab
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(181, 129)
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(124, 164)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(153, 18)
         Me.Label10.TabIndex = 5
@@ -280,9 +305,10 @@ Partial Class Agregarproductos
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.BackColor = System.Drawing.Color.OliveDrab
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(213, 84)
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(156, 129)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(86, 18)
         Me.Label11.TabIndex = 3
@@ -291,7 +317,7 @@ Partial Class Agregarproductos
         'txtagreimpprod
         '
         Me.txtagreimpprod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtagreimpprod.Location = New System.Drawing.Point(305, 81)
+        Me.txtagreimpprod.Location = New System.Drawing.Point(248, 126)
         Me.txtagreimpprod.Name = "txtagreimpprod"
         Me.txtagreimpprod.Size = New System.Drawing.Size(60, 24)
         Me.txtagreimpprod.TabIndex = 2
@@ -299,9 +325,10 @@ Partial Class Agregarproductos
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.BackColor = System.Drawing.Color.OliveDrab
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(238, 42)
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(146, 86)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(96, 18)
         Me.Label12.TabIndex = 1
@@ -310,23 +337,23 @@ Partial Class Agregarproductos
         'txtagreprecio
         '
         Me.txtagreprecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtagreprecio.Location = New System.Drawing.Point(340, 39)
+        Me.txtagreprecio.Location = New System.Drawing.Point(248, 83)
         Me.txtagreprecio.Name = "txtagreprecio"
         Me.txtagreprecio.Size = New System.Drawing.Size(105, 24)
         Me.txtagreprecio.TabIndex = 0
         '
         'btnagrenuevo
         '
-        Me.btnagrenuevo.Location = New System.Drawing.Point(35, 497)
+        Me.btnagrenuevo.Location = New System.Drawing.Point(12, 497)
         Me.btnagrenuevo.Name = "btnagrenuevo"
         Me.btnagrenuevo.Size = New System.Drawing.Size(96, 48)
         Me.btnagrenuevo.TabIndex = 12
-        Me.btnagrenuevo.Text = "Nuevo"
+        Me.btnagrenuevo.Text = "Limpiar"
         Me.btnagrenuevo.UseVisualStyleBackColor = True
         '
         'btnagreguardar
         '
-        Me.btnagreguardar.Location = New System.Drawing.Point(138, 497)
+        Me.btnagreguardar.Location = New System.Drawing.Point(317, 497)
         Me.btnagreguardar.Name = "btnagreguardar"
         Me.btnagreguardar.Size = New System.Drawing.Size(96, 48)
         Me.btnagreguardar.TabIndex = 13
@@ -342,25 +369,33 @@ Partial Class Agregarproductos
         Me.btnagrecerrar.Text = "Cerrar"
         Me.btnagrecerrar.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(499, 56)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(140, 24)
+        Me.TextBox1.TabIndex = 15
+        Me.TextBox1.Visible = False
+        '
         'Agregarproductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(713, 557)
+        Me.BackColor = System.Drawing.Color.DarkOliveGreen
+        Me.ClientSize = New System.Drawing.Size(713, 551)
         Me.Controls.Add(Me.btnagrecerrar)
         Me.Controls.Add(Me.btnagreguardar)
         Me.Controls.Add(Me.btnagrenuevo)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.ForeColor = System.Drawing.Color.Black
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Agregarproductos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "--AGREGAR PRODUCTO--"
         Me.TopMost = True
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
@@ -371,13 +406,7 @@ Partial Class Agregarproductos
     Friend WithEvents txtagrenombrprod As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents cbcategoria As System.Windows.Forms.ComboBox
-    Friend WithEvents cbproveedor As System.Windows.Forms.ComboBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents txtagreexistmin As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtagreexistprod As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
@@ -392,6 +421,14 @@ Partial Class Agregarproductos
     Friend WithEvents btnagrecerrar As System.Windows.Forms.Button
     Friend WithEvents txtagredescripcionprod As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents btnagregarcat As System.Windows.Forms.Button
+    Friend WithEvents brnagregarprov As System.Windows.Forms.Button
+    Friend WithEvents txtpruebacod2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtpruebacod As System.Windows.Forms.TextBox
+    Friend WithEvents recibecat As System.Windows.Forms.ListBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents recibeprov As System.Windows.Forms.ListBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

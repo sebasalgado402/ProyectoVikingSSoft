@@ -90,6 +90,7 @@ Partial Class Login
         '
         Me.txtcrearcontraseña.Location = New System.Drawing.Point(239, 171)
         Me.txtcrearcontraseña.Name = "txtcrearcontraseña"
+        Me.txtcrearcontraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtcrearcontraseña.Size = New System.Drawing.Size(206, 38)
         Me.txtcrearcontraseña.TabIndex = 2
         '

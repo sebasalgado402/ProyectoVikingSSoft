@@ -46,11 +46,13 @@ Partial Class AgregarProveedor
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Goldenrod
         Me.GroupBox1.Controls.Add(Me.txtrut)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtnombre)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(479, 121)
@@ -60,7 +62,9 @@ Partial Class AgregarProveedor
         '
         'txtrut
         '
+        Me.txtrut.ForeColor = System.Drawing.Color.Black
         Me.txtrut.Location = New System.Drawing.Point(62, 84)
+        Me.txtrut.MaxLength = 12
         Me.txtrut.Name = "txtrut"
         Me.txtrut.Size = New System.Drawing.Size(180, 24)
         Me.txtrut.TabIndex = 3
@@ -69,6 +73,7 @@ Partial Class AgregarProveedor
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(25, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(31, 18)
@@ -77,6 +82,7 @@ Partial Class AgregarProveedor
         '
         'txtnombre
         '
+        Me.txtnombre.ForeColor = System.Drawing.Color.Black
         Me.txtnombre.Location = New System.Drawing.Point(28, 49)
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(339, 24)
@@ -86,6 +92,7 @@ Partial Class AgregarProveedor
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(25, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(161, 18)
@@ -103,6 +110,7 @@ Partial Class AgregarProveedor
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Goldenrod
         Me.GroupBox2.Controls.Add(Me.txtestadocuenta)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.txtemail)
@@ -112,6 +120,7 @@ Partial Class AgregarProveedor
         Me.GroupBox2.Controls.Add(Me.txttelefono)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(12, 139)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(479, 233)
@@ -121,6 +130,7 @@ Partial Class AgregarProveedor
         '
         'txtestadocuenta
         '
+        Me.txtestadocuenta.ForeColor = System.Drawing.Color.Black
         Me.txtestadocuenta.Location = New System.Drawing.Point(165, 158)
         Me.txtestadocuenta.Name = "txtestadocuenta"
         Me.txtestadocuenta.Size = New System.Drawing.Size(96, 24)
@@ -130,6 +140,7 @@ Partial Class AgregarProveedor
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(18, 161)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(141, 18)
@@ -138,6 +149,7 @@ Partial Class AgregarProveedor
         '
         'txtemail
         '
+        Me.txtemail.ForeColor = System.Drawing.Color.Black
         Me.txtemail.Location = New System.Drawing.Point(90, 118)
         Me.txtemail.Name = "txtemail"
         Me.txtemail.Size = New System.Drawing.Size(351, 24)
@@ -147,6 +159,7 @@ Partial Class AgregarProveedor
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(18, 121)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(50, 18)
@@ -155,6 +168,7 @@ Partial Class AgregarProveedor
         '
         'txtdireccion
         '
+        Me.txtdireccion.ForeColor = System.Drawing.Color.Black
         Me.txtdireccion.Location = New System.Drawing.Point(90, 78)
         Me.txtdireccion.Name = "txtdireccion"
         Me.txtdireccion.Size = New System.Drawing.Size(351, 24)
@@ -164,6 +178,7 @@ Partial Class AgregarProveedor
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.Location = New System.Drawing.Point(18, 81)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 18)
@@ -172,7 +187,9 @@ Partial Class AgregarProveedor
         '
         'txttelefono
         '
+        Me.txttelefono.ForeColor = System.Drawing.Color.Black
         Me.txttelefono.Location = New System.Drawing.Point(90, 39)
+        Me.txttelefono.MaxLength = 10
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(180, 24)
         Me.txttelefono.TabIndex = 3
@@ -181,6 +198,7 @@ Partial Class AgregarProveedor
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(18, 42)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 18)
@@ -218,6 +236,7 @@ Partial Class AgregarProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Khaki
         Me.ClientSize = New System.Drawing.Size(503, 425)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -225,6 +244,7 @@ Partial Class AgregarProveedor
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AgregarProveedor"

@@ -32,10 +32,11 @@ Partial Class Facturar
         Me.gbproveedor = New System.Windows.Forms.GroupBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.txtpruebacod = New System.Windows.Forms.TextBox()
-        Me.txtpruebaprod = New System.Windows.Forms.TextBox()
         Me.libcodprod = New System.Windows.Forms.ListBox()
+        Me.txtpruebaprod = New System.Windows.Forms.TextBox()
+        Me.txtpruebacod = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.libprod = New System.Windows.Forms.ListBox()
         Me.btnañadeventa = New System.Windows.Forms.Button()
         Me.txtcantidad = New System.Windows.Forms.TextBox()
         Me.label = New System.Windows.Forms.Label()
@@ -52,7 +53,6 @@ Partial Class Facturar
         Me.Label4 = New System.Windows.Forms.Label()
         Me.brnsalir = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.libprod = New System.Windows.Forms.ListBox()
         Me.GroupBox1.SuspendLayout()
         Me.gbproveedor.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -153,9 +153,9 @@ Partial Class Facturar
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.TabPage1.Controls.Add(Me.txtpruebacod)
-        Me.TabPage1.Controls.Add(Me.txtpruebaprod)
         Me.TabPage1.Controls.Add(Me.libcodprod)
+        Me.TabPage1.Controls.Add(Me.txtpruebaprod)
+        Me.TabPage1.Controls.Add(Me.txtpruebacod)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.libprod)
         Me.TabPage1.Controls.Add(Me.btnañadeventa)
@@ -169,22 +169,6 @@ Partial Class Facturar
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Producto"
         '
-        'txtpruebacod
-        '
-        Me.txtpruebacod.Location = New System.Drawing.Point(445, 243)
-        Me.txtpruebacod.Name = "txtpruebacod"
-        Me.txtpruebacod.Size = New System.Drawing.Size(141, 29)
-        Me.txtpruebacod.TabIndex = 11
-        Me.txtpruebacod.Visible = False
-        '
-        'txtpruebaprod
-        '
-        Me.txtpruebaprod.Location = New System.Drawing.Point(516, 165)
-        Me.txtpruebaprod.Name = "txtpruebaprod"
-        Me.txtpruebaprod.Size = New System.Drawing.Size(100, 29)
-        Me.txtpruebaprod.TabIndex = 10
-        Me.txtpruebaprod.Visible = False
-        '
         'libcodprod
         '
         Me.libcodprod.FormattingEnabled = True
@@ -195,6 +179,22 @@ Partial Class Facturar
         Me.libcodprod.TabIndex = 9
         Me.libcodprod.Visible = False
         '
+        'txtpruebaprod
+        '
+        Me.txtpruebaprod.Location = New System.Drawing.Point(516, 165)
+        Me.txtpruebaprod.Name = "txtpruebaprod"
+        Me.txtpruebaprod.Size = New System.Drawing.Size(100, 29)
+        Me.txtpruebaprod.TabIndex = 10
+        Me.txtpruebaprod.Visible = False
+        '
+        'txtpruebacod
+        '
+        Me.txtpruebacod.Location = New System.Drawing.Point(445, 243)
+        Me.txtpruebacod.Name = "txtpruebacod"
+        Me.txtpruebacod.Size = New System.Drawing.Size(141, 29)
+        Me.txtpruebacod.TabIndex = 11
+        Me.txtpruebacod.Visible = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -204,6 +204,15 @@ Partial Class Facturar
         Me.Label1.Size = New System.Drawing.Size(101, 23)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Elija Producto"
+        '
+        'libprod
+        '
+        Me.libprod.FormattingEnabled = True
+        Me.libprod.ItemHeight = 21
+        Me.libprod.Location = New System.Drawing.Point(212, 14)
+        Me.libprod.Name = "libprod"
+        Me.libprod.Size = New System.Drawing.Size(184, 109)
+        Me.libprod.TabIndex = 7
         '
         'btnañadeventa
         '
@@ -285,7 +294,7 @@ Partial Class Facturar
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(3, 99)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(513, 158)
+        Me.DataGridView2.Size = New System.Drawing.Size(816, 324)
         Me.DataGridView2.TabIndex = 0
         '
         'btnañadirprov
@@ -392,15 +401,6 @@ Partial Class Facturar
         Me.Label2.Size = New System.Drawing.Size(120, 31)
         Me.Label2.TabIndex = 29
         Me.Label2.Text = "FACTURAR"
-        '
-        'libprod
-        '
-        Me.libprod.FormattingEnabled = True
-        Me.libprod.ItemHeight = 21
-        Me.libprod.Location = New System.Drawing.Point(212, 14)
-        Me.libprod.Name = "libprod"
-        Me.libprod.Size = New System.Drawing.Size(184, 109)
-        Me.libprod.TabIndex = 7
         '
         'Facturar
         '

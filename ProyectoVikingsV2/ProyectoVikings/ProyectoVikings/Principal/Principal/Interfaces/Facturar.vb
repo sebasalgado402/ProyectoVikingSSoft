@@ -27,18 +27,7 @@ Public Class Facturar
         End If
 
         conex.Open()
-        Try
-            Dim consulta As String
-            consulta = "Select * from productos"
-            da = New MySqlDataAdapter(consulta, conex)
-            dataset = New DataSet
-            dataset.Tables.Add("productos")
-            da.Fill(dataset.Tables("productos"))
-            libprod.DataSource = dataset.Tables("productos")
-            libprod.DisplayMember = "nombprod"
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+     
         Try
             Dim consulta As String
             consulta = "Select * from productos"
@@ -217,5 +206,25 @@ Public Class Facturar
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+  
+    Private Sub txtpruebacod_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtpruebacod.TextChanged
+
+    End Sub
+    Private Sub libcodprod_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles libcodprod.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub txtcantidad_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtcantidad.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
     End Sub
 End Class

@@ -24,13 +24,12 @@ Partial Class fmrPrincipal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim GroupBox1 As System.Windows.Forms.GroupBox
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fmrPrincipal))
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.btnfacturar = New System.Windows.Forms.Button()
@@ -41,9 +40,28 @@ Partial Class fmrPrincipal
         Me.btnborraproducto = New System.Windows.Forms.Button()
         Me.btnagregaproducto = New System.Windows.Forms.Button()
         Me.groupbproductoLista = New System.Windows.Forms.GroupBox()
+        Me.Pmodprod = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.txtmodimpuesto = New System.Windows.Forms.TextBox()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.txtmodprecio = New System.Windows.Forms.TextBox()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.txtmodexistenciaproducto = New System.Windows.Forms.TextBox()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.txtmodnombproducto = New System.Windows.Forms.TextBox()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.txtmodprodcod = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.dtglistaproducto = New System.Windows.Forms.DataGridView()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtcodproducto = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -56,11 +74,24 @@ Partial Class fmrPrincipal
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.dtglistaproducto = New System.Windows.Forms.DataGridView()
         Me.txtprueba = New System.Windows.Forms.TextBox()
         Me.groupbclientelista = New System.Windows.Forms.GroupBox()
+        Me.pmodificarClientes = New System.Windows.Forms.Panel()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.txtmodestadocuentacliente = New System.Windows.Forms.TextBox()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.txtmodtelefcliente = New System.Windows.Forms.TextBox()
+        Me.txtmoddireccliente = New System.Windows.Forms.TextBox()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.txtmodnombcliente = New System.Windows.Forms.TextBox()
+        Me.btnmodificarclientes = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.dtgclientes = New System.Windows.Forms.DataGridView()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.dtgclientes = New System.Windows.Forms.DataGridView()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.txtbuscacliente = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -74,13 +105,29 @@ Partial Class fmrPrincipal
         Me.btnagregacliente = New System.Windows.Forms.Button()
         Me.btnmodificacliente = New System.Windows.Forms.Button()
         Me.groupblistaproveedores = New System.Windows.Forms.GroupBox()
+        Me.pmodificarprov = New System.Windows.Forms.Panel()
+        Me.btnmodificarprov = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.txtmodestadocuentaprov = New System.Windows.Forms.TextBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.txtmodemailprov = New System.Windows.Forms.TextBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.txtmodtelprov = New System.Windows.Forms.TextBox()
+        Me.txtmoddirecprov = New System.Windows.Forms.TextBox()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.txtmodrutprov = New System.Windows.Forms.TextBox()
+        Me.txtmodnombreprov = New System.Windows.Forms.TextBox()
+        Me.dtglistaproveedores = New System.Windows.Forms.DataGridView()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.txtbuscarnombreprov = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtbuscarrutprov = New System.Windows.Forms.TextBox()
-        Me.dtglistaproveedores = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -94,34 +141,47 @@ Partial Class fmrPrincipal
         Me.btnagregaprov = New System.Windows.Forms.Button()
         Me.btnmodificaprov = New System.Windows.Forms.Button()
         Me.panelventana = New System.Windows.Forms.Panel()
+        Me.pbminimizar = New System.Windows.Forms.PictureBox()
+        Me.pbcerrar = New System.Windows.Forms.PictureBox()
+        Me.pbrestaurar = New System.Windows.Forms.PictureBox()
+        Me.pbmaximizar = New System.Windows.Forms.PictureBox()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.LbHora = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lbfecha = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.pbminimizar = New System.Windows.Forms.PictureBox()
-        Me.pbmaximizar = New System.Windows.Forms.PictureBox()
-        Me.pbcerrar = New System.Windows.Forms.PictureBox()
-        Me.pbrestaurar = New System.Windows.Forms.PictureBox()
-        Me.pblogo = New System.Windows.Forms.PictureBox()
+        Me.lbrecibecat = New System.Windows.Forms.ListBox()
+        Me.lbrecibeprov = New System.Windows.Forms.ListBox()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.btnagregarcat = New System.Windows.Forms.Button()
+        Me.brnagregarprov = New System.Windows.Forms.Button()
+        Me.txtrecibeidprov = New System.Windows.Forms.TextBox()
+        Me.txtrecibeidcliente = New System.Windows.Forms.TextBox()
         GroupBox1 = New System.Windows.Forms.GroupBox()
         GroupBox1.SuspendLayout()
         Me.groupbproductoLista.SuspendLayout()
-        CType(Me.dtglistaproducto, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Pmodprod.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.dtglistaproducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupbclientelista.SuspendLayout()
+        Me.pmodificarClientes.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         CType(Me.dtgclientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.groupblistaproveedores.SuspendLayout()
+        Me.pmodificarprov.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         CType(Me.dtglistaproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.panelventana.SuspendLayout()
         CType(Me.pbminimizar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbmaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbcerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbrestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pblogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbmaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -257,9 +317,9 @@ Partial Class fmrPrincipal
         '
         'groupbproductoLista
         '
+        Me.groupbproductoLista.Controls.Add(Me.Pmodprod)
         Me.groupbproductoLista.Controls.Add(Me.Label10)
         Me.groupbproductoLista.Controls.Add(Me.Label9)
-        Me.groupbproductoLista.Controls.Add(Me.dtglistaproducto)
         Me.groupbproductoLista.Controls.Add(Me.Label7)
         Me.groupbproductoLista.Controls.Add(Me.txtcodproducto)
         Me.groupbproductoLista.Controls.Add(Me.Label6)
@@ -269,6 +329,7 @@ Partial Class fmrPrincipal
         Me.groupbproductoLista.Controls.Add(Me.btnagregaproducto)
         Me.groupbproductoLista.Controls.Add(Me.btnmodificaproducto)
         Me.groupbproductoLista.Controls.Add(Me.Panel1)
+        Me.groupbproductoLista.Controls.Add(Me.dtglistaproducto)
         Me.groupbproductoLista.Controls.Add(Me.txtprueba)
         Me.groupbproductoLista.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupbproductoLista.ForeColor = System.Drawing.Color.Black
@@ -280,6 +341,227 @@ Partial Class fmrPrincipal
         Me.groupbproductoLista.TabStop = False
         Me.groupbproductoLista.Text = "Lista de Productos"
         Me.groupbproductoLista.Visible = False
+        '
+        'Pmodprod
+        '
+        Me.Pmodprod.BackColor = System.Drawing.Color.CadetBlue
+        Me.Pmodprod.Controls.Add(Me.Button8)
+        Me.Pmodprod.Controls.Add(Me.Button9)
+        Me.Pmodprod.Controls.Add(Me.GroupBox4)
+        Me.Pmodprod.Controls.Add(Me.GroupBox6)
+        Me.Pmodprod.Controls.Add(Me.GroupBox8)
+        Me.Pmodprod.Location = New System.Drawing.Point(12, 34)
+        Me.Pmodprod.Name = "Pmodprod"
+        Me.Pmodprod.Size = New System.Drawing.Size(657, 529)
+        Me.Pmodprod.TabIndex = 30
+        Me.Pmodprod.Visible = False
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(19, 466)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(102, 48)
+        Me.Button8.TabIndex = 27
+        Me.Button8.Text = "Modificar"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(556, 466)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(96, 48)
+        Me.Button9.TabIndex = 26
+        Me.Button9.Text = "Cerrar"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.TextBox1)
+        Me.GroupBox4.Controls.Add(Me.Label39)
+        Me.GroupBox4.Controls.Add(Me.Label40)
+        Me.GroupBox4.Controls.Add(Me.txtmodimpuesto)
+        Me.GroupBox4.Controls.Add(Me.Label41)
+        Me.GroupBox4.Controls.Add(Me.txtmodprecio)
+        Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox4.ForeColor = System.Drawing.Color.White
+        Me.GroupBox4.Location = New System.Drawing.Point(8, 293)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(644, 140)
+        Me.GroupBox4.TabIndex = 25
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Detalle de Precio"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(179, 110)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(105, 24)
+        Me.TextBox1.TabIndex = 6
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.BackColor = System.Drawing.Color.Transparent
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(20, 113)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(153, 18)
+        Me.Label39.TabIndex = 5
+        Me.Label39.Text = "Precio Costo con Imp"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.BackColor = System.Drawing.Color.Transparent
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Location = New System.Drawing.Point(87, 68)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(86, 18)
+        Me.Label40.TabIndex = 3
+        Me.Label40.Text = "Impuesto %"
+        '
+        'txtmodimpuesto
+        '
+        Me.txtmodimpuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodimpuesto.Location = New System.Drawing.Point(179, 65)
+        Me.txtmodimpuesto.Name = "txtmodimpuesto"
+        Me.txtmodimpuesto.Size = New System.Drawing.Size(60, 24)
+        Me.txtmodimpuesto.TabIndex = 2
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.BackColor = System.Drawing.Color.Transparent
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(77, 26)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(96, 18)
+        Me.Label41.TabIndex = 1
+        Me.Label41.Text = "Precio Costo"
+        '
+        'txtmodprecio
+        '
+        Me.txtmodprecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodprecio.Location = New System.Drawing.Point(179, 23)
+        Me.txtmodprecio.Name = "txtmodprecio"
+        Me.txtmodprecio.Size = New System.Drawing.Size(105, 24)
+        Me.txtmodprecio.TabIndex = 0
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.Label45)
+        Me.GroupBox6.Controls.Add(Me.txtmodexistenciaproducto)
+        Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox6.ForeColor = System.Drawing.Color.White
+        Me.GroupBox6.Location = New System.Drawing.Point(8, 193)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(644, 94)
+        Me.GroupBox6.TabIndex = 24
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Existencias"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.BackColor = System.Drawing.Color.Transparent
+        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.Location = New System.Drawing.Point(78, 39)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(75, 18)
+        Me.Label45.TabIndex = 1
+        Me.Label45.Text = "Existencia"
+        '
+        'txtmodexistenciaproducto
+        '
+        Me.txtmodexistenciaproducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodexistenciaproducto.Location = New System.Drawing.Point(159, 36)
+        Me.txtmodexistenciaproducto.Name = "txtmodexistenciaproducto"
+        Me.txtmodexistenciaproducto.Size = New System.Drawing.Size(111, 24)
+        Me.txtmodexistenciaproducto.TabIndex = 0
+        '
+        'GroupBox8
+        '
+        Me.GroupBox8.Controls.Add(Me.Button10)
+        Me.GroupBox8.Controls.Add(Me.btnagregarcat)
+        Me.GroupBox8.Controls.Add(Me.brnagregarprov)
+        Me.GroupBox8.Controls.Add(Me.lbrecibeprov)
+        Me.GroupBox8.Controls.Add(Me.lbrecibecat)
+        Me.GroupBox8.Controls.Add(Me.Label50)
+        Me.GroupBox8.Controls.Add(Me.Label54)
+        Me.GroupBox8.Controls.Add(Me.Label55)
+        Me.GroupBox8.Controls.Add(Me.txtmodnombproducto)
+        Me.GroupBox8.Controls.Add(Me.Label56)
+        Me.GroupBox8.Controls.Add(Me.txtmodprodcod)
+        Me.GroupBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox8.ForeColor = System.Drawing.Color.White
+        Me.GroupBox8.Location = New System.Drawing.Point(8, 12)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(644, 180)
+        Me.GroupBox8.TabIndex = 23
+        Me.GroupBox8.TabStop = False
+        Me.GroupBox8.Text = "Datos Básicos"
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.BackColor = System.Drawing.Color.Transparent
+        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label50.Location = New System.Drawing.Point(570, 98)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(72, 18)
+        Me.Label50.TabIndex = 7
+        Me.Label50.Text = "Categoría"
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.BackColor = System.Drawing.Color.Transparent
+        Me.Label54.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label54.Location = New System.Drawing.Point(4, 98)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(77, 18)
+        Me.Label54.TabIndex = 5
+        Me.Label54.Text = "Proveedor"
+        '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.BackColor = System.Drawing.Color.Transparent
+        Me.Label55.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.Location = New System.Drawing.Point(242, 24)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(150, 18)
+        Me.Label55.TabIndex = 3
+        Me.Label55.Text = "Nombre del Producto"
+        '
+        'txtmodnombproducto
+        '
+        Me.txtmodnombproducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodnombproducto.Location = New System.Drawing.Point(398, 21)
+        Me.txtmodnombproducto.Name = "txtmodnombproducto"
+        Me.txtmodnombproducto.Size = New System.Drawing.Size(171, 24)
+        Me.txtmodnombproducto.TabIndex = 2
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.BackColor = System.Drawing.Color.Transparent
+        Me.Label56.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label56.Location = New System.Drawing.Point(5, 24)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(56, 18)
+        Me.Label56.TabIndex = 1
+        Me.Label56.Text = "Código"
+        '
+        'txtmodprodcod
+        '
+        Me.txtmodprodcod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodprodcod.Location = New System.Drawing.Point(67, 21)
+        Me.txtmodprodcod.Name = "txtmodprodcod"
+        Me.txtmodprodcod.Size = New System.Drawing.Size(141, 24)
+        Me.txtmodprodcod.TabIndex = 0
         '
         'Label10
         '
@@ -303,43 +585,6 @@ Partial Class fmrPrincipal
         Me.Label9.Size = New System.Drawing.Size(198, 31)
         Me.Label9.TabIndex = 22
         Me.Label9.Text = "Lista de Productos"
-        '
-        'dtglistaproducto
-        '
-        Me.dtglistaproducto.AllowUserToAddRows = False
-        Me.dtglistaproducto.AllowUserToDeleteRows = False
-        Me.dtglistaproducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dtglistaproducto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
-        Me.dtglistaproducto.BackgroundColor = System.Drawing.Color.Teal
-        Me.dtglistaproducto.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dtglistaproducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtglistaproducto.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dtglistaproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dtglistaproducto.ColumnHeadersVisible = False
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.NullValue = Nothing
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Turquoise
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtglistaproducto.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dtglistaproducto.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.dtglistaproducto.Location = New System.Drawing.Point(6, 137)
-        Me.dtglistaproducto.Name = "dtglistaproducto"
-        Me.dtglistaproducto.ReadOnly = True
-        Me.dtglistaproducto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dtglistaproducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dtglistaproducto.Size = New System.Drawing.Size(1000, 435)
-        Me.dtglistaproducto.TabIndex = 20
         '
         'Label7
         '
@@ -469,6 +714,43 @@ Partial Class fmrPrincipal
         Me.Label8.TabIndex = 22
         Me.Label8.Text = "CodProducto"
         '
+        'dtglistaproducto
+        '
+        Me.dtglistaproducto.AllowUserToAddRows = False
+        Me.dtglistaproducto.AllowUserToDeleteRows = False
+        Me.dtglistaproducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dtglistaproducto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
+        Me.dtglistaproducto.BackgroundColor = System.Drawing.Color.Teal
+        Me.dtglistaproducto.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dtglistaproducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtglistaproducto.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        Me.dtglistaproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dtglistaproducto.ColumnHeadersVisible = False
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.NullValue = Nothing
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Turquoise
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtglistaproducto.DefaultCellStyle = DataGridViewCellStyle14
+        Me.dtglistaproducto.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.dtglistaproducto.Location = New System.Drawing.Point(6, 137)
+        Me.dtglistaproducto.Name = "dtglistaproducto"
+        Me.dtglistaproducto.ReadOnly = True
+        Me.dtglistaproducto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dtglistaproducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dtglistaproducto.Size = New System.Drawing.Size(1000, 435)
+        Me.dtglistaproducto.TabIndex = 20
+        '
         'txtprueba
         '
         Me.txtprueba.Location = New System.Drawing.Point(364, 262)
@@ -478,9 +760,10 @@ Partial Class fmrPrincipal
         '
         'groupbclientelista
         '
+        Me.groupbclientelista.Controls.Add(Me.pmodificarClientes)
+        Me.groupbclientelista.Controls.Add(Me.dtgclientes)
         Me.groupbclientelista.Controls.Add(Me.Label31)
         Me.groupbclientelista.Controls.Add(Me.Label22)
-        Me.groupbclientelista.Controls.Add(Me.dtgclientes)
         Me.groupbclientelista.Controls.Add(Me.Label23)
         Me.groupbclientelista.Controls.Add(Me.txtbuscacliente)
         Me.groupbclientelista.Controls.Add(Me.Panel3)
@@ -497,6 +780,174 @@ Partial Class fmrPrincipal
         Me.groupbclientelista.TabStop = False
         Me.groupbclientelista.Text = "Lista de Clientes"
         Me.groupbclientelista.Visible = False
+        '
+        'pmodificarClientes
+        '
+        Me.pmodificarClientes.BackColor = System.Drawing.Color.CadetBlue
+        Me.pmodificarClientes.Controls.Add(Me.GroupBox5)
+        Me.pmodificarClientes.Controls.Add(Me.btnmodificarclientes)
+        Me.pmodificarClientes.Controls.Add(Me.Button7)
+        Me.pmodificarClientes.Location = New System.Drawing.Point(10, 34)
+        Me.pmodificarClientes.Name = "pmodificarClientes"
+        Me.pmodificarClientes.Size = New System.Drawing.Size(530, 299)
+        Me.pmodificarClientes.TabIndex = 33
+        Me.pmodificarClientes.Visible = False
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.txtrecibeidcliente)
+        Me.GroupBox5.Controls.Add(Me.txtmodestadocuentacliente)
+        Me.GroupBox5.Controls.Add(Me.Label44)
+        Me.GroupBox5.Controls.Add(Me.txtmodtelefcliente)
+        Me.GroupBox5.Controls.Add(Me.txtmoddireccliente)
+        Me.GroupBox5.Controls.Add(Me.Label51)
+        Me.GroupBox5.Controls.Add(Me.Label52)
+        Me.GroupBox5.Controls.Add(Me.Label53)
+        Me.GroupBox5.Controls.Add(Me.txtmodnombcliente)
+        Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox5.ForeColor = System.Drawing.Color.White
+        Me.GroupBox5.Location = New System.Drawing.Point(9, 12)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(511, 220)
+        Me.GroupBox5.TabIndex = 23
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Modificar Clientes"
+        '
+        'txtmodestadocuentacliente
+        '
+        Me.txtmodestadocuentacliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodestadocuentacliente.ForeColor = System.Drawing.Color.Black
+        Me.txtmodestadocuentacliente.Location = New System.Drawing.Point(209, 168)
+        Me.txtmodestadocuentacliente.Name = "txtmodestadocuentacliente"
+        Me.txtmodestadocuentacliente.Size = New System.Drawing.Size(68, 24)
+        Me.txtmodestadocuentacliente.TabIndex = 16
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.BackColor = System.Drawing.Color.Transparent
+        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(76, 171)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(130, 18)
+        Me.Label44.TabIndex = 15
+        Me.Label44.Text = "Estado de Cuenta:"
+        '
+        'txtmodtelefcliente
+        '
+        Me.txtmodtelefcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodtelefcliente.ForeColor = System.Drawing.Color.Black
+        Me.txtmodtelefcliente.Location = New System.Drawing.Point(209, 128)
+        Me.txtmodtelefcliente.MaxLength = 12
+        Me.txtmodtelefcliente.Name = "txtmodtelefcliente"
+        Me.txtmodtelefcliente.Size = New System.Drawing.Size(104, 24)
+        Me.txtmodtelefcliente.TabIndex = 12
+        '
+        'txtmoddireccliente
+        '
+        Me.txtmoddireccliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmoddireccliente.ForeColor = System.Drawing.Color.Black
+        Me.txtmoddireccliente.Location = New System.Drawing.Point(209, 92)
+        Me.txtmoddireccliente.Name = "txtmoddireccliente"
+        Me.txtmoddireccliente.Size = New System.Drawing.Size(213, 24)
+        Me.txtmoddireccliente.TabIndex = 11
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.BackColor = System.Drawing.Color.Transparent
+        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.Location = New System.Drawing.Point(136, 132)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(70, 18)
+        Me.Label51.TabIndex = 7
+        Me.Label51.Text = "Telefono:"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.BackColor = System.Drawing.Color.Transparent
+        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.Location = New System.Drawing.Point(132, 95)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(75, 18)
+        Me.Label52.TabIndex = 5
+        Me.Label52.Text = "Dirección:"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.BackColor = System.Drawing.Color.Transparent
+        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Location = New System.Drawing.Point(141, 58)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(66, 18)
+        Me.Label53.TabIndex = 3
+        Me.Label53.Text = "Nombre:"
+        '
+        'txtmodnombcliente
+        '
+        Me.txtmodnombcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodnombcliente.ForeColor = System.Drawing.Color.Black
+        Me.txtmodnombcliente.Location = New System.Drawing.Point(209, 55)
+        Me.txtmodnombcliente.Name = "txtmodnombcliente"
+        Me.txtmodnombcliente.Size = New System.Drawing.Size(141, 24)
+        Me.txtmodnombcliente.TabIndex = 0
+        '
+        'btnmodificarclientes
+        '
+        Me.btnmodificarclientes.Location = New System.Drawing.Point(14, 238)
+        Me.btnmodificarclientes.Name = "btnmodificarclientes"
+        Me.btnmodificarclientes.Size = New System.Drawing.Size(110, 48)
+        Me.btnmodificarclientes.TabIndex = 27
+        Me.btnmodificarclientes.Text = "Modificar"
+        Me.btnmodificarclientes.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(419, 238)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(96, 48)
+        Me.Button7.TabIndex = 26
+        Me.Button7.Text = "Cerrar"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'dtgclientes
+        '
+        Me.dtgclientes.AllowUserToAddRows = False
+        Me.dtgclientes.AllowUserToDeleteRows = False
+        Me.dtgclientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dtgclientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
+        Me.dtgclientes.BackgroundColor = System.Drawing.Color.Teal
+        Me.dtgclientes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dtgclientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgclientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+        Me.dtgclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dtgclientes.ColumnHeadersVisible = False
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle16.NullValue = Nothing
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Turquoise
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgclientes.DefaultCellStyle = DataGridViewCellStyle16
+        Me.dtgclientes.GridColor = System.Drawing.Color.Teal
+        Me.dtgclientes.Location = New System.Drawing.Point(6, 137)
+        Me.dtgclientes.Name = "dtgclientes"
+        Me.dtgclientes.ReadOnly = True
+        Me.dtgclientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dtgclientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dtgclientes.Size = New System.Drawing.Size(1000, 435)
+        Me.dtgclientes.TabIndex = 28
         '
         'Label31
         '
@@ -520,43 +971,6 @@ Partial Class fmrPrincipal
         Me.Label22.Size = New System.Drawing.Size(127, 31)
         Me.Label22.TabIndex = 30
         Me.Label22.Text = "Buscar Por:"
-        '
-        'dtgclientes
-        '
-        Me.dtgclientes.AllowUserToAddRows = False
-        Me.dtgclientes.AllowUserToDeleteRows = False
-        Me.dtgclientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dtgclientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
-        Me.dtgclientes.BackgroundColor = System.Drawing.Color.Teal
-        Me.dtgclientes.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dtgclientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Red
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Cyan
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtgclientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dtgclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dtgclientes.ColumnHeadersVisible = False
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.NullValue = Nothing
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Turquoise
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtgclientes.DefaultCellStyle = DataGridViewCellStyle4
-        Me.dtgclientes.GridColor = System.Drawing.Color.Teal
-        Me.dtgclientes.Location = New System.Drawing.Point(6, 137)
-        Me.dtgclientes.Name = "dtgclientes"
-        Me.dtgclientes.ReadOnly = True
-        Me.dtgclientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dtgclientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dtgclientes.Size = New System.Drawing.Size(1000, 435)
-        Me.dtgclientes.TabIndex = 28
         '
         'Label23
         '
@@ -700,13 +1114,14 @@ Partial Class fmrPrincipal
         'groupblistaproveedores
         '
         Me.groupblistaproveedores.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.groupblistaproveedores.Controls.Add(Me.pmodificarprov)
+        Me.groupblistaproveedores.Controls.Add(Me.dtglistaproveedores)
         Me.groupblistaproveedores.Controls.Add(Me.Label21)
         Me.groupblistaproveedores.Controls.Add(Me.Label18)
         Me.groupblistaproveedores.Controls.Add(Me.Label19)
         Me.groupblistaproveedores.Controls.Add(Me.txtbuscarnombreprov)
         Me.groupblistaproveedores.Controls.Add(Me.Label20)
         Me.groupblistaproveedores.Controls.Add(Me.txtbuscarrutprov)
-        Me.groupblistaproveedores.Controls.Add(Me.dtglistaproveedores)
         Me.groupblistaproveedores.Controls.Add(Me.Panel2)
         Me.groupblistaproveedores.Controls.Add(Me.Button15)
         Me.groupblistaproveedores.Controls.Add(Me.btnborraprov)
@@ -721,6 +1136,221 @@ Partial Class fmrPrincipal
         Me.groupblistaproveedores.TabStop = False
         Me.groupblistaproveedores.Text = "Lista de Proveedores"
         Me.groupblistaproveedores.Visible = False
+        '
+        'pmodificarprov
+        '
+        Me.pmodificarprov.BackColor = System.Drawing.Color.CadetBlue
+        Me.pmodificarprov.Controls.Add(Me.btnmodificarprov)
+        Me.pmodificarprov.Controls.Add(Me.Button5)
+        Me.pmodificarprov.Controls.Add(Me.GroupBox7)
+        Me.pmodificarprov.Location = New System.Drawing.Point(12, 37)
+        Me.pmodificarprov.Name = "pmodificarprov"
+        Me.pmodificarprov.Size = New System.Drawing.Size(535, 368)
+        Me.pmodificarprov.TabIndex = 32
+        Me.pmodificarprov.Visible = False
+        '
+        'btnmodificarprov
+        '
+        Me.btnmodificarprov.Location = New System.Drawing.Point(19, 308)
+        Me.btnmodificarprov.Name = "btnmodificarprov"
+        Me.btnmodificarprov.Size = New System.Drawing.Size(103, 48)
+        Me.btnmodificarprov.TabIndex = 27
+        Me.btnmodificarprov.Text = "Modificar"
+        Me.btnmodificarprov.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(424, 307)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(96, 48)
+        Me.Button5.TabIndex = 26
+        Me.Button5.Text = "Cerrar"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.txtrecibeidprov)
+        Me.GroupBox7.Controls.Add(Me.txtmodestadocuentaprov)
+        Me.GroupBox7.Controls.Add(Me.Label43)
+        Me.GroupBox7.Controls.Add(Me.txtmodemailprov)
+        Me.GroupBox7.Controls.Add(Me.Label37)
+        Me.GroupBox7.Controls.Add(Me.txtmodtelprov)
+        Me.GroupBox7.Controls.Add(Me.txtmoddirecprov)
+        Me.GroupBox7.Controls.Add(Me.Label49)
+        Me.GroupBox7.Controls.Add(Me.Label46)
+        Me.GroupBox7.Controls.Add(Me.Label47)
+        Me.GroupBox7.Controls.Add(Me.Label48)
+        Me.GroupBox7.Controls.Add(Me.txtmodrutprov)
+        Me.GroupBox7.Controls.Add(Me.txtmodnombreprov)
+        Me.GroupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox7.ForeColor = System.Drawing.Color.White
+        Me.GroupBox7.Location = New System.Drawing.Point(11, 9)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(513, 278)
+        Me.GroupBox7.TabIndex = 23
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Modificar Proveedores"
+        '
+        'txtmodestadocuentaprov
+        '
+        Me.txtmodestadocuentaprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodestadocuentaprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodestadocuentaprov.Location = New System.Drawing.Point(159, 234)
+        Me.txtmodestadocuentaprov.Name = "txtmodestadocuentaprov"
+        Me.txtmodestadocuentaprov.Size = New System.Drawing.Size(68, 24)
+        Me.txtmodestadocuentaprov.TabIndex = 16
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.BackColor = System.Drawing.Color.Transparent
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(31, 237)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(130, 18)
+        Me.Label43.TabIndex = 15
+        Me.Label43.Text = "Estado de Cuenta:"
+        '
+        'txtmodemailprov
+        '
+        Me.txtmodemailprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodemailprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodemailprov.Location = New System.Drawing.Point(159, 193)
+        Me.txtmodemailprov.Name = "txtmodemailprov"
+        Me.txtmodemailprov.Size = New System.Drawing.Size(171, 24)
+        Me.txtmodemailprov.TabIndex = 14
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.BackColor = System.Drawing.Color.Transparent
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(112, 196)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(49, 18)
+        Me.Label37.TabIndex = 13
+        Me.Label37.Text = "Email:"
+        '
+        'txtmodtelprov
+        '
+        Me.txtmodtelprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodtelprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodtelprov.Location = New System.Drawing.Point(159, 149)
+        Me.txtmodtelprov.MaxLength = 10
+        Me.txtmodtelprov.Name = "txtmodtelprov"
+        Me.txtmodtelprov.Size = New System.Drawing.Size(104, 24)
+        Me.txtmodtelprov.TabIndex = 12
+        '
+        'txtmoddirecprov
+        '
+        Me.txtmoddirecprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmoddirecprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmoddirecprov.Location = New System.Drawing.Point(159, 105)
+        Me.txtmoddirecprov.Name = "txtmoddirecprov"
+        Me.txtmoddirecprov.Size = New System.Drawing.Size(213, 24)
+        Me.txtmoddirecprov.TabIndex = 11
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.BackColor = System.Drawing.Color.Transparent
+        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(122, 63)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(35, 18)
+        Me.Label49.TabIndex = 10
+        Me.Label49.Text = "Rut:"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.BackColor = System.Drawing.Color.Transparent
+        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.Location = New System.Drawing.Point(91, 152)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(70, 18)
+        Me.Label46.TabIndex = 7
+        Me.Label46.Text = "Telefono:"
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.BackColor = System.Drawing.Color.Transparent
+        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.Location = New System.Drawing.Point(82, 108)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(75, 18)
+        Me.Label47.TabIndex = 5
+        Me.Label47.Text = "Dirección:"
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.BackColor = System.Drawing.Color.Transparent
+        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.Location = New System.Drawing.Point(91, 21)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(66, 18)
+        Me.Label48.TabIndex = 3
+        Me.Label48.Text = "Nombre:"
+        '
+        'txtmodrutprov
+        '
+        Me.txtmodrutprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodrutprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodrutprov.Location = New System.Drawing.Point(159, 60)
+        Me.txtmodrutprov.MaxLength = 12
+        Me.txtmodrutprov.Name = "txtmodrutprov"
+        Me.txtmodrutprov.Size = New System.Drawing.Size(187, 24)
+        Me.txtmodrutprov.TabIndex = 2
+        '
+        'txtmodnombreprov
+        '
+        Me.txtmodnombreprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodnombreprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodnombreprov.Location = New System.Drawing.Point(159, 18)
+        Me.txtmodnombreprov.Name = "txtmodnombreprov"
+        Me.txtmodnombreprov.Size = New System.Drawing.Size(141, 24)
+        Me.txtmodnombreprov.TabIndex = 0
+        '
+        'dtglistaproveedores
+        '
+        Me.dtglistaproveedores.AllowUserToAddRows = False
+        Me.dtglistaproveedores.AllowUserToDeleteRows = False
+        Me.dtglistaproveedores.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtglistaproveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dtglistaproveedores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
+        Me.dtglistaproveedores.BackgroundColor = System.Drawing.Color.Teal
+        Me.dtglistaproveedores.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dtglistaproveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtglistaproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        Me.dtglistaproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dtglistaproveedores.ColumnHeadersVisible = False
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle18.NullValue = Nothing
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Turquoise
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtglistaproveedores.DefaultCellStyle = DataGridViewCellStyle18
+        Me.dtglistaproveedores.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.dtglistaproveedores.Location = New System.Drawing.Point(6, 137)
+        Me.dtglistaproveedores.Name = "dtglistaproveedores"
+        Me.dtglistaproveedores.ReadOnly = True
+        Me.dtglistaproveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dtglistaproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dtglistaproveedores.Size = New System.Drawing.Size(1000, 435)
+        Me.dtglistaproveedores.TabIndex = 22
         '
         'Label21
         '
@@ -780,45 +1410,6 @@ Partial Class fmrPrincipal
         Me.txtbuscarrutprov.Name = "txtbuscarrutprov"
         Me.txtbuscarrutprov.Size = New System.Drawing.Size(163, 33)
         Me.txtbuscarrutprov.TabIndex = 24
-        '
-        'dtglistaproveedores
-        '
-        Me.dtglistaproveedores.AllowUserToAddRows = False
-        Me.dtglistaproveedores.AllowUserToDeleteRows = False
-        Me.dtglistaproveedores.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtglistaproveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dtglistaproveedores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
-        Me.dtglistaproveedores.BackgroundColor = System.Drawing.Color.Teal
-        Me.dtglistaproveedores.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dtglistaproveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Red
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Cyan
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtglistaproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.dtglistaproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dtglistaproveedores.ColumnHeadersVisible = False
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.NullValue = Nothing
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Turquoise
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtglistaproveedores.DefaultCellStyle = DataGridViewCellStyle6
-        Me.dtglistaproveedores.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.dtglistaproveedores.Location = New System.Drawing.Point(6, 137)
-        Me.dtglistaproveedores.Name = "dtglistaproveedores"
-        Me.dtglistaproveedores.ReadOnly = True
-        Me.dtglistaproveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dtglistaproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dtglistaproveedores.Size = New System.Drawing.Size(1000, 435)
-        Me.dtglistaproveedores.TabIndex = 22
         '
         'Panel2
         '
@@ -973,6 +1564,55 @@ Partial Class fmrPrincipal
         Me.panelventana.Size = New System.Drawing.Size(162, 80)
         Me.panelventana.TabIndex = 3
         '
+        'pbminimizar
+        '
+        Me.pbminimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbminimizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.pbminimizar.Image = Global.Principal.My.Resources.Resources.Minimize_Window_2_48px
+        Me.pbminimizar.Location = New System.Drawing.Point(17, 21)
+        Me.pbminimizar.Name = "pbminimizar"
+        Me.pbminimizar.Size = New System.Drawing.Size(40, 40)
+        Me.pbminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbminimizar.TabIndex = 2
+        Me.pbminimizar.TabStop = False
+        '
+        'pbcerrar
+        '
+        Me.pbcerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbcerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.pbcerrar.Image = Global.Principal.My.Resources.Resources.Close_Window__2_48px
+        Me.pbcerrar.Location = New System.Drawing.Point(110, 21)
+        Me.pbcerrar.Name = "pbcerrar"
+        Me.pbcerrar.Size = New System.Drawing.Size(40, 40)
+        Me.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbcerrar.TabIndex = 0
+        Me.pbcerrar.TabStop = False
+        '
+        'pbrestaurar
+        '
+        Me.pbrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbrestaurar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.pbrestaurar.Image = Global.Principal.My.Resources.Resources.Restore_Window_2_48px
+        Me.pbrestaurar.Location = New System.Drawing.Point(63, 21)
+        Me.pbrestaurar.Name = "pbrestaurar"
+        Me.pbrestaurar.Size = New System.Drawing.Size(40, 40)
+        Me.pbrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbrestaurar.TabIndex = 1
+        Me.pbrestaurar.TabStop = False
+        Me.pbrestaurar.Visible = False
+        '
+        'pbmaximizar
+        '
+        Me.pbmaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbmaximizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.pbmaximizar.Image = Global.Principal.My.Resources.Resources.Maximize_Window_2_48px
+        Me.pbmaximizar.Location = New System.Drawing.Point(63, 21)
+        Me.pbmaximizar.Name = "pbmaximizar"
+        Me.pbmaximizar.Size = New System.Drawing.Size(40, 40)
+        Me.pbmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbmaximizar.TabIndex = 4
+        Me.pbmaximizar.TabStop = False
+        '
         'Label30
         '
         Me.Label30.AutoSize = True
@@ -1035,73 +1675,78 @@ Partial Class fmrPrincipal
         Me.Label33.TabIndex = 29
         Me.Label33.Text = "¡¡Bienvenido!!"
         '
-        'pbminimizar
+        'lbrecibecat
         '
-        Me.pbminimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pbminimizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.pbminimizar.Image = Global.Principal.My.Resources.Resources.Minimize_Window_2_48px
-        Me.pbminimizar.Location = New System.Drawing.Point(17, 21)
-        Me.pbminimizar.Name = "pbminimizar"
-        Me.pbminimizar.Size = New System.Drawing.Size(40, 40)
-        Me.pbminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbminimizar.TabIndex = 2
-        Me.pbminimizar.TabStop = False
+        Me.lbrecibecat.FormattingEnabled = True
+        Me.lbrecibecat.ItemHeight = 18
+        Me.lbrecibecat.Location = New System.Drawing.Point(448, 63)
+        Me.lbrecibecat.Name = "lbrecibecat"
+        Me.lbrecibecat.Size = New System.Drawing.Size(120, 94)
+        Me.lbrecibecat.TabIndex = 8
         '
-        'pbmaximizar
+        'lbrecibeprov
         '
-        Me.pbmaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pbmaximizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.pbmaximizar.Image = Global.Principal.My.Resources.Resources.Maximize_Window_2_48px
-        Me.pbmaximizar.Location = New System.Drawing.Point(63, 21)
-        Me.pbmaximizar.Name = "pbmaximizar"
-        Me.pbmaximizar.Size = New System.Drawing.Size(40, 40)
-        Me.pbmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbmaximizar.TabIndex = 4
-        Me.pbmaximizar.TabStop = False
+        Me.lbrecibeprov.FormattingEnabled = True
+        Me.lbrecibeprov.ItemHeight = 18
+        Me.lbrecibeprov.Location = New System.Drawing.Point(80, 63)
+        Me.lbrecibeprov.Name = "lbrecibeprov"
+        Me.lbrecibeprov.Size = New System.Drawing.Size(120, 94)
+        Me.lbrecibeprov.TabIndex = 9
         '
-        'pbcerrar
+        'Button10
         '
-        Me.pbcerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pbcerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.pbcerrar.Image = Global.Principal.My.Resources.Resources.Close_Window__2_48px
-        Me.pbcerrar.Location = New System.Drawing.Point(110, 21)
-        Me.pbcerrar.Name = "pbcerrar"
-        Me.pbcerrar.Size = New System.Drawing.Size(40, 40)
-        Me.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbcerrar.TabIndex = 0
-        Me.pbcerrar.TabStop = False
+        Me.Button10.ForeColor = System.Drawing.Color.Black
+        Me.Button10.Location = New System.Drawing.Point(269, 121)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(111, 52)
+        Me.Button10.TabIndex = 21
+        Me.Button10.Text = "Actualizar"
+        Me.Button10.UseVisualStyleBackColor = True
         '
-        'pbrestaurar
+        'btnagregarcat
         '
-        Me.pbrestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pbrestaurar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.pbrestaurar.Image = Global.Principal.My.Resources.Resources.Restore_Window_2_48px
-        Me.pbrestaurar.Location = New System.Drawing.Point(63, 21)
-        Me.pbrestaurar.Name = "pbrestaurar"
-        Me.pbrestaurar.Size = New System.Drawing.Size(40, 40)
-        Me.pbrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbrestaurar.TabIndex = 1
-        Me.pbrestaurar.TabStop = False
-        Me.pbrestaurar.Visible = False
+        Me.btnagregarcat.ForeColor = System.Drawing.Color.Black
+        Me.btnagregarcat.Location = New System.Drawing.Point(350, 63)
+        Me.btnagregarcat.Name = "btnagregarcat"
+        Me.btnagregarcat.Size = New System.Drawing.Size(98, 52)
+        Me.btnagregarcat.TabIndex = 20
+        Me.btnagregarcat.Text = "Nueva Categoría"
+        Me.btnagregarcat.UseVisualStyleBackColor = True
         '
-        'pblogo
+        'brnagregarprov
         '
-        Me.pblogo.Image = CType(resources.GetObject("pblogo.Image"), System.Drawing.Image)
-        Me.pblogo.Location = New System.Drawing.Point(442, 121)
-        Me.pblogo.Name = "pblogo"
-        Me.pblogo.Size = New System.Drawing.Size(527, 539)
-        Me.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pblogo.TabIndex = 30
-        Me.pblogo.TabStop = False
+        Me.brnagregarprov.ForeColor = System.Drawing.Color.Black
+        Me.brnagregarprov.Location = New System.Drawing.Point(202, 63)
+        Me.brnagregarprov.Name = "brnagregarprov"
+        Me.brnagregarprov.Size = New System.Drawing.Size(95, 52)
+        Me.brnagregarprov.TabIndex = 19
+        Me.brnagregarprov.Text = "Nuevo Proveedor"
+        Me.brnagregarprov.UseVisualStyleBackColor = True
+        '
+        'txtrecibeidprov
+        '
+        Me.txtrecibeidprov.Location = New System.Drawing.Point(369, 162)
+        Me.txtrecibeidprov.Name = "txtrecibeidprov"
+        Me.txtrecibeidprov.Size = New System.Drawing.Size(100, 24)
+        Me.txtrecibeidprov.TabIndex = 17
+        Me.txtrecibeidprov.Visible = False
+        Me.txtrecibeidprov.WordWrap = False
+        '
+        'txtrecibeidcliente
+        '
+        Me.txtrecibeidcliente.Location = New System.Drawing.Point(361, 172)
+        Me.txtrecibeidcliente.Name = "txtrecibeidcliente"
+        Me.txtrecibeidcliente.Size = New System.Drawing.Size(112, 24)
+        Me.txtrecibeidcliente.TabIndex = 17
+        Me.txtrecibeidcliente.Visible = False
         '
         'fmrPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1203, 749)
+        Me.ClientSize = New System.Drawing.Size(1203, 802)
         Me.ControlBox = False
-        Me.Controls.Add(Me.groupbproductoLista)
         Me.Controls.Add(Me.Label33)
         Me.Controls.Add(Me.Label32)
         Me.Controls.Add(Me.lbfecha)
@@ -1111,7 +1756,7 @@ Partial Class fmrPrincipal
         Me.Controls.Add(Me.panelventana)
         Me.Controls.Add(Me.groupblistaproveedores)
         Me.Controls.Add(Me.groupbclientelista)
-        Me.Controls.Add(Me.pblogo)
+        Me.Controls.Add(Me.groupbproductoLista)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.Name = "fmrPrincipal"
@@ -1124,25 +1769,37 @@ Partial Class fmrPrincipal
         GroupBox1.PerformLayout()
         Me.groupbproductoLista.ResumeLayout(False)
         Me.groupbproductoLista.PerformLayout()
-        CType(Me.dtglistaproducto, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Pmodprod.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.dtglistaproducto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.groupbclientelista.ResumeLayout(False)
         Me.groupbclientelista.PerformLayout()
+        Me.pmodificarClientes.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         CType(Me.dtgclientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.groupblistaproveedores.ResumeLayout(False)
         Me.groupblistaproveedores.PerformLayout()
+        Me.pmodificarprov.ResumeLayout(False)
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         CType(Me.dtglistaproveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.panelventana.ResumeLayout(False)
         CType(Me.pbminimizar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbmaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbcerrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbrestaurar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pblogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbmaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1220,6 +1877,60 @@ Partial Class fmrPrincipal
     Friend WithEvents lbfecha As System.Windows.Forms.Label
     Friend WithEvents Label32 As System.Windows.Forms.Label
     Friend WithEvents Label33 As System.Windows.Forms.Label
-    Friend WithEvents pblogo As System.Windows.Forms.PictureBox
+    Friend WithEvents pmodificarprov As System.Windows.Forms.Panel
+    Friend WithEvents btnmodificarprov As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtmodestadocuentaprov As System.Windows.Forms.TextBox
+    Friend WithEvents Label43 As System.Windows.Forms.Label
+    Friend WithEvents txtmodemailprov As System.Windows.Forms.TextBox
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents txtmodtelprov As System.Windows.Forms.TextBox
+    Friend WithEvents txtmoddirecprov As System.Windows.Forms.TextBox
+    Friend WithEvents Label49 As System.Windows.Forms.Label
+    Friend WithEvents Label46 As System.Windows.Forms.Label
+    Friend WithEvents Label47 As System.Windows.Forms.Label
+    Friend WithEvents Label48 As System.Windows.Forms.Label
+    Friend WithEvents txtmodrutprov As System.Windows.Forms.TextBox
+    Friend WithEvents txtmodnombreprov As System.Windows.Forms.TextBox
+    Friend WithEvents pmodificarClientes As System.Windows.Forms.Panel
+    Friend WithEvents btnmodificarclientes As System.Windows.Forms.Button
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtmodestadocuentacliente As System.Windows.Forms.TextBox
+    Friend WithEvents Label44 As System.Windows.Forms.Label
+    Friend WithEvents txtmodtelefcliente As System.Windows.Forms.TextBox
+    Friend WithEvents txtmoddireccliente As System.Windows.Forms.TextBox
+    Friend WithEvents Label51 As System.Windows.Forms.Label
+    Friend WithEvents Label52 As System.Windows.Forms.Label
+    Friend WithEvents Label53 As System.Windows.Forms.Label
+    Friend WithEvents txtmodnombcliente As System.Windows.Forms.TextBox
+    Friend WithEvents Pmodprod As System.Windows.Forms.Panel
+    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents Button9 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label39 As System.Windows.Forms.Label
+    Friend WithEvents Label40 As System.Windows.Forms.Label
+    Friend WithEvents txtmodimpuesto As System.Windows.Forms.TextBox
+    Friend WithEvents Label41 As System.Windows.Forms.Label
+    Friend WithEvents txtmodprecio As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label45 As System.Windows.Forms.Label
+    Friend WithEvents txtmodexistenciaproducto As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label50 As System.Windows.Forms.Label
+    Friend WithEvents Label54 As System.Windows.Forms.Label
+    Friend WithEvents Label55 As System.Windows.Forms.Label
+    Friend WithEvents txtmodnombproducto As System.Windows.Forms.TextBox
+    Friend WithEvents Label56 As System.Windows.Forms.Label
+    Friend WithEvents txtmodprodcod As System.Windows.Forms.TextBox
+    Friend WithEvents lbrecibeprov As System.Windows.Forms.ListBox
+    Friend WithEvents lbrecibecat As System.Windows.Forms.ListBox
+    Friend WithEvents Button10 As System.Windows.Forms.Button
+    Friend WithEvents btnagregarcat As System.Windows.Forms.Button
+    Friend WithEvents brnagregarprov As System.Windows.Forms.Button
+    Friend WithEvents txtrecibeidprov As System.Windows.Forms.TextBox
+    Friend WithEvents txtrecibeidcliente As System.Windows.Forms.TextBox
 
 End Class

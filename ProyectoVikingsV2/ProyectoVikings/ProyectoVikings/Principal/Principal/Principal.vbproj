@@ -77,6 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Conexion.vb" />
+    <Compile Include="Interfaces\AgregaCategoría.Designer.vb">
+      <DependentUpon>AgregaCategoría.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AgregaCategoría.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaces\AgregarCliente.Designer.vb">
       <DependentUpon>AgregarCliente.vb</DependentUpon>
     </Compile>
@@ -87,12 +93,6 @@
       <DependentUpon>Facturar.vb</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\Facturar.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces\modificarProducto.Designer.vb">
-      <DependentUpon>modificarProducto.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces\modificarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces\Notas.Designer.vb">
@@ -149,14 +149,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Interfaces\AgregaCategoría.resx">
+      <DependentUpon>AgregaCategoría.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Facturar.resx">
       <DependentUpon>Facturar.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces\modificarProducto.resx">
-      <DependentUpon>modificarProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Notas.resx">
       <DependentUpon>Notas.vb</DependentUpon>

@@ -67,7 +67,6 @@ C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVik
 C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\bin\Debug\Principal.xml
 C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.AgregarCliente.resources
 C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.Facturar.resources
-C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.modificarProducto.resources
 C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.Notas.resources
 C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.fmrPrincipal.resources
 C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.Agregarproductos.resources
@@ -76,3 +75,4 @@ C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVik
 C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.login2.resources
 C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.Resources.resources
 C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.vbproj.GenerateResource.Cache
+C:\Users\seba1\Desktop\vikings\ProyectoVikingSSoft\ProyectoVikingsV2\ProyectoVikings\ProyectoVikings\Principal\Principal\obj\x86\Debug\Principal.AgregaCategoría.resources

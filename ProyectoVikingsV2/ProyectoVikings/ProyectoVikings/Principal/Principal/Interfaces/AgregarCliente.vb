@@ -41,6 +41,7 @@ Public Class AgregarCliente
             MessageBox.Show("Es posible que el código ya esté en uso/algún campo obligatorio no está completado", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
+
     End Sub
 
     Private Sub AgregarCliente_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -63,5 +64,49 @@ Public Class AgregarCliente
         txtagredire.Text = ""
         txtagrenombre.Text = ""
         txtagretel.Text = ""
+    End Sub
+
+    Private Sub txtagrenombre_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtagrenombre.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtagrenombre_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtagrenombre.TextChanged
+
+    End Sub
+
+    
+    Private Sub txtagretel_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtagretel.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtagrecuenta_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtagrecuenta.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
     End Sub
 End Class

@@ -59,8 +59,7 @@ Public Class fmrPrincipal
     End Sub
 
     Private Sub fmrPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        pblogo.SendToBack()
-        pblogo.Visible = False
+       
         If Me.Visible = True Then
             Login.Visible = False
             login2.Visible = False
@@ -82,7 +81,14 @@ Public Class fmrPrincipal
     End Sub
 
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnagregaproducto.Click
-        Agregarproductos.Show()
+        Try
+            Me.Close()
+
+            Agregarproductos.Show()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -170,7 +176,10 @@ Public Class fmrPrincipal
 
 
     Private Sub Button6_Click(sender As System.Object, e As System.EventArgs) Handles btnmodificaproducto.Click
-        modificarProducto.Show()
+        Pmodprod.Visible = True
+        Pmodprod.BringToFront()
+
+
     End Sub
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles btnclielista.Click
@@ -186,6 +195,7 @@ Public Class fmrPrincipal
 
     Private Sub Button12_Click(sender As System.Object, e As System.EventArgs) Handles btnagregaprov.Click
         AgregarProveedor.Show()
+
 
     End Sub
 
@@ -363,7 +373,7 @@ Public Class fmrPrincipal
         End If
 
 
-            Call mostrarlosproductos(dtglistaproducto)
+        Call mostrarlosproductos(dtglistaproducto)
 
 
 
@@ -457,11 +467,13 @@ Public Class fmrPrincipal
     Private Sub btnborraprov_Click(sender As System.Object, e As System.EventArgs) Handles btnborraprov.Click
         Call eliminarproveedor()
 
+        Call mostrarlosproveedores(dtglistaproveedores)
 
     End Sub
 
     Private Sub btnborracliente_Click(sender As System.Object, e As System.EventArgs) Handles btnborracliente.Click
         Call eliminarcliente()
+        Call mostrarclientes(dtgclientes)
 
     End Sub
 
@@ -574,6 +586,282 @@ Public Class fmrPrincipal
     End Sub
 
     Private Sub dtglistaproducto_CellContentClick_1(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dtglistaproducto.CellContentClick
+
+    End Sub
+
+    Private Sub Button3_Click_1(sender As System.Object, e As System.EventArgs)
+        pmodificarprov.Visible = False
+
+    End Sub
+
+    Private Sub TextBox13_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtmodestadocuentacliente.TextChanged
+
+    End Sub
+
+    Private Sub Label44_Click(sender As System.Object, e As System.EventArgs) Handles Label44.Click
+
+    End Sub
+
+    Private Sub btnmodificaprov_Click(sender As System.Object, e As System.EventArgs) Handles btnmodificaprov.Click
+        pmodificarprov.Visible = True
+        pmodificarprov.BringToFront()
+        Dim idprove As String
+        txtrecibeidprov.Text = dtglistaproveedores.Item(0, dtglistaproveedores.CurrentRow.Index).Value
+        idprove = txtrecibeidprov.Text
+
+        txtmodnombreprov.Text = dtglistaproveedores.Item(1, dtglistaproveedores.CurrentRow.Index).Value
+
+        txtmodrutprov.Text = dtglistaproveedores.Item(2, dtglistaproveedores.CurrentRow.Index).Value
+
+        txtmoddirecprov.Text = dtglistaproveedores.Item(3, dtglistaproveedores.CurrentRow.Index).Value
+
+        txtmodtelprov.Text = dtglistaproveedores.Item(4, dtglistaproveedores.CurrentRow.Index).Value
+
+        txtmodemailprov.Text = dtglistaproveedores.Item(5, dtglistaproveedores.CurrentRow.Index).Value
+
+        txtmodestadocuentaprov.Text = dtglistaproveedores.Item(6, dtglistaproveedores.CurrentRow.Index).Value
+
+        
+
+    End Sub
+
+    Private Sub Button5_Click_1(sender As System.Object, e As System.EventArgs) Handles Button5.Click
+        pmodificarprov.Visible = False
+        Call mostrarlosproveedores(dtglistaproveedores)
+
+    End Sub
+
+    Private Sub Button7_Click(sender As System.Object, e As System.EventArgs) Handles Button7.Click
+        pmodificarClientes.Visible = False
+        Call mostrarclientes(dtgclientes)
+    End Sub
+
+    Private Sub btnmodificacliente_Click(sender As System.Object, e As System.EventArgs) Handles btnmodificacliente.Click
+        pmodificarClientes.Visible = True
+        pmodificarClientes.BringToFront()
+        Dim idcliente As String
+        txtrecibeidcliente.Text = dtgclientes.Item(0, dtgclientes.CurrentRow.Index).Value
+        idcliente = txtrecibeidcliente.Text
+
+        txtmodnombcliente.Text = dtgclientes.Item(1, dtgclientes.CurrentRow.Index).Value
+        txtmoddireccliente.Text = dtgclientes.Item(2, dtgclientes.CurrentRow.Index).Value
+        txtmodtelefcliente.Text = dtgclientes.Item(3, dtgclientes.CurrentRow.Index).Value
+        txtmodestadocuentacliente.Text = dtgclientes.Item(4, dtgclientes.CurrentRow.Index).Value
+
+
+
+
+    End Sub
+
+    Private Sub Button9_Click(sender As System.Object, e As System.EventArgs)
+        pmodificarClientes.Visible = False
+
+    End Sub
+
+    Private Sub Button9_Click_1(sender As System.Object, e As System.EventArgs) Handles Button9.Click
+        Pmodprod.Visible = False
+        Call mostrarlosproductos(dtglistaproducto)
+
+    End Sub
+    
+    Private Sub txtmodtelefcliente_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtmodtelefcliente.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtmodestadocuentacliente_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtmodestadocuentacliente.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtmodexistenciaproducto_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtmodexistenciaproducto.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtmodprecio_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtmodprecio.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtmodimpuesto_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtmodimpuesto.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtmodtelprov_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtmodtelprov.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtmodestadocuentaprov_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtmodestadocuentaprov.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtmodrutprov_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtmodrutprov.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub Button2_Click_1(sender As System.Object, e As System.EventArgs) Handles btnmodificarprov.Click
+        Try
+
+            conex.Open()
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            If txtmodnombreprov.Text = Nothing Or txtmodrutprov.Text = Nothing Or txtmoddirecprov.Text = Nothing Or txtmodtelprov.Text = Nothing Or txtmodemailprov.Text = Nothing Or txtmodestadocuentaprov.Text = Nothing Then
+                MsgBox("complete el campo")
+            Else
+
+
+                comando = New MySqlCommand("Update proveedor set nombprov='" & txtmodnombreprov.Text & "' ,rutprov='" & txtmodrutprov.Text & "',direccprov='" & txtmoddirecprov.Text & "',telprov='" & txtmodtelprov.Text & "',emailprov='" & txtmodemailprov.Text & "',cuentaprov='" & txtmodestadocuentaprov.Text & "' where id_prov='" & txtrecibeidprov.Text & "'", conex)
+
+
+                comando.Parameters.AddWithValue("@nombprov", txtmodnombreprov.Text)
+                comando.Parameters.AddWithValue("@rutprov", txtmodrutprov.Text)
+                comando.Parameters.AddWithValue("@direccprov", txtmoddirecprov.Text)
+                comando.Parameters.AddWithValue("@telprov", txtmodtelprov.Text)
+                comando.Parameters.AddWithValue("@emailprov", txtmodemailprov.Text)
+                comando.Parameters.AddWithValue("@cuentaprov", txtmodestadocuentaprov.Text)
+                Try
+                    comando.ExecuteNonQuery()
+                Catch ex As Exception
+
+                End Try
+
+                MessageBox.Show("Datos Guardados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+               
+            End If
+
+        Catch ex As MySqlException
+
+
+
+
+
+        End Try
+    End Sub
+
+    Private Sub Button8_Click_1(sender As System.Object, e As System.EventArgs) Handles Button8.Click
+
+    End Sub
+
+    Private Sub dtglistaproveedores_Click(sender As System.Object, e As System.EventArgs) Handles dtglistaproveedores.Click
+
+    End Sub
+
+    Private Sub Button6_Click_1(sender As System.Object, e As System.EventArgs) Handles btnmodificarclientes.Click
+        Try
+
+            conex.Open()
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            If txtmodnombcliente.Text = Nothing Or txtmoddireccliente.Text = Nothing Or txtmodtelefcliente.Text = Nothing Or txtmodestadocuentacliente.Text = Nothing Then
+                MsgBox("complete el campo faltante")
+            Else
+
+                Dim ec As Integer
+                ec = CType(txtmodestadocuentacliente.Text, Integer)
+                comando = New MySqlCommand("Update clientes set nombcliente='" & txtmodnombcliente.Text & "' ,dircliente='" & txtmoddireccliente.Text & "',telcliente='" & txtmodtelefcliente.Text & "',cuentacliente='" & ec & "' where idcliente='" & txtrecibeidcliente.Text & "'", conex)
+
+
+                comando.Parameters.AddWithValue("@nombcliente", txtmodnombcliente.Text)
+                comando.Parameters.AddWithValue("@dircliente", txtmoddireccliente.Text)
+                comando.Parameters.AddWithValue("@telcliente", txtmodtelefcliente.Text)
+                comando.Parameters.AddWithValue("@cuentacliente", ec)
+
+                Try
+                    comando.ExecuteNonQuery()
+                    MessageBox.Show("Datos Guardados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+
+
+            End If
+
+        Catch ex As MySqlException
+
+
+            MsgBox(ex.Message)
+
+
+        End Try
+    End Sub
+
+    Private Sub dtgclientes_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles dtgclientes.KeyPress
 
     End Sub
 End Class

@@ -60,4 +60,47 @@ Public Class AgregarProveedor
     Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
 
     End Sub
+
+    Private Sub AgregarProveedor_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub txttelefono_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txttelefono.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtestadocuenta_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtestadocuenta.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub txtrut_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtrut.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        Else
+            e.Handled = True
+
+        End If
+    End Sub
 End Class
