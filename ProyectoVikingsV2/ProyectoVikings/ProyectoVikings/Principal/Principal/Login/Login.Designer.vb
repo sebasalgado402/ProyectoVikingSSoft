@@ -62,7 +62,7 @@ Partial Class Login
         Me.Button2.Location = New System.Drawing.Point(455, 330)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(81, 47)
-        Me.Button2.TabIndex = 5
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = False
         '
@@ -73,7 +73,7 @@ Partial Class Login
         Me.Button1.Location = New System.Drawing.Point(172, 254)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(172, 83)
-        Me.Button1.TabIndex = 4
+        Me.Button1.TabIndex = 3
         Me.Button1.Text = "Crear"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -108,7 +108,7 @@ Partial Class Login
         Me.txtcrearusuario.Location = New System.Drawing.Point(239, 97)
         Me.txtcrearusuario.Name = "txtcrearusuario"
         Me.txtcrearusuario.Size = New System.Drawing.Size(206, 38)
-        Me.txtcrearusuario.TabIndex = 0
+        Me.txtcrearusuario.TabIndex = 1
         '
         'txtrecibeid
         '

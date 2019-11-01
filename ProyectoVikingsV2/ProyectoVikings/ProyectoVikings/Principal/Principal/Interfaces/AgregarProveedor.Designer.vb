@@ -38,8 +38,10 @@ Partial Class AgregarProveedor
         Me.txttelefono = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.noemail = New System.Windows.Forms.CheckBox()
+        Me.checkdire = New System.Windows.Forms.CheckBox()
+        Me.notengotel = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -111,6 +113,9 @@ Partial Class AgregarProveedor
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Goldenrod
+        Me.GroupBox2.Controls.Add(Me.notengotel)
+        Me.GroupBox2.Controls.Add(Me.noemail)
+        Me.GroupBox2.Controls.Add(Me.checkdire)
         Me.GroupBox2.Controls.Add(Me.txtestadocuenta)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.txtemail)
@@ -152,7 +157,7 @@ Partial Class AgregarProveedor
         Me.txtemail.ForeColor = System.Drawing.Color.Black
         Me.txtemail.Location = New System.Drawing.Point(90, 118)
         Me.txtemail.Name = "txtemail"
-        Me.txtemail.Size = New System.Drawing.Size(351, 24)
+        Me.txtemail.Size = New System.Drawing.Size(226, 24)
         Me.txtemail.TabIndex = 7
         '
         'Label6
@@ -171,7 +176,7 @@ Partial Class AgregarProveedor
         Me.txtdireccion.ForeColor = System.Drawing.Color.Black
         Me.txtdireccion.Location = New System.Drawing.Point(90, 78)
         Me.txtdireccion.Name = "txtdireccion"
-        Me.txtdireccion.Size = New System.Drawing.Size(351, 24)
+        Me.txtdireccion.Size = New System.Drawing.Size(200, 24)
         Me.txtdireccion.TabIndex = 5
         '
         'Label5
@@ -189,7 +194,7 @@ Partial Class AgregarProveedor
         '
         Me.txttelefono.ForeColor = System.Drawing.Color.Black
         Me.txttelefono.Location = New System.Drawing.Point(90, 39)
-        Me.txttelefono.MaxLength = 10
+        Me.txttelefono.MaxLength = 9
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(180, 24)
         Me.txttelefono.TabIndex = 3
@@ -214,15 +219,6 @@ Partial Class AgregarProveedor
         Me.Button2.Text = "Guardar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(192, 378)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(84, 42)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Modificar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(407, 378)
@@ -232,6 +228,36 @@ Partial Class AgregarProveedor
         Me.Button4.Text = "Cerrar"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'noemail
+        '
+        Me.noemail.AutoSize = True
+        Me.noemail.Location = New System.Drawing.Point(322, 120)
+        Me.noemail.Name = "noemail"
+        Me.noemail.Size = New System.Drawing.Size(96, 22)
+        Me.noemail.TabIndex = 12
+        Me.noemail.Text = "No tengo"
+        Me.noemail.UseVisualStyleBackColor = True
+        '
+        'checkdire
+        '
+        Me.checkdire.AutoSize = True
+        Me.checkdire.Location = New System.Drawing.Point(296, 80)
+        Me.checkdire.Name = "checkdire"
+        Me.checkdire.Size = New System.Drawing.Size(96, 22)
+        Me.checkdire.TabIndex = 11
+        Me.checkdire.Text = "No tengo"
+        Me.checkdire.UseVisualStyleBackColor = True
+        '
+        'notengotel
+        '
+        Me.notengotel.AutoSize = True
+        Me.notengotel.Location = New System.Drawing.Point(276, 41)
+        Me.notengotel.Name = "notengotel"
+        Me.notengotel.Size = New System.Drawing.Size(96, 22)
+        Me.notengotel.TabIndex = 13
+        Me.notengotel.Text = "No tengo"
+        Me.notengotel.UseVisualStyleBackColor = True
+        '
         'AgregarProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -239,7 +265,6 @@ Partial Class AgregarProveedor
         Me.BackColor = System.Drawing.Color.Khaki
         Me.ClientSize = New System.Drawing.Size(503, 425)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Button1)
@@ -272,8 +297,10 @@ Partial Class AgregarProveedor
     Friend WithEvents txtemail As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents txtestadocuenta As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents noemail As System.Windows.Forms.CheckBox
+    Friend WithEvents checkdire As System.Windows.Forms.CheckBox
+    Friend WithEvents notengotel As System.Windows.Forms.CheckBox
 End Class

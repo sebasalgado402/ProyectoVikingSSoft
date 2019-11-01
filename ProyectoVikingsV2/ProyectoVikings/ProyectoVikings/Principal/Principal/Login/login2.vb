@@ -8,8 +8,11 @@ Public Class login2
     Dim dv As DataView
     Dim dataset As DataSet
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        Login.Close()
         Me.Close()
-        End
+
+
+
     End Sub
 
     Private Sub btniniciar_Click(sender As System.Object, e As System.EventArgs) Handles btniniciar.Click
@@ -32,6 +35,7 @@ Public Class login2
 
         Else
             MsgBox("Usuario/contraseña incorrectos")
+            txtcontraseña.Text = ""
         End If
     End Sub
 

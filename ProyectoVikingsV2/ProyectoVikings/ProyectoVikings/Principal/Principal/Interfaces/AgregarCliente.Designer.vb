@@ -35,6 +35,8 @@ Partial Class AgregarCliente
         Me.btnnuevocliente = New System.Windows.Forms.Button()
         Me.btnguardarcliente = New System.Windows.Forms.Button()
         Me.btncerrarcliente = New System.Windows.Forms.Button()
+        Me.checkdire = New System.Windows.Forms.CheckBox()
+        Me.checktel = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,6 +53,8 @@ Partial Class AgregarCliente
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.checktel)
+        Me.GroupBox1.Controls.Add(Me.checkdire)
         Me.GroupBox1.Controls.Add(Me.txtagrecuenta)
         Me.GroupBox1.Controls.Add(Me.txtagretel)
         Me.GroupBox1.Controls.Add(Me.txtagredire)
@@ -71,14 +75,16 @@ Partial Class AgregarCliente
         'txtagrecuenta
         '
         Me.txtagrecuenta.Location = New System.Drawing.Point(132, 225)
+        Me.txtagrecuenta.MaxLength = 6
         Me.txtagrecuenta.Name = "txtagrecuenta"
         Me.txtagrecuenta.Size = New System.Drawing.Size(132, 26)
         Me.txtagrecuenta.TabIndex = 8
+        Me.txtagrecuenta.Text = "-"
         '
         'txtagretel
         '
-        Me.txtagretel.Location = New System.Drawing.Point(132, 161)
-        Me.txtagretel.MaxLength = 8
+        Me.txtagretel.Location = New System.Drawing.Point(132, 156)
+        Me.txtagretel.MaxLength = 9
         Me.txtagretel.Name = "txtagretel"
         Me.txtagretel.Size = New System.Drawing.Size(132, 26)
         Me.txtagretel.TabIndex = 7
@@ -111,7 +117,7 @@ Partial Class AgregarCliente
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.DarkOliveGreen
-        Me.Label4.Location = New System.Drawing.Point(59, 164)
+        Me.Label4.Location = New System.Drawing.Point(59, 159)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(65, 16)
         Me.Label4.TabIndex = 2
@@ -164,6 +170,26 @@ Partial Class AgregarCliente
         Me.btncerrarcliente.Text = "Cerrar"
         Me.btncerrarcliente.UseVisualStyleBackColor = True
         '
+        'checkdire
+        '
+        Me.checkdire.AutoSize = True
+        Me.checkdire.Location = New System.Drawing.Point(270, 96)
+        Me.checkdire.Name = "checkdire"
+        Me.checkdire.Size = New System.Drawing.Size(86, 20)
+        Me.checkdire.TabIndex = 9
+        Me.checkdire.Text = "No tengo"
+        Me.checkdire.UseVisualStyleBackColor = True
+        '
+        'checktel
+        '
+        Me.checktel.AutoSize = True
+        Me.checktel.Location = New System.Drawing.Point(270, 162)
+        Me.checktel.Name = "checktel"
+        Me.checktel.Size = New System.Drawing.Size(86, 20)
+        Me.checktel.TabIndex = 10
+        Me.checktel.Text = "No tengo"
+        Me.checktel.UseVisualStyleBackColor = True
+        '
         'AgregarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -199,4 +225,6 @@ Partial Class AgregarCliente
     Friend WithEvents btnnuevocliente As System.Windows.Forms.Button
     Friend WithEvents btnguardarcliente As System.Windows.Forms.Button
     Friend WithEvents btncerrarcliente As System.Windows.Forms.Button
+    Friend WithEvents checktel As System.Windows.Forms.CheckBox
+    Friend WithEvents checkdire As System.Windows.Forms.CheckBox
 End Class

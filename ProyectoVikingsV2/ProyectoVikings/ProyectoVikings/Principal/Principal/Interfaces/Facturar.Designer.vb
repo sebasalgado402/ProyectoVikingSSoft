@@ -53,6 +53,8 @@ Partial Class Facturar
         Me.Label4 = New System.Windows.Forms.Label()
         Me.brnsalir = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.labelfecha = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.gbproveedor.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -126,6 +128,8 @@ Partial Class Facturar
         '
         'gbproveedor
         '
+        Me.gbproveedor.Controls.Add(Me.labelfecha)
+        Me.gbproveedor.Controls.Add(Me.Label5)
         Me.gbproveedor.Controls.Add(Me.TabControl1)
         Me.gbproveedor.Controls.Add(Me.btnañadirprov)
         Me.gbproveedor.Controls.Add(Me.cbprov)
@@ -402,6 +406,24 @@ Partial Class Facturar
         Me.Label2.TabIndex = 29
         Me.Label2.Text = "FACTURAR"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(619, 22)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(56, 23)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Fecha:"
+        '
+        'labelfecha
+        '
+        Me.labelfecha.AutoSize = True
+        Me.labelfecha.Location = New System.Drawing.Point(672, 22)
+        Me.labelfecha.Name = "labelfecha"
+        Me.labelfecha.Size = New System.Drawing.Size(55, 23)
+        Me.labelfecha.TabIndex = 6
+        Me.labelfecha.Text = "Label6"
+        '
         'Facturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -461,4 +483,6 @@ Partial Class Facturar
     Friend WithEvents txtpruebacod As System.Windows.Forms.TextBox
     Friend WithEvents dtgobtieneventa As System.Windows.Forms.DataGridView
     Friend WithEvents libprod As System.Windows.Forms.ListBox
+    Friend WithEvents labelfecha As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

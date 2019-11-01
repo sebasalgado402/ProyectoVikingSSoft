@@ -125,10 +125,10 @@ Public Class Agregarproductos
 
                 txtagreexistprod.Text = ""
                 txtagrenombrprod.Text = ""
-                txtagreimpprod.Text = ""
+
                 txtagrenombrprod.Text = ""
                 txtagreprecio.Text = ""
-                txtagrepreciofinalprod.Text = ""
+
 
             
 
@@ -154,10 +154,10 @@ Public Class Agregarproductos
 
         txtagreexistprod.Text = ""
         txtagrenombrprod.Text = ""
-        txtagreimpprod.Text = ""
+
         txtagrenombrprod.Text = ""
         txtagreprecio.Text = ""
-        txtagrepreciofinalprod.Text = ""
+
 
 
 
@@ -258,7 +258,7 @@ Public Class Agregarproductos
         End If
     End Sub
 
-    Private Sub txtagreimpprod_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtagreimpprod.KeyPress
+    Private Sub txtagreimpprod_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs)
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then

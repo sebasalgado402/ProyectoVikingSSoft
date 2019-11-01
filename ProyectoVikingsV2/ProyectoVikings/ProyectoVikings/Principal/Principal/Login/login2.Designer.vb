@@ -56,7 +56,7 @@ Partial Class login2
         Me.Button2.Location = New System.Drawing.Point(455, 330)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(81, 47)
-        Me.Button2.TabIndex = 6
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = False
         '
@@ -67,7 +67,7 @@ Partial Class login2
         Me.btniniciar.Location = New System.Drawing.Point(177, 255)
         Me.btniniciar.Name = "btniniciar"
         Me.btniniciar.Size = New System.Drawing.Size(172, 83)
-        Me.btniniciar.TabIndex = 4
+        Me.btniniciar.TabIndex = 3
         Me.btniniciar.Text = "Iniciar"
         Me.btniniciar.UseVisualStyleBackColor = False
         '
@@ -102,7 +102,7 @@ Partial Class login2
         Me.txtusuario.Location = New System.Drawing.Point(239, 97)
         Me.txtusuario.Name = "txtusuario"
         Me.txtusuario.Size = New System.Drawing.Size(206, 38)
-        Me.txtusuario.TabIndex = 0
+        Me.txtusuario.TabIndex = 1
         '
         'login2
         '

@@ -122,6 +122,7 @@ Public Class fmrPrincipal
 
 
     End Sub
+
     Private Sub mostrarlosproductos(ByVal dgv As DataGridView)
         Try
             sql = "select * from productos"
@@ -178,6 +179,23 @@ Public Class fmrPrincipal
     Private Sub Button6_Click(sender As System.Object, e As System.EventArgs) Handles btnmodificaproducto.Click
         Pmodprod.Visible = True
         Pmodprod.BringToFront()
+
+
+        Dim idproducto As String
+        txtrecibeidprod.Text = dtglistaproducto.Item(0, dtglistaproducto.CurrentRow.Index).Value
+        idproducto = txtrecibeidprov.Text
+
+        txtmodprodcod.Text = dtglistaproducto.Item(1, dtglistaproducto.CurrentRow.Index).Value
+
+        txtmodnombproducto.Text = dtglistaproducto.Item(2, dtglistaproducto.CurrentRow.Index).Value
+
+        txtmodprecio.Text = dtglistaproducto.Item(3, dtglistaproducto.CurrentRow.Index).Value
+
+        txtmodexistenciaproducto.Text = dtglistaproducto.Item(4, dtglistaproducto.CurrentRow.Index).Value
+
+        txtmoddesc.Text = dtglistaproducto.Item(5, dtglistaproducto.CurrentRow.Index).Value
+
+      
 
 
     End Sub
@@ -684,6 +702,8 @@ Public Class fmrPrincipal
             e.Handled = False
         ElseIf Char.IsSeparator(e.KeyChar) Then
             e.Handled = True
+        ElseIf (e.KeyChar = "-") Then
+            e.Handled = False
         Else
             e.Handled = True
 
@@ -716,7 +736,7 @@ Public Class fmrPrincipal
         End If
     End Sub
 
-    Private Sub txtmodimpuesto_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtmodimpuesto.KeyPress
+    Private Sub txtmodimpuesto_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs)
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -749,6 +769,8 @@ Public Class fmrPrincipal
             e.Handled = False
         ElseIf Char.IsSeparator(e.KeyChar) Then
             e.Handled = True
+        ElseIf (e.KeyChar = "-") Then
+            e.Handled = False
         Else
             e.Handled = True
 
@@ -810,8 +832,39 @@ Public Class fmrPrincipal
         End Try
     End Sub
 
-    Private Sub Button8_Click_1(sender As System.Object, e As System.EventArgs) Handles Button8.Click
+    Private Sub btnmodificarproducto_Click_1(sender As System.Object, e As System.EventArgs) Handles btnmodificarproducto.Click
+        Try
+            conex.Open()
+        Catch ex As MySqlException
 
+        End Try
+
+        If txtmodprodcod.Text = Nothing Or txtmodnombproducto.Text = Nothing Or txtmodexistenciaproducto.Text = Nothing Or txtmodprecio.Text = Nothing Then
+            MsgBox("Complete los campos")
+       
+        Else
+
+            
+            Try
+                comando = New MySqlCommand("Update productos set codprod='" & txtmodprodcod.Text & "' ,nombprod='" & txtmodnombproducto.Text & "',precioprod='" & txtmodprecio.Text & "',stockprod='" & txtmodexistenciaproducto.Text & "' ,descprod='" & txtmoddesc.Text & "' where idprod='" & txtrecibeidprod.Text & "'", conex)
+
+
+                comando.Parameters.AddWithValue("@codprod", txtmodprodcod.Text)
+                comando.Parameters.AddWithValue("@nombprod", txtmodnombproducto.Text)
+                comando.Parameters.AddWithValue("@precioprod", txtmodprecio.Text)
+                comando.Parameters.AddWithValue("@stockprod", txtmodexistenciaproducto.Text)
+                comando.Parameters.AddWithValue("@descprod", txtmoddesc.Text)
+
+                comando.ExecuteNonQuery()
+                MessageBox.Show("Datos Guardados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                conex.Close()
+
+            Catch ex As MySqlException
+
+            End Try
+
+
+        End If
     End Sub
 
     Private Sub dtglistaproveedores_Click(sender As System.Object, e As System.EventArgs) Handles dtglistaproveedores.Click
@@ -861,7 +914,278 @@ Public Class fmrPrincipal
         End Try
     End Sub
 
-    Private Sub dtgclientes_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles dtgclientes.KeyPress
+    Private Sub btnprodlista_MouseHover(sender As Object, e As System.EventArgs) Handles btnprodlista.MouseHover
+        btnprodlista.BackColor = Color.SeaGreen
+    End Sub
+   
+    Private Sub btnprodlista_MouseLeave(sender As System.Object, e As System.EventArgs) Handles btnprodlista.MouseLeave
+
+        btnprodlista.BackColor = Color.LightSeaGreen
+    End Sub
+  
+    Private Sub btnclielista_MouseHover(sender As System.Object, e As System.EventArgs) Handles btnclielista.MouseHover
+        btnclielista.BackColor = Color.SeaGreen
+    End Sub
+
+    Private Sub btnclielista_MouseLeave(sender As Object, e As System.EventArgs) Handles btnclielista.MouseLeave
+        btnclielista.BackColor = Color.LightSeaGreen
+    End Sub
+
+    Private Sub btnprovlista_MouseHover(sender As System.Object, e As System.EventArgs) Handles btnprovlista.MouseHover
+        btnprovlista.BackColor = Color.SeaGreen
+    End Sub
+
+    Private Sub btnprovlista_MouseLeave(sender As Object, e As System.EventArgs) Handles btnprovlista.MouseLeave
+        btnprovlista.BackColor = Color.LightSeaGreen
+    End Sub
+
+    
+    Private Sub btnfacturar_MouseHover(sender As System.Object, e As System.EventArgs) Handles btnfacturar.MouseHover
+        btnfacturar.BackColor = Color.SeaGreen
+    End Sub
+
+    Private Sub btnfacturar_MouseLeave(sender As Object, e As System.EventArgs) Handles btnfacturar.MouseLeave
+        btnfacturar.BackColor = Color.LightSeaGreen
+    End Sub
+
+    Private Sub dtglistaproducto_CellFormatting(sender As Object, e As System.Windows.Forms.DataGridViewCellFormattingEventArgs) Handles dtglistaproducto.CellFormatting
+
+        If e.ColumnIndex = 4 Then
+            Dim row As DataGridViewCell = dtglistaproducto(e.ColumnIndex, e.RowIndex)
+
+            If row.Value <= "5" Then
+
+                row.Style.BackColor = Color.Red
+
+            End If
+
+        End If
+        If e.ColumnIndex = 4 Then
+            Dim row As DataGridViewCell = dtglistaproducto(e.ColumnIndex, e.RowIndex)
+
+            If row.Value >= "6" And row.Value <= "9" Then
+
+                row.Style.BackColor = Color.Orange
+
+            End If
+
+        End If
+        If e.ColumnIndex = 4 Then
+            Dim row As DataGridViewCell = dtglistaproducto(e.ColumnIndex, e.RowIndex)
+
+            If row.Value >= "10" Then
+
+                row.Style.BackColor = Color.Green
+
+            End If
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub dtglistaproveedores_CellFormatting(sender As System.Object, e As System.Windows.Forms.DataGridViewCellFormattingEventArgs) Handles dtglistaproveedores.CellFormatting
+        If e.ColumnIndex = 6 Then
+            Dim row As DataGridViewCell = dtglistaproveedores(e.ColumnIndex, e.RowIndex)
+
+            If row.Value >= "1" Then
+
+                row.Style.BackColor = Color.Red
+            ElseIf row.Value = "0" Then
+                row.Style.BackColor = Color.Gray
+            End If
+
+        End If
+        If e.ColumnIndex = 6 Then
+            Dim row As DataGridViewCell = dtglistaproveedores(e.ColumnIndex, e.RowIndex)
+
+            If row.Value < "0" Then
+
+                row.Style.BackColor = Color.Green
+
+            End If
+
+        End If
+
+
+    End Sub
+
+    Private Sub dtgclientes_CellFormatting(sender As Object, e As System.Windows.Forms.DataGridViewCellFormattingEventArgs) Handles dtgclientes.CellFormatting
+        If e.ColumnIndex = 4 Then
+            Dim row As DataGridViewCell = dtgclientes(e.ColumnIndex, e.RowIndex)
+
+            If row.Value >= "1" Then
+
+                row.Style.BackColor = Color.Red
+            ElseIf row.Value = "0" Then
+                row.Style.BackColor = Color.Gray
+            End If
+
+        End If
+        If e.ColumnIndex = 4 Then
+            Dim row As DataGridViewCell = dtgclientes(e.ColumnIndex, e.RowIndex)
+
+            If row.Value < "0" Then
+
+                row.Style.BackColor = Color.Green
+
+            End If
+
+        End If
+
+    End Sub
+    Private Sub mostrarlosproductospornombre(ByVal dgv As DataGridView)
+        Try
+            sql = "select * from productos order by nombprod ASC"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        End Try
+
+
+
+
+    End Sub
+    Private Sub mostrarlosproductosporcodprod(ByVal dgv As DataGridView)
+        Try
+            sql = "select * from productos order by codprod ASC"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+    Private Sub mostrarlosproductosporprecio(ByVal dgv As DataGridView)
+        Try
+            sql = "select * from productos order by precioprod ASC"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        End Try
+
+
+
+
+    End Sub
+    Private Sub mostrarlosproductosporstock(ByVal dgv As DataGridView)
+        Try
+            sql = "select * from productos order by stockprod ASC"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        End Try
+
+
+
+
+    End Sub
+    Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
+        Call mostrarlosproductospornombre(dtglistaproducto)
+    End Sub
+
+    Private Sub Button10_Click(sender As System.Object, e As System.EventArgs) Handles Button10.Click
+        Call mostrarlosproductosporcodprod(dtglistaproducto)
+    End Sub
+
+    Private Sub Button8_Click_1(sender As System.Object, e As System.EventArgs) Handles Button8.Click
+        Call mostrarlosproductosporprecio(dtglistaproducto)
+    End Sub
+
+    Private Sub Button6_Click_2(sender As System.Object, e As System.EventArgs) Handles Button6.Click
+        Call mostrarlosproductosporstock(dtglistaproducto)
+    End Sub
+
+    Private Sub Button2_Click_2(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        Call mostrarlosproveedorespornombre(dtglistaproveedores)
+    End Sub
+    Private Sub mostrarlosproveedorespornombre(ByVal dgv As DataGridView)
+        Try
+            sql = "select * from proveedor order by nombprov ASC"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+    Private Sub mostrarlosproveedoresporestadocuenta(ByVal dgv As DataGridView)
+        Try
+            sql = "select * from proveedor order by cuentaprov ASC"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub Button11_Click(sender As System.Object, e As System.EventArgs) Handles Button11.Click
+        Call mostrarlosproveedoresporestadocuenta(dtglistaproveedores)
+    End Sub
+
+
+    Private Sub Button12_Click_1(sender As System.Object, e As System.EventArgs) Handles Button12.Click
+        Call mostrarlosclientespornombre(dtgclientes)
+    End Sub
+
+    Private Sub Button3_Click_2(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+        Call mostrarlosclientesporestadocuenta(dtgclientes)
+    End Sub
+    Private Sub mostrarlosclientesporestadocuenta(ByVal dgv As DataGridView)
+        Try
+            sql = "select * from clientes order by cuentacliente ASC"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+    Private Sub mostrarlosclientespornombre(ByVal dgv As DataGridView)
+        Try
+            sql = "select * from clientes order by nombcliente ASC"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 End Class

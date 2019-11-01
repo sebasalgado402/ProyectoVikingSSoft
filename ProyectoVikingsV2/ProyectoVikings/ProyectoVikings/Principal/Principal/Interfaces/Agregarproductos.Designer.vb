@@ -39,19 +39,14 @@ Partial Class Agregarproductos
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtagreexistprod = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txtpruebacod2 = New System.Windows.Forms.TextBox()
         Me.txtpruebacod = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtagrepreciofinalprod = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtagreimpprod = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtagreprecio = New System.Windows.Forms.TextBox()
         Me.btnagrenuevo = New System.Windows.Forms.Button()
         Me.btnagreguardar = New System.Windows.Forms.Button()
         Me.btnagrecerrar = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -217,7 +212,7 @@ Partial Class Agregarproductos
         Me.Label8.BackColor = System.Drawing.Color.OliveDrab
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(195, 42)
+        Me.Label8.Location = New System.Drawing.Point(195, 59)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(47, 18)
         Me.Label8.TabIndex = 1
@@ -226,7 +221,7 @@ Partial Class Agregarproductos
         'txtagreexistprod
         '
         Me.txtagreexistprod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtagreexistprod.Location = New System.Drawing.Point(248, 39)
+        Me.txtagreexistprod.Location = New System.Drawing.Point(248, 56)
         Me.txtagreexistprod.Name = "txtagreexistprod"
         Me.txtagreexistprod.Size = New System.Drawing.Size(111, 24)
         Me.txtagreexistprod.TabIndex = 0
@@ -238,11 +233,6 @@ Partial Class Agregarproductos
         Me.GroupBox3.Controls.Add(Me.txtagreexistprod)
         Me.GroupBox3.Controls.Add(Me.txtpruebacod2)
         Me.GroupBox3.Controls.Add(Me.txtpruebacod)
-        Me.GroupBox3.Controls.Add(Me.Label9)
-        Me.GroupBox3.Controls.Add(Me.txtagrepreciofinalprod)
-        Me.GroupBox3.Controls.Add(Me.Label10)
-        Me.GroupBox3.Controls.Add(Me.Label11)
-        Me.GroupBox3.Controls.Add(Me.txtagreimpprod)
         Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.Controls.Add(Me.txtagreprecio)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -253,6 +243,14 @@ Partial Class Agregarproductos
         Me.GroupBox3.TabIndex = 11
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Detalle de Precio y Stock"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(499, 56)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(140, 24)
+        Me.TextBox1.TabIndex = 15
+        Me.TextBox1.Visible = False
         '
         'txtpruebacod2
         '
@@ -270,65 +268,13 @@ Partial Class Agregarproductos
         Me.txtpruebacod.TabIndex = 13
         Me.txtpruebacod.Visible = False
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.OliveDrab
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(314, 129)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(87, 18)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "(Opcional)"
-        '
-        'txtagrepreciofinalprod
-        '
-        Me.txtagrepreciofinalprod.Enabled = False
-        Me.txtagrepreciofinalprod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtagrepreciofinalprod.Location = New System.Drawing.Point(283, 161)
-        Me.txtagrepreciofinalprod.Name = "txtagrepreciofinalprod"
-        Me.txtagrepreciofinalprod.Size = New System.Drawing.Size(105, 24)
-        Me.txtagrepreciofinalprod.TabIndex = 6
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.OliveDrab
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(124, 164)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(153, 18)
-        Me.Label10.TabIndex = 5
-        Me.Label10.Text = "Precio Costo con Imp"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.OliveDrab
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(156, 129)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(86, 18)
-        Me.Label11.TabIndex = 3
-        Me.Label11.Text = "Impuesto %"
-        '
-        'txtagreimpprod
-        '
-        Me.txtagreimpprod.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtagreimpprod.Location = New System.Drawing.Point(248, 126)
-        Me.txtagreimpprod.Name = "txtagreimpprod"
-        Me.txtagreimpprod.Size = New System.Drawing.Size(60, 24)
-        Me.txtagreimpprod.TabIndex = 2
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.OliveDrab
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(146, 86)
+        Me.Label12.Location = New System.Drawing.Point(146, 117)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(96, 18)
         Me.Label12.TabIndex = 1
@@ -337,9 +283,9 @@ Partial Class Agregarproductos
         'txtagreprecio
         '
         Me.txtagreprecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtagreprecio.Location = New System.Drawing.Point(248, 83)
+        Me.txtagreprecio.Location = New System.Drawing.Point(248, 114)
         Me.txtagreprecio.Name = "txtagreprecio"
-        Me.txtagreprecio.Size = New System.Drawing.Size(105, 24)
+        Me.txtagreprecio.Size = New System.Drawing.Size(111, 24)
         Me.txtagreprecio.TabIndex = 0
         '
         'btnagrenuevo
@@ -368,14 +314,6 @@ Partial Class Agregarproductos
         Me.btnagrecerrar.TabIndex = 14
         Me.btnagrecerrar.Text = "Cerrar"
         Me.btnagrecerrar.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(499, 56)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(140, 24)
-        Me.TextBox1.TabIndex = 15
-        Me.TextBox1.Visible = False
         '
         'Agregarproductos
         '
@@ -410,10 +348,6 @@ Partial Class Agregarproductos
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtagreexistprod As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtagrepreciofinalprod As System.Windows.Forms.TextBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents txtagreimpprod As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents txtagreprecio As System.Windows.Forms.TextBox
     Friend WithEvents btnagrenuevo As System.Windows.Forms.Button
@@ -421,7 +355,6 @@ Partial Class Agregarproductos
     Friend WithEvents btnagrecerrar As System.Windows.Forms.Button
     Friend WithEvents txtagredescripcionprod As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents btnagregarcat As System.Windows.Forms.Button
     Friend WithEvents brnagregarprov As System.Windows.Forms.Button
     Friend WithEvents txtpruebacod2 As System.Windows.Forms.TextBox

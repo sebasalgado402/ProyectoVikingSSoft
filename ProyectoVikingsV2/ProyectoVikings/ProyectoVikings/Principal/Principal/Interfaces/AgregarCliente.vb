@@ -20,27 +20,84 @@ Public Class AgregarCliente
     End Sub
 
     Private Sub btnguardarcliente_Click(sender As System.Object, e As System.EventArgs) Handles btnguardarcliente.Click
+        
+
         Try
-            comandos = New MySqlCommand("INSERT INTO clientes (nombcliente,dircliente,telcliente,cuentacliente)" & Chr(13) &
-                                        "Values(@nombcliente,@dircliente,@telcliente,@cuentacliente)", conex)
-            comandos.Parameters.AddWithValue("@nombcliente", txtagrenombre.Text)
-            comandos.Parameters.AddWithValue("@dircliente", txtagredire.Text)
-            comandos.Parameters.AddWithValue("@telcliente", txtagretel.Text)
-            comandos.Parameters.AddWithValue("@cuentacliente", txtagrecuenta.Text)
+            If txtagrecuenta.Text = "-" Or txtagrenombre.Text = "" Then
+                MsgBox("complete los campos faltantes")
+
+            Else
+                Dim tel As String
+                Dim convertel As Integer
+                If checktel.Checked = True Then
+                    tel = ""
+                    txtagretel.Text = ""
+                Else
+                    If txtagretel.Text = "" Then
+                        tel = ""
+                    Else
+                        tel = txtagretel.Text
+                        convertel = CType(tel, Integer)
+                    End If
+                End If
+                Dim cuentas As String
+                Dim cuentai As Integer
+                If txtagrecuenta.Text = "-" Or txtagrecuenta.Text = "" Then
+                    cuentai = Nothing
+                Else
+                    cuentas = txtagrecuenta.Text
+                    cuentai = CType(cuentas, Integer)
+
+                End If
+                Dim direccion As String
+                If checkdire.Checked = True Then
+                    direccion = "null"
+                    txtagredire.Text = "---"
+                Else
+                    direccion = txtagredire.Text
+                End If
+                If txtagredire.Text = "" Then
+                    direccion = "---"
+                Else
+                    direccion = txtagredire.Text
+                End If
 
 
-            comandos.ExecuteNonQuery()
-            MessageBox.Show("Datos Guardados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-            txtagrecuenta.Text = ""
-            txtagredire.Text = ""
-            txtagrenombre.Text = ""
-            txtagretel.Text = ""
+
+
+
+
+                comandos = New MySqlCommand("INSERT INTO clientes (nombcliente,dircliente,telcliente,cuentacliente)" & Chr(13) &
+                                            "Values(@nombcliente,@dircliente,@telcliente,@cuentacliente)", conex)
+                comandos.Parameters.AddWithValue("@nombcliente", txtagrenombre.Text)
+                comandos.Parameters.AddWithValue("@dircliente", direccion)
+                comandos.Parameters.AddWithValue("@telcliente", convertel)
+                comandos.Parameters.AddWithValue("@cuentacliente", cuentai)
+
+
+                comandos.ExecuteNonQuery()
+                MessageBox.Show("Datos Guardados", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                txtagrecuenta.Text = ""
+                txtagredire.Text = ""
+                txtagrenombre.Text = ""
+                txtagretel.Text = ""
+            End If
+
 
         Catch ex As Exception
             MsgBox(ex.Message)
             MessageBox.Show("Es posible que el código ya esté en uso/algún campo obligatorio no está completado", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
+
+
+
+
+        
+
+        
+
+
 
     End Sub
 
@@ -106,6 +163,34 @@ Public Class AgregarCliente
             e.Handled = True
         Else
             e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub checkdire_Click(sender As System.Object, e As System.EventArgs) Handles checkdire.Click
+        If checkdire.Checked = True Then
+
+            txtagredire.Text = ""
+            txtagredire.ReadOnly = True
+            txtagredire.Enabled = False
+
+        Else
+            txtagredire.ReadOnly = False
+            txtagredire.Enabled = True
+
+        End If
+    End Sub
+
+    Private Sub checktel_Click(sender As System.Object, e As System.EventArgs) Handles checktel.Click
+        If checktel.Checked = True Then
+
+            txtagretel.Text = ""
+            txtagretel.ReadOnly = True
+            txtagretel.Enabled = False
+
+        Else
+            txtagretel.ReadOnly = False
+            txtagretel.Enabled = True
 
         End If
     End Sub
