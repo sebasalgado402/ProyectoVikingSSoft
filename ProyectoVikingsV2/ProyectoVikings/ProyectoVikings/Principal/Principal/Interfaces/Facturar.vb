@@ -9,7 +9,7 @@ Public Class Facturar
     Dim dataset As DataSet
     Dim ex, ey As Integer
     Dim Arrastre As Boolean
-
+   
     Private Sub Facturar_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         gbcliente.Visible = False
         gbconsumidor.Visible = False
@@ -143,32 +143,9 @@ Public Class Facturar
 
     End Sub
 
-    Private Sub btnañadeventa_Click(sender As System.Object, e As System.EventArgs) Handles btnañadeventa.Click
+    Private Sub btnañadeventa_Click(sender As System.Object, e As System.EventArgs)
 
-        Dim conex As New MySqlConnection("data source=localhost;user id=root; password='';database= vikingssoft")
-        conex.Open()
-        Try
-            Dim borrar As Integer = 3
-            comando = New MySqlCommand("INSERT INTO productosfactura (codprod,idventafact,numlineas,cantidad,montolinea)" & Chr(13) &
-                                                    "Values(@codprod,@idventafact,@numlineas,@cantidad,@montolinea)", conex)
-            comando.Parameters.AddWithValue("@codprod", txtpruebacod.Text)
-            comando.Parameters.AddWithValue("@idventafact", borrar)
-            comando.Parameters.AddWithValue("@numlineas", borrar)
-            Dim cantidad As Integer
-            cantidad = txtcantidad.Text
-            comando.Parameters.AddWithValue("@cantidad", cantidad)
-            comando.Parameters.AddWithValue("@montolinea", borrar)
-
-            comando.ExecuteNonQuery()
-            MessageBox.Show("Operacion realizada", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-
-
-            Call mostrarlosproductos(dtgobtieneventa)
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            ' MessageBox.Show("error", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+       
 
     End Sub
 
@@ -180,7 +157,7 @@ Public Class Facturar
     Private Sub mostrarlosproductos(ByVal dgv As DataGridView)
     Try
             Dim consulta As String
-            consulta = "Select * from productosfactura"
+            consulta = "Select * from factura"
             da = New MySqlDataAdapter(consulta, conex)
             dataset = New DataSet
             dataset.Tables.Add("productosfactura")
@@ -194,14 +171,14 @@ Public Class Facturar
 
     End Sub
 
-    Private Sub libprod_SelectedValueChanged(sender As System.Object, e As System.EventArgs) Handles libprod.SelectedValueChanged
+    Private Sub libprod_SelectedValueChanged(sender As System.Object, e As System.EventArgs)
         Dim Indice As Integer = libprod.SelectedIndex + 1
         Dim cod As String
-        txtpruebaprod.Text = Indice
+        txtpruebacodigoprod.Text = Indice
         Try
             libcodprod.SelectedIndex = Indice - 1
             cod = libcodprod.Text
-            txtpruebacod.Text = cod
+            txtpruebanombreprod.Text = cod
 
         Catch ex As Exception
 
@@ -209,15 +186,15 @@ Public Class Facturar
 
     End Sub
 
-  
-    Private Sub txtpruebacod_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtpruebacod.TextChanged
+
+    Private Sub txtpruebacod_TextChanged(sender As System.Object, e As System.EventArgs)
 
     End Sub
-    Private Sub libcodprod_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles libcodprod.SelectedIndexChanged
+    Private Sub libcodprod_SelectedIndexChanged(sender As System.Object, e As System.EventArgs)
 
     End Sub
 
-    Private Sub txtcantidad_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtcantidad.KeyPress
+    Private Sub txtcantidad_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs)
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsSeparator(e.KeyChar) Then
@@ -226,5 +203,113 @@ Public Class Facturar
             e.Handled = True
 
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
+        labelfecha.Text = Date.Now.ToShortDateString
+
+
+        If labelfecha.Text = My.Settings.hora Then
+
+            Me.TopMost = True
+
+        End If
+    End Sub
+    Private Sub mostrarstock(ByVal dgv As DataGridView)
+        Try
+            Dim producto As String
+            Dim codprod As String
+            producto = txtpruebanombreprod.Text
+            codprod = txtpruebacodigoprod.Text
+
+            sql = "Select * from productos where codprod='" & codprod & "' and nombprod='" & producto & "'"
+            da = New MySqlDataAdapter(sql, conex)
+            dt = New DataTable
+            da.Fill(dt)
+            dgv.DataSource = dt
+
+
+        Catch ex As MySqlException
+            ' MsgBox(ex.Message)
+
+        End Try
+    End Sub
+    Private Sub btnañadeventa_Click_1(sender As System.Object, e As System.EventArgs) Handles btnañadeventa.Click
+        Dim montofinal As Integer
+        Dim fecha As Date
+        Dim contenido As String
+        Try
+            'Dim conex As New MySqlConnection("data source=localhost;user id=root; password='';database= vikingssoft")
+            'conex.Open()
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+        End Try
+
+        Try
+            '''''''''''''''''''
+            Call mostrarstock(dtgrecibeprod)
+            Dim cantidad1 As Integer
+            Dim cantidad2 As Integer
+            txtrecibeprecio.Text = dtgrecibeprod.Item(3, dtgrecibeprod.CurrentRow.Index).Value
+            txtrecibecantidad.Text = dtgrecibeprod.Item(4, dtgrecibeprod.CurrentRow.Index).Value
+
+            cantidad1 = CType(txtrecibecantidad.Text, Integer)
+
+            If txtcantidadcompra.Text >= txtrecibecantidad.Text Then
+                MsgBox("No hay cantidad de ese producto")
+            Else
+                cantidad2 = cantidad1
+                MsgBox("funciona")
+
+
+                Try
+
+                    '          comando = New MySqlCommand("INSERT INTO factura (factfecha,contenido,montofinalfact)" & Chr(13) &
+                    '                                                 "Values(@factfecha,@contenido,@montofinalfact)", conex)
+                    '           comando.Parameters.AddWithValue("@factfecha", labelfecha.Text)
+                    '            comando.Parameters.AddWithValue("@contenido", contenido)
+
+                    'comando.ExecuteNonQuery()
+                    'MessageBox.Show("Operacion realizada", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
+
+                    'Call mostrarlosproductos(dtgobtieneventa)
+
+                Catch ex As Exception
+
+                End Try
+            End If
+            '''''''''''''''''''
+
+
+
+
+
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            ' MessageBox.Show("error", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
+    Private Sub libprod_SelectedValueChanged1(sender As Object, e As System.EventArgs) Handles libprod.SelectedValueChanged
+        Dim Indice As Integer = libprod.SelectedIndex + 1
+        Dim cod As String
+        txtpruebanombreprod.Text = Indice
+        Try
+            libcodprod.SelectedIndex = Indice - 1
+            cod = libprod.Text
+            txtpruebanombreprod.Text = cod
+            txtpruebacodigoprod.Text = libcodprod.Text
+        Catch
+
+        End Try
     End Sub
 End Class

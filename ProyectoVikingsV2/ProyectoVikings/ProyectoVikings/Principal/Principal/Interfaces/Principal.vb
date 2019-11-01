@@ -153,9 +153,6 @@ Public Class fmrPrincipal
             MsgBox(ex.Message)
         End Try
 
-
-
-
     End Sub
     Private Sub mostrarclientes(ByVal dgv As DataGridView)
         Try
