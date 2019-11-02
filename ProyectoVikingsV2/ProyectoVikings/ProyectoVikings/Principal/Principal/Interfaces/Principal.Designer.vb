@@ -24,12 +24,12 @@ Partial Class fmrPrincipal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim GroupBox1 As System.Windows.Forms.GroupBox
-        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.btnfacturar = New System.Windows.Forms.Button()
@@ -40,6 +40,11 @@ Partial Class fmrPrincipal
         Me.btnborraproducto = New System.Windows.Forms.Button()
         Me.btnagregaproducto = New System.Windows.Forms.Button()
         Me.groupbproductoLista = New System.Windows.Forms.GroupBox()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -76,19 +81,9 @@ Partial Class fmrPrincipal
         Me.Label56 = New System.Windows.Forms.Label()
         Me.txtmodprodcod = New System.Windows.Forms.TextBox()
         Me.groupbclientelista = New System.Windows.Forms.GroupBox()
-        Me.pmodificarClientes = New System.Windows.Forms.Panel()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.txtrecibeidcliente = New System.Windows.Forms.TextBox()
-        Me.txtmodestadocuentacliente = New System.Windows.Forms.TextBox()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.txtmodtelefcliente = New System.Windows.Forms.TextBox()
-        Me.txtmoddireccliente = New System.Windows.Forms.TextBox()
-        Me.Label51 = New System.Windows.Forms.Label()
-        Me.Label52 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.txtmodnombcliente = New System.Windows.Forms.TextBox()
-        Me.btnmodificarclientes = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Label38 = New System.Windows.Forms.Label()
         Me.dtgclientes = New System.Windows.Forms.DataGridView()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -104,24 +99,23 @@ Partial Class fmrPrincipal
         Me.btnborracliente = New System.Windows.Forms.Button()
         Me.btnagregacliente = New System.Windows.Forms.Button()
         Me.btnmodificacliente = New System.Windows.Forms.Button()
+        Me.pmodificarClientes = New System.Windows.Forms.Panel()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.txtrecibeidcliente = New System.Windows.Forms.TextBox()
+        Me.txtmodestadocuentacliente = New System.Windows.Forms.TextBox()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.txtmodtelefcliente = New System.Windows.Forms.TextBox()
+        Me.txtmoddireccliente = New System.Windows.Forms.TextBox()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.txtmodnombcliente = New System.Windows.Forms.TextBox()
+        Me.btnmodificarclientes = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.groupblistaproveedores = New System.Windows.Forms.GroupBox()
-        Me.pmodificarprov = New System.Windows.Forms.Panel()
-        Me.btnmodificarprov = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.txtrecibeidprov = New System.Windows.Forms.TextBox()
-        Me.txtmodestadocuentaprov = New System.Windows.Forms.TextBox()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.txtmodemailprov = New System.Windows.Forms.TextBox()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.txtmodtelprov = New System.Windows.Forms.TextBox()
-        Me.txtmoddirecprov = New System.Windows.Forms.TextBox()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.txtmodrutprov = New System.Windows.Forms.TextBox()
-        Me.txtmodnombreprov = New System.Windows.Forms.TextBox()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label36 = New System.Windows.Forms.Label()
         Me.dtglistaproveedores = New System.Windows.Forms.DataGridView()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -141,6 +135,23 @@ Partial Class fmrPrincipal
         Me.btnborraprov = New System.Windows.Forms.Button()
         Me.btnagregaprov = New System.Windows.Forms.Button()
         Me.btnmodificaprov = New System.Windows.Forms.Button()
+        Me.pmodificarprov = New System.Windows.Forms.Panel()
+        Me.btnmodificarprov = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.txtrecibeidprov = New System.Windows.Forms.TextBox()
+        Me.txtmodestadocuentaprov = New System.Windows.Forms.TextBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.txtmodemailprov = New System.Windows.Forms.TextBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.txtmodtelprov = New System.Windows.Forms.TextBox()
+        Me.txtmoddirecprov = New System.Windows.Forms.TextBox()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.txtmodrutprov = New System.Windows.Forms.TextBox()
+        Me.txtmodnombreprov = New System.Windows.Forms.TextBox()
         Me.panelventana = New System.Windows.Forms.Panel()
         Me.pbminimizar = New System.Windows.Forms.PictureBox()
         Me.pbcerrar = New System.Windows.Forms.PictureBox()
@@ -152,17 +163,6 @@ Partial Class fmrPrincipal
         Me.lbfecha = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Label38 = New System.Windows.Forms.Label()
         GroupBox1 = New System.Windows.Forms.GroupBox()
         GroupBox1.SuspendLayout()
         Me.groupbproductoLista.SuspendLayout()
@@ -173,15 +173,15 @@ Partial Class fmrPrincipal
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.groupbclientelista.SuspendLayout()
-        Me.pmodificarClientes.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
         CType(Me.dtgclientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
+        Me.pmodificarClientes.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.groupblistaproveedores.SuspendLayout()
-        Me.pmodificarprov.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
         CType(Me.dtglistaproveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.pmodificarprov.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         Me.panelventana.SuspendLayout()
         CType(Me.pbminimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbcerrar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -354,6 +354,62 @@ Partial Class fmrPrincipal
         Me.groupbproductoLista.Text = "Lista de Productos"
         Me.groupbproductoLista.Visible = False
         '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.Button10.Font = New System.Drawing.Font("Segoe UI", 12.25!)
+        Me.Button10.Location = New System.Drawing.Point(669, 43)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(92, 39)
+        Me.Button10.TabIndex = 41
+        Me.Button10.Text = "CodProd"
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.Button8.Font = New System.Drawing.Font("Segoe UI", 12.25!)
+        Me.Button8.Location = New System.Drawing.Point(845, 43)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(81, 39)
+        Me.Button8.TabIndex = 40
+        Me.Button8.Text = "Precio"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.Button6.Font = New System.Drawing.Font("Segoe UI", 12.25!)
+        Me.Button6.Location = New System.Drawing.Point(928, 43)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(81, 39)
+        Me.Button6.TabIndex = 39
+        Me.Button6.Text = "Stock"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 12.25!)
+        Me.Button4.Location = New System.Drawing.Point(762, 43)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(81, 39)
+        Me.Button4.TabIndex = 38
+        Me.Button4.Text = "Nombre"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.BackColor = System.Drawing.Color.Transparent
+        Me.Label39.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label39.ForeColor = System.Drawing.Color.White
+        Me.Label39.Location = New System.Drawing.Point(524, 50)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(140, 31)
+        Me.Label39.TabIndex = 37
+        Me.Label39.Text = "Ordenar Por:"
+        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -514,25 +570,25 @@ Partial Class fmrPrincipal
         Me.dtglistaproducto.BackgroundColor = System.Drawing.Color.Teal
         Me.dtglistaproducto.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dtglistaproducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle49.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle49.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle49.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtglistaproducto.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle49
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtglistaproducto.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dtglistaproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dtglistaproducto.ColumnHeadersVisible = False
-        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle50.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle50.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle50.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle50.NullValue = Nothing
-        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.Turquoise
-        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtglistaproducto.DefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.NullValue = Nothing
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Turquoise
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtglistaproducto.DefaultCellStyle = DataGridViewCellStyle2
         Me.dtglistaproducto.GridColor = System.Drawing.SystemColors.ActiveCaption
         Me.dtglistaproducto.Location = New System.Drawing.Point(6, 137)
         Me.dtglistaproducto.Name = "dtglistaproducto"
@@ -776,145 +832,39 @@ Partial Class fmrPrincipal
         Me.groupbclientelista.Text = "Lista de Clientes"
         Me.groupbclientelista.Visible = False
         '
-        'pmodificarClientes
+        'Button3
         '
-        Me.pmodificarClientes.BackColor = System.Drawing.Color.CadetBlue
-        Me.pmodificarClientes.Controls.Add(Me.GroupBox5)
-        Me.pmodificarClientes.Controls.Add(Me.btnmodificarclientes)
-        Me.pmodificarClientes.Controls.Add(Me.Button7)
-        Me.pmodificarClientes.Location = New System.Drawing.Point(10, 34)
-        Me.pmodificarClientes.Name = "pmodificarClientes"
-        Me.pmodificarClientes.Size = New System.Drawing.Size(530, 299)
-        Me.pmodificarClientes.TabIndex = 33
-        Me.pmodificarClientes.Visible = False
+        Me.Button3.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.25!)
+        Me.Button3.Location = New System.Drawing.Point(793, 48)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(138, 39)
+        Me.Button3.TabIndex = 39
+        Me.Button3.Text = "Cuenta Cliente"
+        Me.Button3.UseVisualStyleBackColor = False
         '
-        'GroupBox5
+        'Button12
         '
-        Me.GroupBox5.Controls.Add(Me.txtrecibeidcliente)
-        Me.GroupBox5.Controls.Add(Me.txtmodestadocuentacliente)
-        Me.GroupBox5.Controls.Add(Me.Label44)
-        Me.GroupBox5.Controls.Add(Me.txtmodtelefcliente)
-        Me.GroupBox5.Controls.Add(Me.txtmoddireccliente)
-        Me.GroupBox5.Controls.Add(Me.Label51)
-        Me.GroupBox5.Controls.Add(Me.Label52)
-        Me.GroupBox5.Controls.Add(Me.Label53)
-        Me.GroupBox5.Controls.Add(Me.txtmodnombcliente)
-        Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.ForeColor = System.Drawing.Color.White
-        Me.GroupBox5.Location = New System.Drawing.Point(9, 12)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(511, 220)
-        Me.GroupBox5.TabIndex = 23
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Modificar Clientes"
+        Me.Button12.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.Button12.Font = New System.Drawing.Font("Segoe UI", 12.25!)
+        Me.Button12.Location = New System.Drawing.Point(691, 49)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(96, 39)
+        Me.Button12.TabIndex = 38
+        Me.Button12.Text = "Nombre"
+        Me.Button12.UseVisualStyleBackColor = False
         '
-        'txtrecibeidcliente
+        'Label38
         '
-        Me.txtrecibeidcliente.Location = New System.Drawing.Point(361, 172)
-        Me.txtrecibeidcliente.Name = "txtrecibeidcliente"
-        Me.txtrecibeidcliente.Size = New System.Drawing.Size(112, 24)
-        Me.txtrecibeidcliente.TabIndex = 17
-        Me.txtrecibeidcliente.Visible = False
-        '
-        'txtmodestadocuentacliente
-        '
-        Me.txtmodestadocuentacliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmodestadocuentacliente.ForeColor = System.Drawing.Color.Black
-        Me.txtmodestadocuentacliente.Location = New System.Drawing.Point(209, 168)
-        Me.txtmodestadocuentacliente.Name = "txtmodestadocuentacliente"
-        Me.txtmodestadocuentacliente.Size = New System.Drawing.Size(68, 24)
-        Me.txtmodestadocuentacliente.TabIndex = 16
-        Me.txtmodestadocuentacliente.Text = "-"
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.BackColor = System.Drawing.Color.Transparent
-        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(76, 171)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(130, 18)
-        Me.Label44.TabIndex = 15
-        Me.Label44.Text = "Estado de Cuenta:"
-        '
-        'txtmodtelefcliente
-        '
-        Me.txtmodtelefcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmodtelefcliente.ForeColor = System.Drawing.Color.Black
-        Me.txtmodtelefcliente.Location = New System.Drawing.Point(209, 128)
-        Me.txtmodtelefcliente.MaxLength = 9
-        Me.txtmodtelefcliente.Name = "txtmodtelefcliente"
-        Me.txtmodtelefcliente.Size = New System.Drawing.Size(104, 24)
-        Me.txtmodtelefcliente.TabIndex = 12
-        '
-        'txtmoddireccliente
-        '
-        Me.txtmoddireccliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmoddireccliente.ForeColor = System.Drawing.Color.Black
-        Me.txtmoddireccliente.Location = New System.Drawing.Point(209, 92)
-        Me.txtmoddireccliente.Name = "txtmoddireccliente"
-        Me.txtmoddireccliente.Size = New System.Drawing.Size(213, 24)
-        Me.txtmoddireccliente.TabIndex = 11
-        '
-        'Label51
-        '
-        Me.Label51.AutoSize = True
-        Me.Label51.BackColor = System.Drawing.Color.Transparent
-        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label51.Location = New System.Drawing.Point(136, 132)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(70, 18)
-        Me.Label51.TabIndex = 7
-        Me.Label51.Text = "Telefono:"
-        '
-        'Label52
-        '
-        Me.Label52.AutoSize = True
-        Me.Label52.BackColor = System.Drawing.Color.Transparent
-        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label52.Location = New System.Drawing.Point(132, 95)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(75, 18)
-        Me.Label52.TabIndex = 5
-        Me.Label52.Text = "Dirección:"
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = True
-        Me.Label53.BackColor = System.Drawing.Color.Transparent
-        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(141, 58)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(66, 18)
-        Me.Label53.TabIndex = 3
-        Me.Label53.Text = "Nombre:"
-        '
-        'txtmodnombcliente
-        '
-        Me.txtmodnombcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmodnombcliente.ForeColor = System.Drawing.Color.Black
-        Me.txtmodnombcliente.Location = New System.Drawing.Point(209, 55)
-        Me.txtmodnombcliente.Name = "txtmodnombcliente"
-        Me.txtmodnombcliente.Size = New System.Drawing.Size(141, 24)
-        Me.txtmodnombcliente.TabIndex = 0
-        '
-        'btnmodificarclientes
-        '
-        Me.btnmodificarclientes.Location = New System.Drawing.Point(14, 238)
-        Me.btnmodificarclientes.Name = "btnmodificarclientes"
-        Me.btnmodificarclientes.Size = New System.Drawing.Size(110, 48)
-        Me.btnmodificarclientes.TabIndex = 27
-        Me.btnmodificarclientes.Text = "Modificar"
-        Me.btnmodificarclientes.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(419, 238)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(96, 48)
-        Me.Button7.TabIndex = 26
-        Me.Button7.Text = "Cerrar"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Label38.AutoSize = True
+        Me.Label38.BackColor = System.Drawing.Color.Transparent
+        Me.Label38.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label38.ForeColor = System.Drawing.Color.White
+        Me.Label38.Location = New System.Drawing.Point(542, 54)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(140, 31)
+        Me.Label38.TabIndex = 37
+        Me.Label38.Text = "Ordenar Por:"
         '
         'dtgclientes
         '
@@ -925,25 +875,25 @@ Partial Class fmrPrincipal
         Me.dtgclientes.BackgroundColor = System.Drawing.Color.Teal
         Me.dtgclientes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dtgclientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle51.BackColor = System.Drawing.Color.Red
-        DataGridViewCellStyle51.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.Cyan
-        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtgclientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle51
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgclientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dtgclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dtgclientes.ColumnHeadersVisible = False
-        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle52.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle52.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle52.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle52.NullValue = Nothing
-        DataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.Turquoise
-        DataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtgclientes.DefaultCellStyle = DataGridViewCellStyle52
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.NullValue = Nothing
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Turquoise
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgclientes.DefaultCellStyle = DataGridViewCellStyle4
         Me.dtgclientes.GridColor = System.Drawing.Color.Teal
         Me.dtgclientes.Location = New System.Drawing.Point(6, 137)
         Me.dtgclientes.Name = "dtgclientes"
@@ -1115,6 +1065,146 @@ Partial Class fmrPrincipal
         Me.btnmodificacliente.Text = "Modificar Cliente"
         Me.btnmodificacliente.UseVisualStyleBackColor = False
         '
+        'pmodificarClientes
+        '
+        Me.pmodificarClientes.BackColor = System.Drawing.Color.CadetBlue
+        Me.pmodificarClientes.Controls.Add(Me.GroupBox5)
+        Me.pmodificarClientes.Controls.Add(Me.btnmodificarclientes)
+        Me.pmodificarClientes.Controls.Add(Me.Button7)
+        Me.pmodificarClientes.Location = New System.Drawing.Point(10, 34)
+        Me.pmodificarClientes.Name = "pmodificarClientes"
+        Me.pmodificarClientes.Size = New System.Drawing.Size(530, 299)
+        Me.pmodificarClientes.TabIndex = 33
+        Me.pmodificarClientes.Visible = False
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.txtrecibeidcliente)
+        Me.GroupBox5.Controls.Add(Me.txtmodestadocuentacliente)
+        Me.GroupBox5.Controls.Add(Me.Label44)
+        Me.GroupBox5.Controls.Add(Me.txtmodtelefcliente)
+        Me.GroupBox5.Controls.Add(Me.txtmoddireccliente)
+        Me.GroupBox5.Controls.Add(Me.Label51)
+        Me.GroupBox5.Controls.Add(Me.Label52)
+        Me.GroupBox5.Controls.Add(Me.Label53)
+        Me.GroupBox5.Controls.Add(Me.txtmodnombcliente)
+        Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox5.ForeColor = System.Drawing.Color.White
+        Me.GroupBox5.Location = New System.Drawing.Point(9, 12)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(511, 220)
+        Me.GroupBox5.TabIndex = 23
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Modificar Clientes"
+        '
+        'txtrecibeidcliente
+        '
+        Me.txtrecibeidcliente.Location = New System.Drawing.Point(361, 172)
+        Me.txtrecibeidcliente.Name = "txtrecibeidcliente"
+        Me.txtrecibeidcliente.Size = New System.Drawing.Size(112, 24)
+        Me.txtrecibeidcliente.TabIndex = 17
+        Me.txtrecibeidcliente.Visible = False
+        '
+        'txtmodestadocuentacliente
+        '
+        Me.txtmodestadocuentacliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodestadocuentacliente.ForeColor = System.Drawing.Color.Black
+        Me.txtmodestadocuentacliente.Location = New System.Drawing.Point(209, 168)
+        Me.txtmodestadocuentacliente.Name = "txtmodestadocuentacliente"
+        Me.txtmodestadocuentacliente.Size = New System.Drawing.Size(68, 24)
+        Me.txtmodestadocuentacliente.TabIndex = 16
+        Me.txtmodestadocuentacliente.Text = "-"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.BackColor = System.Drawing.Color.Transparent
+        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(76, 171)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(130, 18)
+        Me.Label44.TabIndex = 15
+        Me.Label44.Text = "Estado de Cuenta:"
+        '
+        'txtmodtelefcliente
+        '
+        Me.txtmodtelefcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodtelefcliente.ForeColor = System.Drawing.Color.Black
+        Me.txtmodtelefcliente.Location = New System.Drawing.Point(209, 128)
+        Me.txtmodtelefcliente.MaxLength = 9
+        Me.txtmodtelefcliente.Name = "txtmodtelefcliente"
+        Me.txtmodtelefcliente.Size = New System.Drawing.Size(104, 24)
+        Me.txtmodtelefcliente.TabIndex = 12
+        '
+        'txtmoddireccliente
+        '
+        Me.txtmoddireccliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmoddireccliente.ForeColor = System.Drawing.Color.Black
+        Me.txtmoddireccliente.Location = New System.Drawing.Point(209, 92)
+        Me.txtmoddireccliente.Name = "txtmoddireccliente"
+        Me.txtmoddireccliente.Size = New System.Drawing.Size(213, 24)
+        Me.txtmoddireccliente.TabIndex = 11
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.BackColor = System.Drawing.Color.Transparent
+        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.Location = New System.Drawing.Point(136, 132)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(70, 18)
+        Me.Label51.TabIndex = 7
+        Me.Label51.Text = "Telefono:"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.BackColor = System.Drawing.Color.Transparent
+        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.Location = New System.Drawing.Point(132, 95)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(75, 18)
+        Me.Label52.TabIndex = 5
+        Me.Label52.Text = "Dirección:"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.BackColor = System.Drawing.Color.Transparent
+        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Location = New System.Drawing.Point(141, 58)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(66, 18)
+        Me.Label53.TabIndex = 3
+        Me.Label53.Text = "Nombre:"
+        '
+        'txtmodnombcliente
+        '
+        Me.txtmodnombcliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodnombcliente.ForeColor = System.Drawing.Color.Black
+        Me.txtmodnombcliente.Location = New System.Drawing.Point(209, 55)
+        Me.txtmodnombcliente.Name = "txtmodnombcliente"
+        Me.txtmodnombcliente.Size = New System.Drawing.Size(141, 24)
+        Me.txtmodnombcliente.TabIndex = 0
+        '
+        'btnmodificarclientes
+        '
+        Me.btnmodificarclientes.Location = New System.Drawing.Point(14, 238)
+        Me.btnmodificarclientes.Name = "btnmodificarclientes"
+        Me.btnmodificarclientes.Size = New System.Drawing.Size(110, 48)
+        Me.btnmodificarclientes.TabIndex = 27
+        Me.btnmodificarclientes.Text = "Modificar"
+        Me.btnmodificarclientes.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(419, 238)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(96, 48)
+        Me.Button7.TabIndex = 26
+        Me.Button7.Text = "Cerrar"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'groupblistaproveedores
         '
         Me.groupblistaproveedores.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(46, Byte), Integer))
@@ -1144,191 +1234,39 @@ Partial Class fmrPrincipal
         Me.groupblistaproveedores.Text = "Lista de Proveedores"
         Me.groupblistaproveedores.Visible = False
         '
-        'pmodificarprov
+        'Button11
         '
-        Me.pmodificarprov.BackColor = System.Drawing.Color.CadetBlue
-        Me.pmodificarprov.Controls.Add(Me.btnmodificarprov)
-        Me.pmodificarprov.Controls.Add(Me.Button5)
-        Me.pmodificarprov.Controls.Add(Me.GroupBox7)
-        Me.pmodificarprov.Location = New System.Drawing.Point(12, 37)
-        Me.pmodificarprov.Name = "pmodificarprov"
-        Me.pmodificarprov.Size = New System.Drawing.Size(535, 368)
-        Me.pmodificarprov.TabIndex = 32
-        Me.pmodificarprov.Visible = False
+        Me.Button11.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.Button11.Font = New System.Drawing.Font("Segoe UI", 12.25!)
+        Me.Button11.Location = New System.Drawing.Point(858, 42)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(138, 39)
+        Me.Button11.TabIndex = 36
+        Me.Button11.Text = "Estado Cuenta"
+        Me.Button11.UseVisualStyleBackColor = False
         '
-        'btnmodificarprov
+        'Button2
         '
-        Me.btnmodificarprov.Location = New System.Drawing.Point(19, 308)
-        Me.btnmodificarprov.Name = "btnmodificarprov"
-        Me.btnmodificarprov.Size = New System.Drawing.Size(103, 48)
-        Me.btnmodificarprov.TabIndex = 27
-        Me.btnmodificarprov.Text = "Modificar"
-        Me.btnmodificarprov.UseVisualStyleBackColor = True
+        Me.Button2.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.25!)
+        Me.Button2.Location = New System.Drawing.Point(756, 43)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(96, 39)
+        Me.Button2.TabIndex = 35
+        Me.Button2.Text = "Nombre"
+        Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button5
+        'Label36
         '
-        Me.Button5.Location = New System.Drawing.Point(424, 307)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(96, 48)
-        Me.Button5.TabIndex = 26
-        Me.Button5.Text = "Cerrar"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'GroupBox7
-        '
-        Me.GroupBox7.Controls.Add(Me.txtrecibeidprov)
-        Me.GroupBox7.Controls.Add(Me.txtmodestadocuentaprov)
-        Me.GroupBox7.Controls.Add(Me.Label43)
-        Me.GroupBox7.Controls.Add(Me.txtmodemailprov)
-        Me.GroupBox7.Controls.Add(Me.Label37)
-        Me.GroupBox7.Controls.Add(Me.txtmodtelprov)
-        Me.GroupBox7.Controls.Add(Me.txtmoddirecprov)
-        Me.GroupBox7.Controls.Add(Me.Label49)
-        Me.GroupBox7.Controls.Add(Me.Label46)
-        Me.GroupBox7.Controls.Add(Me.Label47)
-        Me.GroupBox7.Controls.Add(Me.Label48)
-        Me.GroupBox7.Controls.Add(Me.txtmodrutprov)
-        Me.GroupBox7.Controls.Add(Me.txtmodnombreprov)
-        Me.GroupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox7.ForeColor = System.Drawing.Color.White
-        Me.GroupBox7.Location = New System.Drawing.Point(11, 9)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(513, 278)
-        Me.GroupBox7.TabIndex = 23
-        Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Modificar Proveedores"
-        '
-        'txtrecibeidprov
-        '
-        Me.txtrecibeidprov.Location = New System.Drawing.Point(369, 162)
-        Me.txtrecibeidprov.Name = "txtrecibeidprov"
-        Me.txtrecibeidprov.Size = New System.Drawing.Size(100, 24)
-        Me.txtrecibeidprov.TabIndex = 17
-        Me.txtrecibeidprov.Visible = False
-        Me.txtrecibeidprov.WordWrap = False
-        '
-        'txtmodestadocuentaprov
-        '
-        Me.txtmodestadocuentaprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmodestadocuentaprov.ForeColor = System.Drawing.Color.Black
-        Me.txtmodestadocuentaprov.Location = New System.Drawing.Point(159, 234)
-        Me.txtmodestadocuentaprov.MaxLength = 5
-        Me.txtmodestadocuentaprov.Name = "txtmodestadocuentaprov"
-        Me.txtmodestadocuentaprov.Size = New System.Drawing.Size(94, 24)
-        Me.txtmodestadocuentaprov.TabIndex = 16
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.BackColor = System.Drawing.Color.Transparent
-        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(31, 237)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(130, 18)
-        Me.Label43.TabIndex = 15
-        Me.Label43.Text = "Estado de Cuenta:"
-        '
-        'txtmodemailprov
-        '
-        Me.txtmodemailprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmodemailprov.ForeColor = System.Drawing.Color.Black
-        Me.txtmodemailprov.Location = New System.Drawing.Point(159, 193)
-        Me.txtmodemailprov.Name = "txtmodemailprov"
-        Me.txtmodemailprov.Size = New System.Drawing.Size(171, 24)
-        Me.txtmodemailprov.TabIndex = 14
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.BackColor = System.Drawing.Color.Transparent
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(112, 196)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(49, 18)
-        Me.Label37.TabIndex = 13
-        Me.Label37.Text = "Email:"
-        '
-        'txtmodtelprov
-        '
-        Me.txtmodtelprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmodtelprov.ForeColor = System.Drawing.Color.Black
-        Me.txtmodtelprov.Location = New System.Drawing.Point(159, 149)
-        Me.txtmodtelprov.MaxLength = 9
-        Me.txtmodtelprov.Name = "txtmodtelprov"
-        Me.txtmodtelprov.Size = New System.Drawing.Size(104, 24)
-        Me.txtmodtelprov.TabIndex = 12
-        '
-        'txtmoddirecprov
-        '
-        Me.txtmoddirecprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmoddirecprov.ForeColor = System.Drawing.Color.Black
-        Me.txtmoddirecprov.Location = New System.Drawing.Point(159, 105)
-        Me.txtmoddirecprov.Name = "txtmoddirecprov"
-        Me.txtmoddirecprov.Size = New System.Drawing.Size(213, 24)
-        Me.txtmoddirecprov.TabIndex = 11
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.BackColor = System.Drawing.Color.Transparent
-        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(122, 63)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(35, 18)
-        Me.Label49.TabIndex = 10
-        Me.Label49.Text = "Rut:"
-        '
-        'Label46
-        '
-        Me.Label46.AutoSize = True
-        Me.Label46.BackColor = System.Drawing.Color.Transparent
-        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.Location = New System.Drawing.Point(91, 152)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(70, 18)
-        Me.Label46.TabIndex = 7
-        Me.Label46.Text = "Telefono:"
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.BackColor = System.Drawing.Color.Transparent
-        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.Location = New System.Drawing.Point(82, 108)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(75, 18)
-        Me.Label47.TabIndex = 5
-        Me.Label47.Text = "Dirección:"
-        '
-        'Label48
-        '
-        Me.Label48.AutoSize = True
-        Me.Label48.BackColor = System.Drawing.Color.Transparent
-        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.Location = New System.Drawing.Point(91, 21)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(66, 18)
-        Me.Label48.TabIndex = 3
-        Me.Label48.Text = "Nombre:"
-        '
-        'txtmodrutprov
-        '
-        Me.txtmodrutprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmodrutprov.ForeColor = System.Drawing.Color.Black
-        Me.txtmodrutprov.Location = New System.Drawing.Point(159, 60)
-        Me.txtmodrutprov.MaxLength = 12
-        Me.txtmodrutprov.Name = "txtmodrutprov"
-        Me.txtmodrutprov.Size = New System.Drawing.Size(187, 24)
-        Me.txtmodrutprov.TabIndex = 2
-        '
-        'txtmodnombreprov
-        '
-        Me.txtmodnombreprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmodnombreprov.ForeColor = System.Drawing.Color.Black
-        Me.txtmodnombreprov.Location = New System.Drawing.Point(159, 18)
-        Me.txtmodnombreprov.Name = "txtmodnombreprov"
-        Me.txtmodnombreprov.Size = New System.Drawing.Size(141, 24)
-        Me.txtmodnombreprov.TabIndex = 0
+        Me.Label36.AutoSize = True
+        Me.Label36.BackColor = System.Drawing.Color.Transparent
+        Me.Label36.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label36.ForeColor = System.Drawing.Color.White
+        Me.Label36.Location = New System.Drawing.Point(607, 48)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(140, 31)
+        Me.Label36.TabIndex = 34
+        Me.Label36.Text = "Ordenar Por:"
         '
         'dtglistaproveedores
         '
@@ -1341,25 +1279,25 @@ Partial Class fmrPrincipal
         Me.dtglistaproveedores.BackgroundColor = System.Drawing.Color.Teal
         Me.dtglistaproveedores.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dtglistaproveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle53.BackColor = System.Drawing.Color.Red
-        DataGridViewCellStyle53.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle53.SelectionBackColor = System.Drawing.Color.Cyan
-        DataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        DataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtglistaproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtglistaproveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dtglistaproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dtglistaproveedores.ColumnHeadersVisible = False
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle54.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle54.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle54.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle54.NullValue = Nothing
-        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.Turquoise
-        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtglistaproveedores.DefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.NullValue = Nothing
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Turquoise
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtglistaproveedores.DefaultCellStyle = DataGridViewCellStyle6
         Me.dtglistaproveedores.GridColor = System.Drawing.SystemColors.ActiveCaption
         Me.dtglistaproveedores.Location = New System.Drawing.Point(6, 137)
         Me.dtglistaproveedores.Name = "dtglistaproveedores"
@@ -1568,6 +1506,192 @@ Partial Class fmrPrincipal
         Me.btnmodificaprov.Text = "Modificar Proveedor"
         Me.btnmodificaprov.UseVisualStyleBackColor = False
         '
+        'pmodificarprov
+        '
+        Me.pmodificarprov.BackColor = System.Drawing.Color.CadetBlue
+        Me.pmodificarprov.Controls.Add(Me.btnmodificarprov)
+        Me.pmodificarprov.Controls.Add(Me.Button5)
+        Me.pmodificarprov.Controls.Add(Me.GroupBox7)
+        Me.pmodificarprov.Location = New System.Drawing.Point(12, 37)
+        Me.pmodificarprov.Name = "pmodificarprov"
+        Me.pmodificarprov.Size = New System.Drawing.Size(535, 368)
+        Me.pmodificarprov.TabIndex = 32
+        Me.pmodificarprov.Visible = False
+        '
+        'btnmodificarprov
+        '
+        Me.btnmodificarprov.Location = New System.Drawing.Point(19, 308)
+        Me.btnmodificarprov.Name = "btnmodificarprov"
+        Me.btnmodificarprov.Size = New System.Drawing.Size(103, 48)
+        Me.btnmodificarprov.TabIndex = 27
+        Me.btnmodificarprov.Text = "Modificar"
+        Me.btnmodificarprov.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(424, 307)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(96, 48)
+        Me.Button5.TabIndex = 26
+        Me.Button5.Text = "Cerrar"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.txtrecibeidprov)
+        Me.GroupBox7.Controls.Add(Me.txtmodestadocuentaprov)
+        Me.GroupBox7.Controls.Add(Me.Label43)
+        Me.GroupBox7.Controls.Add(Me.txtmodemailprov)
+        Me.GroupBox7.Controls.Add(Me.Label37)
+        Me.GroupBox7.Controls.Add(Me.txtmodtelprov)
+        Me.GroupBox7.Controls.Add(Me.txtmoddirecprov)
+        Me.GroupBox7.Controls.Add(Me.Label49)
+        Me.GroupBox7.Controls.Add(Me.Label46)
+        Me.GroupBox7.Controls.Add(Me.Label47)
+        Me.GroupBox7.Controls.Add(Me.Label48)
+        Me.GroupBox7.Controls.Add(Me.txtmodrutprov)
+        Me.GroupBox7.Controls.Add(Me.txtmodnombreprov)
+        Me.GroupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox7.ForeColor = System.Drawing.Color.White
+        Me.GroupBox7.Location = New System.Drawing.Point(11, 9)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(513, 278)
+        Me.GroupBox7.TabIndex = 23
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Modificar Proveedores"
+        '
+        'txtrecibeidprov
+        '
+        Me.txtrecibeidprov.Location = New System.Drawing.Point(369, 162)
+        Me.txtrecibeidprov.Name = "txtrecibeidprov"
+        Me.txtrecibeidprov.Size = New System.Drawing.Size(100, 24)
+        Me.txtrecibeidprov.TabIndex = 17
+        Me.txtrecibeidprov.Visible = False
+        Me.txtrecibeidprov.WordWrap = False
+        '
+        'txtmodestadocuentaprov
+        '
+        Me.txtmodestadocuentaprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodestadocuentaprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodestadocuentaprov.Location = New System.Drawing.Point(159, 234)
+        Me.txtmodestadocuentaprov.MaxLength = 5
+        Me.txtmodestadocuentaprov.Name = "txtmodestadocuentaprov"
+        Me.txtmodestadocuentaprov.Size = New System.Drawing.Size(94, 24)
+        Me.txtmodestadocuentaprov.TabIndex = 16
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.BackColor = System.Drawing.Color.Transparent
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(31, 237)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(130, 18)
+        Me.Label43.TabIndex = 15
+        Me.Label43.Text = "Estado de Cuenta:"
+        '
+        'txtmodemailprov
+        '
+        Me.txtmodemailprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodemailprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodemailprov.Location = New System.Drawing.Point(159, 193)
+        Me.txtmodemailprov.Name = "txtmodemailprov"
+        Me.txtmodemailprov.Size = New System.Drawing.Size(171, 24)
+        Me.txtmodemailprov.TabIndex = 14
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.BackColor = System.Drawing.Color.Transparent
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(112, 196)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(49, 18)
+        Me.Label37.TabIndex = 13
+        Me.Label37.Text = "Email:"
+        '
+        'txtmodtelprov
+        '
+        Me.txtmodtelprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodtelprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodtelprov.Location = New System.Drawing.Point(159, 149)
+        Me.txtmodtelprov.MaxLength = 9
+        Me.txtmodtelprov.Name = "txtmodtelprov"
+        Me.txtmodtelprov.Size = New System.Drawing.Size(104, 24)
+        Me.txtmodtelprov.TabIndex = 12
+        '
+        'txtmoddirecprov
+        '
+        Me.txtmoddirecprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmoddirecprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmoddirecprov.Location = New System.Drawing.Point(159, 105)
+        Me.txtmoddirecprov.Name = "txtmoddirecprov"
+        Me.txtmoddirecprov.Size = New System.Drawing.Size(213, 24)
+        Me.txtmoddirecprov.TabIndex = 11
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.BackColor = System.Drawing.Color.Transparent
+        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(122, 63)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(35, 18)
+        Me.Label49.TabIndex = 10
+        Me.Label49.Text = "Rut:"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.BackColor = System.Drawing.Color.Transparent
+        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.Location = New System.Drawing.Point(91, 152)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(70, 18)
+        Me.Label46.TabIndex = 7
+        Me.Label46.Text = "Telefono:"
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.BackColor = System.Drawing.Color.Transparent
+        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.Location = New System.Drawing.Point(82, 108)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(75, 18)
+        Me.Label47.TabIndex = 5
+        Me.Label47.Text = "Dirección:"
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.BackColor = System.Drawing.Color.Transparent
+        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.Location = New System.Drawing.Point(91, 21)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(66, 18)
+        Me.Label48.TabIndex = 3
+        Me.Label48.Text = "Nombre:"
+        '
+        'txtmodrutprov
+        '
+        Me.txtmodrutprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodrutprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodrutprov.Location = New System.Drawing.Point(159, 60)
+        Me.txtmodrutprov.MaxLength = 12
+        Me.txtmodrutprov.Name = "txtmodrutprov"
+        Me.txtmodrutprov.Size = New System.Drawing.Size(187, 24)
+        Me.txtmodrutprov.TabIndex = 2
+        '
+        'txtmodnombreprov
+        '
+        Me.txtmodnombreprov.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtmodnombreprov.ForeColor = System.Drawing.Color.Black
+        Me.txtmodnombreprov.Location = New System.Drawing.Point(159, 18)
+        Me.txtmodnombreprov.Name = "txtmodnombreprov"
+        Me.txtmodnombreprov.Size = New System.Drawing.Size(141, 24)
+        Me.txtmodnombreprov.TabIndex = 0
+        '
         'panelventana
         '
         Me.panelventana.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1692,130 +1816,6 @@ Partial Class fmrPrincipal
         Me.Label33.TabIndex = 29
         Me.Label33.Text = "¡¡Bienvenido!!"
         '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.BackColor = System.Drawing.Color.Transparent
-        Me.Label36.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Label36.ForeColor = System.Drawing.Color.White
-        Me.Label36.Location = New System.Drawing.Point(607, 48)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(140, 31)
-        Me.Label36.TabIndex = 34
-        Me.Label36.Text = "Ordenar Por:"
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.25!)
-        Me.Button2.Location = New System.Drawing.Point(756, 43)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(96, 39)
-        Me.Button2.TabIndex = 35
-        Me.Button2.Text = "Nombre"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 12.25!)
-        Me.Button4.Location = New System.Drawing.Point(762, 43)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(81, 39)
-        Me.Button4.TabIndex = 38
-        Me.Button4.Text = "Nombre"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.BackColor = System.Drawing.Color.Transparent
-        Me.Label39.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Label39.ForeColor = System.Drawing.Color.White
-        Me.Label39.Location = New System.Drawing.Point(524, 50)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(140, 31)
-        Me.Label39.TabIndex = 37
-        Me.Label39.Text = "Ordenar Por:"
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button6.Font = New System.Drawing.Font("Segoe UI", 12.25!)
-        Me.Button6.Location = New System.Drawing.Point(928, 43)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(81, 39)
-        Me.Button6.TabIndex = 39
-        Me.Button6.Text = "Stock"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button8.Font = New System.Drawing.Font("Segoe UI", 12.25!)
-        Me.Button8.Location = New System.Drawing.Point(845, 43)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(81, 39)
-        Me.Button8.TabIndex = 40
-        Me.Button8.Text = "Precio"
-        Me.Button8.UseVisualStyleBackColor = False
-        '
-        'Button10
-        '
-        Me.Button10.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button10.Font = New System.Drawing.Font("Segoe UI", 12.25!)
-        Me.Button10.Location = New System.Drawing.Point(669, 43)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(92, 39)
-        Me.Button10.TabIndex = 41
-        Me.Button10.Text = "CodProd"
-        Me.Button10.UseVisualStyleBackColor = False
-        '
-        'Button11
-        '
-        Me.Button11.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button11.Font = New System.Drawing.Font("Segoe UI", 12.25!)
-        Me.Button11.Location = New System.Drawing.Point(858, 42)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(138, 39)
-        Me.Button11.TabIndex = 36
-        Me.Button11.Text = "Estado Cuenta"
-        Me.Button11.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.25!)
-        Me.Button3.Location = New System.Drawing.Point(793, 48)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(138, 39)
-        Me.Button3.TabIndex = 39
-        Me.Button3.Text = "Cuenta Cliente"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button12
-        '
-        Me.Button12.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button12.Font = New System.Drawing.Font("Segoe UI", 12.25!)
-        Me.Button12.Location = New System.Drawing.Point(691, 49)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(96, 39)
-        Me.Button12.TabIndex = 38
-        Me.Button12.Text = "Nombre"
-        Me.Button12.UseVisualStyleBackColor = False
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.BackColor = System.Drawing.Color.Transparent
-        Me.Label38.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Label38.ForeColor = System.Drawing.Color.White
-        Me.Label38.Location = New System.Drawing.Point(542, 54)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(140, 31)
-        Me.Label38.TabIndex = 37
-        Me.Label38.Text = "Ordenar Por:"
-        '
         'fmrPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1830,9 +1830,9 @@ Partial Class fmrPrincipal
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(GroupBox1)
         Me.Controls.Add(Me.panelventana)
+        Me.Controls.Add(Me.groupblistaproveedores)
         Me.Controls.Add(Me.groupbclientelista)
         Me.Controls.Add(Me.groupbproductoLista)
-        Me.Controls.Add(Me.groupblistaproveedores)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.Name = "fmrPrincipal"
@@ -1858,20 +1858,20 @@ Partial Class fmrPrincipal
         Me.GroupBox8.PerformLayout()
         Me.groupbclientelista.ResumeLayout(False)
         Me.groupbclientelista.PerformLayout()
-        Me.pmodificarClientes.ResumeLayout(False)
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
         CType(Me.dtgclientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        Me.pmodificarClientes.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.groupblistaproveedores.ResumeLayout(False)
         Me.groupblistaproveedores.PerformLayout()
-        Me.pmodificarprov.ResumeLayout(False)
-        Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox7.PerformLayout()
         CType(Me.dtglistaproveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.pmodificarprov.ResumeLayout(False)
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         Me.panelventana.ResumeLayout(False)
         CType(Me.pbminimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbcerrar, System.ComponentModel.ISupportInitialize).EndInit()

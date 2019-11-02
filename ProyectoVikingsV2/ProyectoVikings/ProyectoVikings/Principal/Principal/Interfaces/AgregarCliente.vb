@@ -86,17 +86,8 @@ Public Class AgregarCliente
 
         Catch ex As Exception
             MsgBox(ex.Message)
-            MessageBox.Show("Es posible que el código ya esté en uso/algún campo obligatorio no está completado", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
+            
         End Try
-
-
-
-
-        
-
-        
-
 
 
     End Sub

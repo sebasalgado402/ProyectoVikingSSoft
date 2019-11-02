@@ -9,7 +9,9 @@ Public Class Facturar
     Dim dataset As DataSet
     Dim ex, ey As Integer
     Dim Arrastre As Boolean
-   
+
+    Dim nombres As New List(Of String)
+    Dim precios As New List(Of Integer)
     Private Sub Facturar_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         gbcliente.Visible = False
         gbconsumidor.Visible = False
@@ -219,7 +221,7 @@ Public Class Facturar
 
         End If
     End Sub
-    Private Sub mostrarstock(ByVal dgv As DataGridView)
+    Public Sub mostrarstock(ByVal dgv As DataGridView)
         Try
             Dim producto As String
             Dim codprod As String
@@ -239,62 +241,43 @@ Public Class Facturar
         End Try
     End Sub
     Private Sub btnañadeventa_Click_1(sender As System.Object, e As System.EventArgs) Handles btnañadeventa.Click
+
         Dim montofinal As Integer
         Dim fecha As Date
         Dim contenido As String
-        Try
-            'Dim conex As New MySqlConnection("data source=localhost;user id=root; password='';database= vikingssoft")
-            'conex.Open()
-        Catch ex As Exception
-            'MsgBox(ex.Message)
-        End Try
-
+     
         Try
             '''''''''''''''''''
             Call mostrarstock(dtgrecibeprod)
-            Dim cantidad1 As Integer
-            Dim cantidad2 As Integer
-            txtrecibeprecio.Text = dtgrecibeprod.Item(3, dtgrecibeprod.CurrentRow.Index).Value
+            Dim nombre As String
+
+            nombres.Add(txtpruebanombreprod.Text)
+
+            Dim cantidaddef As Integer
+
+            Dim precioven As Integer
+            Dim cantcompra As Integer
+            Dim cantidadrecibida As Integer
+
+            cantcompra = txtcantidadcompra.Text
+
+            precios.Add(dtgrecibeprod.Item(3, dtgrecibeprod.CurrentRow.Index).Value)
             txtrecibecantidad.Text = dtgrecibeprod.Item(4, dtgrecibeprod.CurrentRow.Index).Value
+        
+            cantidadrecibida = txtrecibecantidad.Text
 
-            cantidad1 = CType(txtrecibecantidad.Text, Integer)
 
-            If txtcantidadcompra.Text >= txtrecibecantidad.Text Then
+            If cantidadrecibida <= cantidaddef Then
                 MsgBox("No hay cantidad de ese producto")
             Else
-                cantidad2 = cantidad1
-                MsgBox("funciona")
 
+                fecha = labelfecha.Text
 
-                Try
-
-                    '          comando = New MySqlCommand("INSERT INTO factura (factfecha,contenido,montofinalfact)" & Chr(13) &
-                    '                                                 "Values(@factfecha,@contenido,@montofinalfact)", conex)
-                    '           comando.Parameters.AddWithValue("@factfecha", labelfecha.Text)
-                    '            comando.Parameters.AddWithValue("@contenido", contenido)
-
-                    'comando.ExecuteNonQuery()
-                    'MessageBox.Show("Operacion realizada", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-
-
-                    'Call mostrarlosproductos(dtgobtieneventa)
-
-                Catch ex As Exception
-
-                End Try
             End If
-            '''''''''''''''''''
-
-
-
-
-
-
-
 
         Catch ex As Exception
             MsgBox(ex.Message)
-            ' MessageBox.Show("error", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         End Try
     End Sub
 
@@ -311,5 +294,34 @@ Public Class Facturar
         Catch
 
         End Try
+    End Sub
+
+    Private Sub Button2_Click_1(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        Dim monto As Integer = 0
+        Dim nombreprod As String = String.Join(",", nombres.ToArray())
+        Dim precioprod As String = String.Join(",", precios.ToArray())
+        Dim fecha As String = labelfecha.Text
+        MsgBox(nombreprod)
+        MsgBox(precioprod)
+        MsgBox(fecha)
+        MsgBox(monto)
+        Try
+            conex.Open()
+
+        Catch ex As Exception
+
+        End Try
+        Try
+            ' comando = New MySqlCommand("INSERT INTO factura (factfecha, contenidonombre, contenidoprecio, montofinalfact) VALUES (" & fecha & ", " & nombreprod & "," & precioprod & ", " & monto & ")")
+           
+            ' comando.ExecuteNonQuery()
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        End Try
+        
+       
+
+
+
     End Sub
 End Class

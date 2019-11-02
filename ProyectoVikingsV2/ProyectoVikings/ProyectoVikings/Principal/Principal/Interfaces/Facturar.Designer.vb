@@ -23,10 +23,10 @@ Partial Class Facturar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.rbconsumidor = New System.Windows.Forms.RadioButton()
@@ -35,6 +35,10 @@ Partial Class Facturar
         Me.gbconsumidor = New System.Windows.Forms.GroupBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.txtnombreventa = New System.Windows.Forms.TextBox()
+        Me.dtgrecibeprod = New System.Windows.Forms.DataGridView()
+        Me.txtrecibeprecio = New System.Windows.Forms.TextBox()
+        Me.txtrecibecantidad = New System.Windows.Forms.TextBox()
         Me.libcodprod = New System.Windows.Forms.ListBox()
         Me.txtpruebacodigoprod = New System.Windows.Forms.TextBox()
         Me.txtpruebanombreprod = New System.Windows.Forms.TextBox()
@@ -58,17 +62,15 @@ Partial Class Facturar
         Me.brnsalir = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.txtrecibecantidad = New System.Windows.Forms.TextBox()
-        Me.txtrecibeprecio = New System.Windows.Forms.TextBox()
-        Me.dtgrecibeprod = New System.Windows.Forms.DataGridView()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.gbconsumidor.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.dtgrecibeprod, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgobtieneventa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbcliente.SuspendLayout()
         Me.gbproveedor.SuspendLayout()
-        CType(Me.dtgrecibeprod, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -158,6 +160,8 @@ Partial Class Facturar
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.TabPage1.Controls.Add(Me.Button2)
+        Me.TabPage1.Controls.Add(Me.txtnombreventa)
         Me.TabPage1.Controls.Add(Me.dtgrecibeprod)
         Me.TabPage1.Controls.Add(Me.txtrecibeprecio)
         Me.TabPage1.Controls.Add(Me.txtrecibecantidad)
@@ -177,6 +181,67 @@ Partial Class Facturar
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Producto"
         '
+        'txtnombreventa
+        '
+        Me.txtnombreventa.Location = New System.Drawing.Point(394, 141)
+        Me.txtnombreventa.Name = "txtnombreventa"
+        Me.txtnombreventa.Size = New System.Drawing.Size(100, 29)
+        Me.txtnombreventa.TabIndex = 28
+        Me.txtnombreventa.Visible = False
+        '
+        'dtgrecibeprod
+        '
+        Me.dtgrecibeprod.AllowUserToAddRows = False
+        Me.dtgrecibeprod.AllowUserToDeleteRows = False
+        Me.dtgrecibeprod.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dtgrecibeprod.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
+        Me.dtgrecibeprod.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.dtgrecibeprod.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dtgrecibeprod.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Poppins", 9.9999!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgrecibeprod.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dtgrecibeprod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Poppins", 9.9999!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.NullValue = Nothing
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Turquoise
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgrecibeprod.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dtgrecibeprod.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.dtgrecibeprod.Location = New System.Drawing.Point(407, 245)
+        Me.dtgrecibeprod.Name = "dtgrecibeprod"
+        Me.dtgrecibeprod.ReadOnly = True
+        Me.dtgrecibeprod.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dtgrecibeprod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dtgrecibeprod.Size = New System.Drawing.Size(421, 175)
+        Me.dtgrecibeprod.TabIndex = 27
+        Me.dtgrecibeprod.Visible = False
+        '
+        'txtrecibeprecio
+        '
+        Me.txtrecibeprecio.Location = New System.Drawing.Point(240, 191)
+        Me.txtrecibeprecio.Name = "txtrecibeprecio"
+        Me.txtrecibeprecio.Size = New System.Drawing.Size(85, 29)
+        Me.txtrecibeprecio.TabIndex = 26
+        Me.txtrecibeprecio.Visible = False
+        '
+        'txtrecibecantidad
+        '
+        Me.txtrecibecantidad.Location = New System.Drawing.Point(240, 141)
+        Me.txtrecibecantidad.Name = "txtrecibecantidad"
+        Me.txtrecibecantidad.Size = New System.Drawing.Size(85, 29)
+        Me.txtrecibecantidad.TabIndex = 25
+        Me.txtrecibecantidad.Visible = False
+        '
         'libcodprod
         '
         Me.libcodprod.FormattingEnabled = True
@@ -185,6 +250,7 @@ Partial Class Facturar
         Me.libcodprod.Name = "libcodprod"
         Me.libcodprod.Size = New System.Drawing.Size(184, 109)
         Me.libcodprod.TabIndex = 9
+        Me.libcodprod.Visible = False
         '
         'txtpruebacodigoprod
         '
@@ -192,6 +258,7 @@ Partial Class Facturar
         Me.txtpruebacodigoprod.Name = "txtpruebacodigoprod"
         Me.txtpruebacodigoprod.Size = New System.Drawing.Size(100, 29)
         Me.txtpruebacodigoprod.TabIndex = 10
+        Me.txtpruebacodigoprod.Visible = False
         '
         'txtpruebanombreprod
         '
@@ -199,6 +266,7 @@ Partial Class Facturar
         Me.txtpruebanombreprod.Name = "txtpruebanombreprod"
         Me.txtpruebanombreprod.Size = New System.Drawing.Size(141, 29)
         Me.txtpruebanombreprod.TabIndex = 11
+        Me.txtpruebanombreprod.Visible = False
         '
         'Label1
         '
@@ -255,25 +323,25 @@ Partial Class Facturar
         Me.dtgobtieneventa.BackgroundColor = System.Drawing.Color.Teal
         Me.dtgobtieneventa.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dtgobtieneventa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Poppins", 9.9999!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtgobtieneventa.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Poppins", 9.9999!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgobtieneventa.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dtgobtieneventa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dtgobtieneventa.ColumnHeadersVisible = False
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Poppins", 9.9999!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.NullValue = Nothing
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Turquoise
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtgobtieneventa.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Poppins", 9.9999!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.NullValue = Nothing
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Turquoise
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtgobtieneventa.DefaultCellStyle = DataGridViewCellStyle4
         Me.dtgobtieneventa.GridColor = System.Drawing.SystemColors.ActiveCaption
         Me.dtgobtieneventa.Location = New System.Drawing.Point(9, 118)
         Me.dtgobtieneventa.Name = "dtgobtieneventa"
@@ -316,6 +384,7 @@ Partial Class Facturar
         Me.gbcliente.Controls.Add(Me.Button1)
         Me.gbcliente.Controls.Add(Me.ComboBox2)
         Me.gbcliente.Controls.Add(Me.Label4)
+        Me.gbcliente.Enabled = False
         Me.gbcliente.Font = New System.Drawing.Font("Poppins", 9.9999!)
         Me.gbcliente.ForeColor = System.Drawing.Color.White
         Me.gbcliente.Location = New System.Drawing.Point(7, 44)
@@ -358,6 +427,7 @@ Partial Class Facturar
         Me.gbproveedor.Controls.Add(Me.btnañadirprov)
         Me.gbproveedor.Controls.Add(Me.cbprov)
         Me.gbproveedor.Controls.Add(Me.Label3)
+        Me.gbproveedor.Enabled = False
         Me.gbproveedor.Font = New System.Drawing.Font("Poppins", 9.9999!)
         Me.gbproveedor.ForeColor = System.Drawing.Color.White
         Me.gbproveedor.Location = New System.Drawing.Point(7, 44)
@@ -423,55 +493,15 @@ Partial Class Facturar
         '
         Me.Timer1.Enabled = True
         '
-        'txtrecibecantidad
+        'Button2
         '
-        Me.txtrecibecantidad.Location = New System.Drawing.Point(240, 141)
-        Me.txtrecibecantidad.Name = "txtrecibecantidad"
-        Me.txtrecibecantidad.Size = New System.Drawing.Size(85, 29)
-        Me.txtrecibecantidad.TabIndex = 25
-        '
-        'txtrecibeprecio
-        '
-        Me.txtrecibeprecio.Location = New System.Drawing.Point(240, 191)
-        Me.txtrecibeprecio.Name = "txtrecibeprecio"
-        Me.txtrecibeprecio.Size = New System.Drawing.Size(85, 29)
-        Me.txtrecibeprecio.TabIndex = 26
-        '
-        'dtgrecibeprod
-        '
-        Me.dtgrecibeprod.AllowUserToAddRows = False
-        Me.dtgrecibeprod.AllowUserToDeleteRows = False
-        Me.dtgrecibeprod.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dtgrecibeprod.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
-        Me.dtgrecibeprod.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.dtgrecibeprod.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dtgrecibeprod.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Poppins", 9.9999!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtgrecibeprod.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.dtgrecibeprod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Poppins", 9.9999!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.NullValue = Nothing
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Turquoise
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtgrecibeprod.DefaultCellStyle = DataGridViewCellStyle6
-        Me.dtgrecibeprod.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.dtgrecibeprod.Location = New System.Drawing.Point(407, 245)
-        Me.dtgrecibeprod.Name = "dtgrecibeprod"
-        Me.dtgrecibeprod.ReadOnly = True
-        Me.dtgrecibeprod.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dtgrecibeprod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dtgrecibeprod.Size = New System.Drawing.Size(421, 175)
-        Me.dtgrecibeprod.TabIndex = 27
+        Me.Button2.ForeColor = System.Drawing.Color.Black
+        Me.Button2.Location = New System.Drawing.Point(704, 41)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(115, 54)
+        Me.Button2.TabIndex = 30
+        Me.Button2.Text = "Vender"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Facturar
         '
@@ -482,11 +512,9 @@ Partial Class Facturar
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.brnsalir)
         Me.Controls.Add(Me.GroupBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Facturar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Facturar"
-        Me.TopMost = True
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.gbconsumidor.ResumeLayout(False)
@@ -494,12 +522,12 @@ Partial Class Facturar
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.dtgrecibeprod, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgobtieneventa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbcliente.ResumeLayout(False)
         Me.gbcliente.PerformLayout()
         Me.gbproveedor.ResumeLayout(False)
         Me.gbproveedor.PerformLayout()
-        CType(Me.dtgrecibeprod, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -538,4 +566,6 @@ Partial Class Facturar
     Friend WithEvents txtrecibecantidad As System.Windows.Forms.TextBox
     Friend WithEvents txtrecibeprecio As System.Windows.Forms.TextBox
     Friend WithEvents dtgrecibeprod As System.Windows.Forms.DataGridView
+    Friend WithEvents txtnombreventa As System.Windows.Forms.TextBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

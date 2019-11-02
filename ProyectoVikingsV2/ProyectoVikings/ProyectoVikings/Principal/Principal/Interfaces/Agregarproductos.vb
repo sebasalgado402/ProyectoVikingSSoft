@@ -136,7 +136,6 @@ Public Class Agregarproductos
            
 
             Catch ex As MySqlException
-                'MessageBox.Show("Es posible que el código ya esté en uso/algún campo obligatorio no está completado", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 MsgBox("Codigo ya existente")
 
 
